@@ -1,0 +1,58 @@
+---
+title: "Intertemporal Choice"
+description: "Serotonin and delay discounting: how the brain trades present against future"
+---
+
+```{=html}
+<div class="page-header">
+  <h1>Intertemporal Choice Under Trade-off</h1>
+  <p class="subtitle">How does the brain decide between a small reward now and a larger reward later?</p>
+</div>
+```
+
+---
+
+## The Question
+
+Intertemporal choice — preferring an immediate smaller reward over a delayed larger one — is a fundamental feature of decision-making in virtually every animal species. In humans, high discount rates predict addiction, obesity, and poor financial decisions. In *Drosophila*, it can be measured cleanly with sucrose concentration trade-offs and latency-based assays.
+
+The serotonin system has been implicated in patience, self-control, and waiting across species. But *how* it implements these effects — which circuits, which receptors, which timescales — remained unclear.
+
+## The Approach
+
+Using optogenetics and pharmacology in *Drosophila*, I identified a specific population of **dorsal raphe serotonergic neurons** (DR5-HT) that bidirectionally controls delay discounting:
+
+- **Activation** → flies become *more patient*: they wait longer for the higher-value option
+- **Silencing** → flies become *more impulsive*: they preferentially take the immediate reward
+
+This effect was specific to trade-off conditions. When no delay was involved, DR5-HT activation had no effect on choice — ruling out simple motor or motivational confounds.
+
+::: {.itc-highlight}
+**Key finding:** Dorsal raphe serotonin does not control feeding or locomotion in this context. It specifically controls the *willingness to wait* when there is a trade-off between time and reward magnitude.
+
+This is a computationally specific role for serotonin — one that connects to theories of serotonin as a discount rate signal (Daw et al., Mobini et al.) and provides a circuit-level mechanistic grounding in *Drosophila*.
+:::
+
+## The Measurement Problem
+
+Measuring intertemporal choice in a fly is not trivial. Key design decisions:
+
+**1. The reward schedule.** Sucrose concentrations of 1% vs. 5%, with a delay of 30–120s imposed on the high-value option. The delay needs to be long enough to matter behaviourally but short enough that the fly remains engaged.
+
+**2. Individual variability.** Flies are not identical. Individual discount rates vary by 3–4× even within a genotype. This means you need within-fly repeated measures, not population averages — which requires a tracking system (Espresso) capable of individual identification.
+
+**3. The confound problem.** Any manipulation that changes locomotion could artifactually change "waiting" behaviour. Controlling for this required extensive tests with delay-free protocols and motor-neutral optogenetic controls.
+
+This is the same confound problem that DESTRA solves more systematically. The ITC work was earlier, and it taught me why multidimensional evaluation matters: a single metric (latency-to-choice) cannot tell you whether you are measuring patience or motor speed.
+
+## Publication
+
+> Xu S†, Karigo T, Tonegawa S†. Dorsal raphe serotonergic neurons control intertemporal choice under trade-off. *Current Biology* 2017; 27(22):3440–3451.e3.
+>
+> (†Co-corresponding authors. 48 citations.)
+
+→ [DOI: 10.1016/j.cub.2017.10.002](https://doi.org/10.1016/j.cub.2017.10.002)
+
+---
+
+*This project was completed during my postdoctoral work in the Tonegawa Lab at MIT (2016–2017).*

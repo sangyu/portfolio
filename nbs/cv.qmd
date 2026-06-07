@@ -1,0 +1,152 @@
+---
+title: "CV"
+page-layout: full
+---
+
+```{=html}
+<div class="page-header">
+  <h1>Curriculum Vitae</h1>
+</div>
+
+<div class="cv-wrapper">
+
+  <div class="cv-profile">
+    AI evaluation and measurement scientist with 15+ years building rigorous frameworks
+    to define and quantify &ldquo;good&rdquo; in complex, high-dimensional systems.
+    Co-lead of DABEST 2.0 (<em>Nature Methods</em>, in revision). Builder of agentic LLM
+    evaluation pipelines and high-dimensional behavioural benchmarking tools.
+    PhD from MIT (Tonegawa Lab, Nobel laureate supervisor).
+  </div>
+
+
+  <!-- PUBLICATIONS -->
+  <h2 class="cv-section-title">Selected Publications</h2>
+
+  <div class="cv-pub">
+    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. Getting over ANOVA: Estimation
+    graphics for multi-group comparisons. <em>Nature Methods</em> (co-corresponding,
+    in revision). bioRxiv 2026.
+  </div>
+
+  <div class="cv-pub">
+    <strong>Xu S</strong> et al. Contextualized ethomics reveals a <em>Drosophila</em>
+    serotonergic circuit controlling satiety. <em>Science Advances</em> (in revision).
+  </div>
+
+  <div class="cv-pub">
+    <strong>Xu S†</strong>, Karigo T, Tonegawa S†. Dorsal raphe serotonergic neurons
+    control intertemporal choice under trade-off. <em>Current Biology</em> 2017;
+    27(22):3440–3451. (Co-corresponding; 48 citations.)
+  </div>
+
+  <div class="cv-pub">
+    Bari A, <strong>Xu S</strong> et al. Differential attentional control mechanisms by
+    two distinct noradrenergic pathways. <em>PNAS</em> 2020; 117(46):29080–29089.
+    (119 citations.)
+  </div>
+
+  <div class="cv-pub">
+    Kim J, ..., <strong>Xu S</strong>, Tonegawa S. Antagonistic negative and positive
+    neurons of the basolateral amygdala. <em>Nature Neuroscience</em> 2016;
+    19(12):1636–1646. (550 citations.)
+  </div>
+
+
+  <!-- EXPERIENCE -->
+  <h2 class="cv-section-title">Experience</h2>
+
+  <div class="cv-entry">
+    <span class="cv-entry-main">Senior Research Fellow / Research Fellow &mdash; IMCB, A*STAR Singapore</span>
+    <span class="cv-entry-date">2017–present</span>
+  </div>
+  <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
+    Led the computational side of the Claridge-Chang Lab&rsquo;s ethomics programme.
+    Built the DESTRA benchmarking framework, the LLM manuscript evaluation pipeline,
+    and the nanopore epitranscriptomics analysis stack.
+  </p>
+
+  <div class="cv-entry">
+    <span class="cv-entry-main">Postdoctoral Associate &mdash; Tonegawa Lab, MIT</span>
+    <span class="cv-entry-date">2016–2017</span>
+  </div>
+  <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
+    Characterised serotonergic control of intertemporal choice in <em>Drosophila</em>
+    (<em>Current Biology</em> 2017). First postdoc in lab to work on an invertebrate system.
+  </p>
+
+
+  <!-- EDUCATION -->
+  <h2 class="cv-section-title">Education</h2>
+
+  <div class="cv-entry">
+    <span class="cv-entry-main">PhD Systems Neuroscience &mdash; MIT</span>
+    <span class="cv-entry-date">2016</span>
+  </div>
+  <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
+    Supervisor: Susumu Tonegawa (Nobel Prize in Physiology or Medicine, 1987).
+    Dissertation: memory engram cells and the circuits of fear.
+  </p>
+
+  <div class="cv-entry">
+    <span class="cv-entry-main">BS Biology (Minor: Music) &mdash; UC San Diego</span>
+    <span class="cv-entry-date">2007</span>
+  </div>
+  <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
+    Supervisor: Charles Zuker. Undergraduate research in taste transduction.
+  </p>
+
+
+  <!-- SKILLS -->
+  <h2 class="cv-section-title">Technical Skills</h2>
+
+  <div class="skills-cloud">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">R</span>
+    <span class="skill-tag">Git</span>
+    <span class="skill-tag">nbdev</span>
+    <span class="skill-tag">Quarto</span>
+    <span class="skill-tag">pandas</span>
+    <span class="skill-tag">NumPy</span>
+    <span class="skill-tag">SciPy</span>
+    <span class="skill-tag">PyTorch</span>
+    <span class="skill-tag">matplotlib</span>
+    <span class="skill-tag">LLM-as-Judge</span>
+    <span class="skill-tag">DSPy</span>
+    <span class="skill-tag">LangGraph</span>
+    <span class="skill-tag">Claude API</span>
+    <span class="skill-tag">agentic evals</span>
+    <span class="skill-tag">adversarial red-teaming</span>
+    <span class="skill-tag">prompt engineering</span>
+    <span class="skill-tag">bootstrap CI</span>
+    <span class="skill-tag">effect size estimation</span>
+    <span class="skill-tag">uncertainty quantification</span>
+    <span class="skill-tag">causal inference</span>
+    <span class="skill-tag">A/B testing</span>
+    <span class="skill-tag">experimental design</span>
+    <span class="skill-tag">Oxford Nanopore</span>
+    <span class="skill-tag">direct RNA-seq</span>
+    <span class="skill-tag">epitranscriptomics</span>
+    <span class="skill-tag">DeepLabCut</span>
+    <span class="skill-tag">SLEAP</span>
+    <span class="skill-tag">SQL</span>
+  </div>
+
+
+  <!-- RECOGNITION -->
+  <h2 class="cv-section-title">Recognition</h2>
+
+  <div class="award-item">Outstanding Short Talk Award — Neuroscience Singapore 2025</div>
+  <div class="award-item">Walle Nauta Award for Excellence in Graduate Teaching — MIT, 2011</div>
+  <div class="award-item">Gold Medal — 17th International Festival of Advent and Christmas Music, Prague, 2007</div>
+  <div class="award-item">Honourable Mention — Singapore Physics Olympiad, 2002</div>
+
+
+  <!-- ARTS -->
+  <h2 class="cv-section-title">Arts</h2>
+
+  <div class="award-item">Painter — 22nd UOB Painting of the Year Exhibition, Singapore, 2003</div>
+  <div class="award-item">Ceramicist — The Art of the Cup, Cambridge, MA, USA, 2014</div>
+  <div class="award-item">Classical soprano — performed in Singapore and internationally</div>
+
+</div>
+```

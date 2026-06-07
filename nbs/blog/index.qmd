@@ -1,0 +1,59 @@
+---
+title: "Writing"
+page-layout: full
+---
+
+```{=html}
+<div class="page-header">
+  <h1>Writing</h1>
+</div>
+
+<p class="blog-intro">
+  Posts in progress &mdash; coming after the <em>Science Advances</em> submission clears.
+  The common thread: what does it mean to measure something, and when does measurement go wrong?
+</p>
+
+<div style="max-width: 820px; margin: 0 auto; padding: 0 1.5rem 4rem;">
+
+  <div class="blog-stub">
+    <span class="coming-soon-tag">Coming soon</span>
+    <h3>Why bootstrapping?</h3>
+    <p>
+      Why I built DABEST around empirical resampling, and why that matters for anyone who
+      measures things. What parametric confidence intervals assume about your data &mdash; and
+      what happens when those assumptions are wrong.
+    </p>
+  </div>
+
+  <div class="blog-stub">
+    <span class="coming-soon-tag">Coming soon</span>
+    <h3>What is a behavioural state?</h3>
+    <p>
+      On why &ldquo;feeding behaviour&rdquo; is not one thing. The conceptual problem of defining
+      a state from its behavioural signatures &mdash; and why this matters for both neuroscience
+      and AI evaluation. A measurement is not an observation is not a construct.
+    </p>
+  </div>
+
+  <div class="blog-stub">
+    <span class="coming-soon-tag">Coming soon</span>
+    <h3>Four agents arguing about a manuscript</h3>
+    <p>
+      What I learned about evaluation design when there is no ground truth. On adversarial
+      pipelines, the LLM-as-Judge problem, and why inter-rater agreement is the metric
+      I keep returning to.
+    </p>
+  </div>
+
+  <div class="blog-stub">
+    <span class="coming-soon-tag">Coming soon</span>
+    <h3>The failure mode that connects fruit flies and language models</h3>
+    <p>
+      Optimising individual metrics while missing the underlying state. The common structure
+      of goodhart&rsquo;s law violations in neuroscience, AI benchmarking, and statistics.
+      And what multidimensional, reference-anchored evaluation does about it.
+    </p>
+  </div>
+
+</div>
+```

@@ -1,0 +1,12 @@
+{
+  "hash": "2198a5635b7d112af2aeb05e2fcc8870",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: core\n---\n\n\n\n> Fill in a module description here\n\n\n\n::: {#251bbca9 .cell 0='h' 1='i' 2='d' 3='e' execution_count=2}\n``` {.python .cell-code}\nfrom nbdev.showdoc import *\n```\n:::\n\n\n::: {#e3ab6fb9 .cell 0='e' 1='x' 2='p' 3='o' 4='r' 5='t' execution_count=3}\n``` {.python .cell-code}\ndef foo(): pass\n```\n:::\n\n\n::: {#de40dfb9 .cell 0='h' 1='i' 2='d' 3='e' execution_count=4}\n``` {.python .cell-code}\nimport nbdev; nbdev.nbdev_export()\n```\n:::\n\n\n",
+    "supporting": [
+      "00_core_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,22 +1,55 @@
 project:
   type: website
+  output-dir: _docs
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    - "!00_core.ipynb"
+    - "blog/*.qmd"
+
+website:
+  title: "Sangyu Xu 徐桑榆"
+  description: "Computational Behaviour Scientist"
+  site-url: "https://sangyu.github.io/portfolio"
+  repo-url: "https://github.com/sangyu/portfolio"
+  repo-branch: main
+  favicon: "🪰"
+  open-graph: true
+  twitter-card: true
+  navbar:
+    pinned: true
+    background: white
+    left:
+      - href: index.ipynb
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: blog/index.qmd
+        text: Writing
+      - href: art.qmd
+        text: Art & Music
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/sangyu
+        aria-label: GitHub
+      - text: xusangyu.com
+        href: https://xusangyu.com
+  sidebar: false
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
-    keep-md: true
-  commonmark: default
+    toc: false
+    page-layout: full
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+execute:
+  freeze: auto
 
-website:
-  twitter-card: true
-  open-graph: true
-  repo-actions: [issue]
-  navbar:
-    background: primary
-    search: true
-  sidebar:
-    style: floating
-
-metadata-files: [nbdev.yml, sidebar.yml]
+jupyter: dabestnmethrevision

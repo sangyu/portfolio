@@ -1,0 +1,18 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_core.ipynb
+      - 01_dabest.ipynb
+      - 02_ethomics.ipynb
+      - 03_itc.qmd
+      - 04_llm_evals.ipynb
+      - art.qmd
+      - cv.qmd
+      - nbdev.yml
+      - research.qmd
+      - sidebar.yml
+      - styles.css
+      - section: blog
+        contents: []
+        href: blog/index.qmd
