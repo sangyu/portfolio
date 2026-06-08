@@ -44,6 +44,7 @@ format:
     css: styles.css
     toc: false
     page-layout: full
+    lightbox: true
     include-in-header:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">

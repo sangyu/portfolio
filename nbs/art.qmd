@@ -31,20 +31,46 @@ page-layout: full
   </p>
   <div class="gallery-grid">
     <div class="gallery-item">
+      <a href="images/paintings/sunset-trees.jpg" target="_blank" class="gallery-link">
       <img src="images/paintings/sunset-trees.jpg" alt="Oils on canvas — bare trees silhouetted against a red-orange sunset, Chinese poem at lower left" loading="lazy">
+      </a>
       <div class="gallery-caption">Dusk. Oils on canvas, 2003. UOB Painting of the Year.</div>
     </div>
     <div class="gallery-item">
-      <img src="images/paintings/portrait.jpg" alt="Portrait in oils — face lit in yellow-green against deep blue clothing" loading="lazy">
-      <div class="gallery-caption">Portrait study. Oils on paper.</div>
+      <a href="images/paintings/japanese-garden.jpg" target="_blank" class="gallery-link">
+      <img src="images/paintings/japanese-garden.jpg" alt="Japanese garden plein air — koi pond, red bridge, dappled greens in oils" loading="lazy">
+      </a>
+      <div class="gallery-caption">Japanese garden. Oils on canvas board, plein air.</div>
     </div>
     <div class="gallery-item">
+      <a href="images/paintings/impasto-city.jpg" target="_blank" class="gallery-link">
       <img src="images/paintings/impasto-city.jpg" alt="Thick palette-knife impasto cityscape at dusk — yellow sky, dark blue-purple buildings" loading="lazy">
+      </a>
       <div class="gallery-caption">City, dusk. Oils, palette knife.</div>
     </div>
     <div class="gallery-item">
+      <a href="images/paintings/son-in-field.jpg" target="_blank" class="gallery-link">
+      <img src="images/paintings/son-in-field.jpg" alt="Small figure in red walking across a green sunlit field — oils on canvas" loading="lazy">
+      </a>
+      <div class="gallery-caption">Field. Oils on canvas.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/paintings/portrait.jpg" target="_blank" class="gallery-link">
+      <img src="images/paintings/portrait.jpg" alt="Portrait in oils — face lit in yellow-green against deep blue clothing" loading="lazy">
+      </a>
+      <div class="gallery-caption">Portrait study. Oils on paper.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/paintings/coastal-plein-air.jpg" target="_blank" class="gallery-link">
       <img src="images/paintings/coastal-plein-air.jpg" alt="Wide coastal bay plein air — muted grey sky, teal water, warm sand foreground" loading="lazy">
+      </a>
       <div class="gallery-caption">Bay. Oils on canvas board, plein air.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/paintings/angkor-temple.jpg" target="_blank" class="gallery-link">
+      <img src="images/paintings/angkor-temple.jpg" alt="Ta Prohm temple, Angkor — coloured pencil, tree roots engulfing stone" loading="lazy">
+      </a>
+      <div class="gallery-caption">Ta Prohm, Angkor. Coloured pencil, 2018.</div>
     </div>
   </div>
 </div>
@@ -63,24 +89,46 @@ page-layout: full
   </p>
   <div class="gallery-grid">
     <div class="gallery-item">
+      <a href="images/ceramics/curl-handle-mug.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/curl-handle-mug.jpg" alt="Cream stoneware mug with sculpted curling handle that ends in a tight spiral" loading="lazy">
+      </a>
       <div class="gallery-caption">Mug with curl handle. Stoneware, celadon glaze. The Art of the Cup, 2014.</div>
     </div>
     <div class="gallery-item">
+      <a href="images/ceramics/herringbone-pitcher.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/herringbone-pitcher.jpg" alt="Amber-glazed pitcher with elegant long neck — lower body covered in dense herringbone impressed texture" loading="lazy">
+      </a>
+      <div class="gallery-caption">Herringbone pitcher. Stoneware, amber glaze.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/spiral-plate.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/spiral-plate.jpg" alt="Celadon plate viewed from above — concentric thrown rings at centre, carved radiating leaf-marks filling the field" loading="lazy">
+      </a>
       <div class="gallery-caption">Spiral plate. Stoneware, celadon glaze.</div>
     </div>
     <div class="gallery-item">
+      <a href="images/ceramics/marbled-bowl-interior.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/marbled-bowl-interior.jpg" alt="Nerikomi bowl viewed from directly above — black and white marbled clay spirals inward to a vortex" loading="lazy">
+      </a>
+      <div class="gallery-caption">Marbled bowl, interior. Nerikomi porcelain.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/sea-urchin-vessel.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/sea-urchin-vessel.jpg" alt="Small spherical vessel with barnacle-like textured surface, cobalt blue glaze pooling in the crevices" loading="lazy">
+      </a>
       <div class="gallery-caption">Sea-urchin vessel. Stoneware, cobalt glaze.</div>
     </div>
     <div class="gallery-item">
-      <img src="images/ceramics/temmoku-vase.jpg" alt="Bottle vase with temmoku glaze — ash and ochre streaks dripping from the shoulder over a dark body" loading="lazy">
-      <div class="gallery-caption">Bottle vase. Stoneware, ash temmoku glaze.</div>
+      <a href="images/ceramics/teal-nerikomi-yunomi.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/teal-nerikomi-yunomi.jpg" alt="Tall yunomi with teal glaze over nerikomi marbled body — dark slip waves rising from the base" loading="lazy">
+      </a>
+      <div class="gallery-caption">Teal yunomi. Nerikomi porcelain.</div>
     </div>
     <div class="gallery-item">
-      <img src="images/ceramics/nerikomi-vase.jpg" alt="Nerikomi marbled vase — swirling blue, grey and cream clay body, with red tulips cascading from the opening" loading="lazy">
-      <div class="gallery-caption">Nerikomi vase. Marbled porcelain.</div>
+      <a href="images/ceramics/blue-stripe-mug.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/blue-stripe-mug.jpg" alt="Round belly mug with combed blue and white slip — feathered horizontal stripes in ink-blue and cream" loading="lazy">
+      </a>
+      <div class="gallery-caption">Blue stripe mug. Stoneware, combed slip.</div>
     </div>
   </div>
 </div>
