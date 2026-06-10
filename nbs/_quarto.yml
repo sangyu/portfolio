@@ -5,6 +5,8 @@ project:
     - "*.qmd"
     - "*.ipynb"
     - "!00_core.ipynb"
+    - "!02_ethomics.ipynb"
+    - "!04_llm_evals.ipynb"
     - "blog/*.qmd"
 
 website:
@@ -22,8 +24,14 @@ website:
     left:
       - href: index.ipynb
         text: Home
-      - href: research.qmd
-        text: Research
+      - href: statistics.qmd
+        text: Statistics
+      - href: neuroscience.qmd
+        text: Neuroscience
+      - href: genetic-tools.qmd
+        text: Genetic Tools
+      - href: 04_llm_evals.qmd
+        text: LLM Evals
       - href: blog/index.qmd
         text: Writing
       - href: art.qmd

@@ -6,9 +6,9 @@ page-layout: full
 ```{=html}
 <div class="page-header">
   <h1>Art &amp; Music</h1>
-  <p class="subtitle">"The bridge between art and science runs in both directions."</p>
+  <p class="subtitle"><a href="https://www.instagram.com/mulberryandelm" target="_blank">@mulberryandelm &nearr;</a></p>
 </div>
-
+<!-- 
 <div class="art-intro">
   <p>
     Tufte argued that good data visualisation is an aesthetic act. I&rsquo;d add that good
@@ -16,55 +16,55 @@ page-layout: full
     hobbies separate from my science &mdash; they&rsquo;re the same impulse: find the form that
     makes the invisible legible.
   </p>
-</div>
+</div> -->
 
 <div class="section-divider">&bull;</div>
 
 <!-- PAINTING -->
 <div class="art-section">
   <h2>Painting</h2>
-  <p class="art-meta">22nd UOB Painting of the Year Exhibition &bull; Singapore &bull; 2003</p>
-  <p>
+  <!-- <p class="art-meta">22nd UOB Painting of the Year Exhibition &bull; Singapore &bull; 2003</p> -->
+  <!-- <p>
     Oils and acrylics. Drawn to atmosphere, gesture, and the moment before a form resolves
     &mdash; the suspended instant where something is almost but not yet identifiable.
     The same interest in thresholds that shapes my behavioural science.
-  </p>
+  </p> -->
   <div class="gallery-grid">
     <div class="gallery-item">
       <a href="images/paintings/sunset-trees.jpg" target="_blank" class="gallery-link">
-      <img src="images/paintings/sunset-trees.jpg" alt="Oils on canvas — bare trees silhouetted against a red-orange sunset, Chinese poem at lower left" loading="lazy">
+      <img src="images/paintings/sunset-trees.jpg" alt="Acrylics on canvas 2004" loading="lazy">
       </a>
-      <div class="gallery-caption">Dusk. Oils on canvas, 2003. UOB Painting of the Year.</div>
+      <div class="gallery-caption">Acrylic on canvas, 2004.</div>
     </div>
     <div class="gallery-item">
       <a href="images/paintings/japanese-garden.jpg" target="_blank" class="gallery-link">
-      <img src="images/paintings/japanese-garden.jpg" alt="Japanese garden plein air — koi pond, red bridge, dappled greens in oils" loading="lazy">
+      <img src="images/paintings/japanese-garden.jpg" alt="Japanese garden plein air" loading="lazy">
       </a>
-      <div class="gallery-caption">Japanese garden. Oils on canvas board, plein air.</div>
+      <div class="gallery-caption">Japanese garden. Acrylic on canvas, plein air, 2019.</div>
     </div>
     <div class="gallery-item">
       <a href="images/paintings/impasto-city.jpg" target="_blank" class="gallery-link">
-      <img src="images/paintings/impasto-city.jpg" alt="Thick palette-knife impasto cityscape at dusk — yellow sky, dark blue-purple buildings" loading="lazy">
+      <img src="images/paintings/impasto-city.jpg" alt="Thick palette-knife impasto mountain scape at sunrise — yellow sky, dark blue-purple buildings" loading="lazy">
       </a>
-      <div class="gallery-caption">City, dusk. Oils, palette knife.</div>
+      <div class="gallery-caption">黄山. Acrylic on canvas, palette knife, 2019.</div>
     </div>
     <div class="gallery-item">
       <a href="images/paintings/son-in-field.jpg" target="_blank" class="gallery-link">
       <img src="images/paintings/son-in-field.jpg" alt="Small figure in red walking across a green sunlit field — oils on canvas" loading="lazy">
       </a>
-      <div class="gallery-caption">Field. Oils on canvas.</div>
+      <div class="gallery-caption">Small child in red running into a hedge. Acrylics on canvas, 2025.</div>
     </div>
     <div class="gallery-item">
       <a href="images/paintings/portrait.jpg" target="_blank" class="gallery-link">
       <img src="images/paintings/portrait.jpg" alt="Portrait in oils — face lit in yellow-green against deep blue clothing" loading="lazy">
       </a>
-      <div class="gallery-caption">Portrait study. Oils on paper.</div>
+      <div class="gallery-caption">Self portrait. Acrylic on canvas, 2018.</div>
     </div>
     <div class="gallery-item">
       <a href="images/paintings/coastal-plein-air.jpg" target="_blank" class="gallery-link">
       <img src="images/paintings/coastal-plein-air.jpg" alt="Wide coastal bay plein air — muted grey sky, teal water, warm sand foreground" loading="lazy">
       </a>
-      <div class="gallery-caption">Bay. Oils on canvas board, plein air.</div>
+      <div class="gallery-caption">Juara beach. Acrylic on canvas, plein air, 2018.</div>
     </div>
     <div class="gallery-item">
       <a href="images/paintings/angkor-temple.jpg" target="_blank" class="gallery-link">
@@ -80,55 +80,55 @@ page-layout: full
 <!-- CERAMICS -->
 <div class="art-section">
   <h2>Ceramics</h2>
-  <p class="art-meta">The Art of the Cup &bull; Cambridge, MA, USA &bull; 2014</p>
-  <p>
+  <!-- <p class="art-meta">The Art of the Cup &bull; Cambridge, MA, USA &bull; 2014</p> -->
+  <!-- <p>
     Functional vessels. Wheel-thrown stoneware, with interest in the conversation between
     thrown form and surface treatment &mdash; where the physics of clay meeting resistance
     produces an outcome that is partly designed and partly discovered.
     That negotiation is the interesting part.
-  </p>
+  </p> -->
   <div class="gallery-grid">
     <div class="gallery-item">
       <a href="images/ceramics/curl-handle-mug.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/curl-handle-mug.jpg" alt="Cream stoneware mug with sculpted curling handle that ends in a tight spiral" loading="lazy">
       </a>
-      <div class="gallery-caption">Mug with curl handle. Stoneware, celadon glaze. The Art of the Cup, 2014.</div>
+      <div class="gallery-caption">Mug.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/herringbone-pitcher.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/herringbone-pitcher.jpg" alt="Amber-glazed pitcher with elegant long neck — lower body covered in dense herringbone impressed texture" loading="lazy">
       </a>
-      <div class="gallery-caption">Herringbone pitcher. Stoneware, amber glaze.</div>
+      <div class="gallery-caption">Herringbone pitcher.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/spiral-plate.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/spiral-plate.jpg" alt="Celadon plate viewed from above — concentric thrown rings at centre, carved radiating leaf-marks filling the field" loading="lazy">
       </a>
-      <div class="gallery-caption">Spiral plate. Stoneware, celadon glaze.</div>
+      <div class="gallery-caption">Spiral plate.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/marbled-bowl-interior.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/marbled-bowl-interior.jpg" alt="Nerikomi bowl viewed from directly above — black and white marbled clay spirals inward to a vortex" loading="lazy">
       </a>
-      <div class="gallery-caption">Marbled bowl, interior. Nerikomi porcelain.</div>
+      <div class="gallery-caption">Marbled bowl.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/sea-urchin-vessel.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/sea-urchin-vessel.jpg" alt="Small spherical vessel with barnacle-like textured surface, cobalt blue glaze pooling in the crevices" loading="lazy">
       </a>
-      <div class="gallery-caption">Sea-urchin vessel. Stoneware, cobalt glaze.</div>
+      <div class="gallery-caption">Vessel.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/teal-nerikomi-yunomi.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/teal-nerikomi-yunomi.jpg" alt="Tall yunomi with teal glaze over nerikomi marbled body — dark slip waves rising from the base" loading="lazy">
       </a>
-      <div class="gallery-caption">Teal yunomi. Nerikomi porcelain.</div>
+      <div class="gallery-caption">Cup.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/blue-stripe-mug.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/blue-stripe-mug.jpg" alt="Round belly mug with combed blue and white slip — feathered horizontal stripes in ink-blue and cream" loading="lazy">
       </a>
-      <div class="gallery-caption">Blue stripe mug. Stoneware, combed slip.</div>
+      <div class="gallery-caption">Cup.</div>
     </div>
   </div>
 </div>
@@ -138,29 +138,30 @@ page-layout: full
 <!-- MUSIC -->
 <div class="art-section">
   <h2>Music</h2>
-  <p class="art-meta">Classical Soprano &bull; Singapore, Prague, international</p>
+  <p class="art-meta">Classical Soprano: art songs, a cappella</p>
 
   <div class="music-block">
     <p class="award-label">Gold Medal</p>
     <h3>17th International Festival of Advent and Christmas Music</h3>
-    <p>Prague, Czech Republic &bull; 2007</p>
+    <p>Raffles Concert Singers, Prague, Czech Republic &bull; 2007</p>
   </div>
 
   <p style="margin-top: 1.5rem;">
-    Studied voice at UC San Diego (Minor: Music) and performed in Singapore and internationally.
-    Repertoire centred on Baroque and early Classical: Bach, Handel, Purcell, Vivaldi.
+    Studied voice at UC San Diego (Minor: Music).
+    Solo repertoire centred on French impressionists: Poulenc, Debussy, Faur&eacute;; opera excerpts.
+    Group repertoire centred on Renaissance and modern/post-modern a cappella music.
   </p>
-  <p>
+  <!-- <p>
     The discipline of singing &mdash; breath, phrase, the physics of resonance &mdash; shares
     more with experimental design than it might seem. Both require understanding what the
     system will and will not do, and working with rather than against its constraints.
-  </p>
+  </p> -->
 </div>
 
 <div class="section-divider">&bull;</div>
 
 <!-- TUFTE NOTE -->
-<div class="art-section" style="max-width: 720px; margin-left: auto; margin-right: auto;">
+<!-- <div class="art-section" style="max-width: 720px; margin-left: auto; margin-right: auto;">
   <div class="tufte-note">
     <p>
       The whorlmap visualisation I designed for DABEST is both a statistical tool and a
@@ -175,5 +176,5 @@ page-layout: full
       show it so clearly that nothing else needs to be said?
     </p>
   </div>
-</div>
+</div> -->
 ```

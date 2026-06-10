@@ -1,0 +1,39 @@
+---
+title: "Genetic Tools"
+page-layout: full
+---
+
+```{=html}
+<div class="page-header">
+  <h1>Genetic Tools</h1>
+  <p class="subtitle">Resources for the community.</p>
+</div>
+
+<div class="research-grid">
+
+  <div class="research-card">
+    <span class="output-tag">Nature Communications 2024</span>
+    <h3>Kalium Channelrhodopsins (KCR)</h3>
+    <p>
+      Comparative evaluation of light-gated potassium-conducting channelrhodopsins
+      as neuronal inhibitors in <em>Drosophila</em>, <em>C. elegans</em>, and zebrafish.
+      KCR1-ET matches ACR1 potency while avoiding the depolarising artefact that
+      chloride conductance produces in high-chloride cells &mdash; including axons.
+    </p>
+    <a href="https://doi.org/10.1038/s41467-024-47203-w">&rarr; Nature Communications</a>
+  </div>
+
+  <div class="research-card">
+    <span class="output-tag">bioRxiv 2026</span>
+    <h3>LSSmScarlet3 for Two-Photon Imaging</h3>
+    <p>
+      A long-Stokes-shift mScarlet variant that can be co-imaged with GCaMP using
+      a single 920-nm laser in <em>Drosophila</em>. Simplifies two-photon setups by
+      eliminating the need for a second excitation wavelength when using a red
+      structural marker alongside a green calcium indicator.
+    </p>
+    <a href="https://doi.org/10.64898/2026.04.12.718060">&rarr; bioRxiv</a>
+  </div>
+
+</div>
+```

@@ -1,0 +1,83 @@
+---
+title: "Neuroscience"
+page-layout: full
+---
+
+```{=html}
+<div class="page-header">
+  <h1>Neuroscience</h1>
+  <p class="subtitle">Internal states, circuits, and the behaviour they produce.</p>
+</div>
+
+<div class="research-grid">
+
+  <div class="research-card">
+    <span class="output-tag">in revision</span>
+    <h3>Ethomics &mdash; What Is a Hungry Fly?</h3>
+    <p>
+      High-dimensional behavioural state benchmarking in <em>Drosophila</em>.
+      The Espresso platform captures 17 behavioural metrics simultaneously across
+      hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
+      produce genuine hunger, or just a superficially similar signature?
+    </p>
+    <a href="02_ethomics.html">&rarr; Interactive demo</a>
+  </div>
+
+  <div class="research-card">
+    <span class="output-tag">Current Biology 2017 &mdash; 48 citations</span>
+    <h3>Intertemporal Choice</h3>
+    <p>
+      Dorsal raphe serotonergic neurons bidirectionally control delay discounting
+      in <em>Drosophila</em>. Activation increases patience; silencing increases
+      impulsivity. Effect is trade-off specific &mdash; not a motor or motivational confound.
+    </p>
+    <a href="03_itc.html">&rarr; Project page</a>
+  </div>
+
+  <div class="research-card">
+    <span class="output-tag">PNAS 2020 &mdash; 119 citations</span>
+    <h3>Noradrenergic Attention</h3>
+    <p>
+      Two distinct noradrenergic pathways implement different attentional control
+      mechanisms in rodents. Selective lesions reveal a functional dissociation
+      not apparent from anatomy alone.
+    </p>
+    <a href="cv.html">&rarr; Publication</a>
+  </div>
+
+  <div class="research-card stub">
+    <span class="output-tag">In development</span>
+    <h3>Epitranscriptomics</h3>
+    <p>
+      Direct RNA nanopore sequencing pipeline for m6A and pseudouridine mapping
+      in <em>Drosophila</em> serotonergic neurons. Does hunger change the RNA
+      modification landscape?
+    </p>
+  </div>
+
+  <div class="research-card">
+    <span class="output-tag">Nature Neuroscience 2016 &mdash; 550 citations</span>
+    <h3>Basolateral Amygdala Valence Circuits</h3>
+    <p>
+      Antagonistic negative and positive neurons of the basolateral amygdala
+      encode opposing valence signals. Selective activation and silencing
+      reveal a functional opponent architecture for fear and reward.
+    </p>
+    <a href="cv.html">&rarr; Publication</a>
+  </div>
+
+  <div class="research-card">
+    <span class="output-tag">bioRxiv 2026</span>
+    <h3>Octopamine, Dopamine, and the Hungry Fly Circuit</h3>
+    <p>
+      A mushroom-body output neuron (MBON11) integrates octopaminergic and dopaminergic
+      signals to control hunger-motivated feeding in <em>Drosophila</em>.
+      Octopaminergic VPM3/4 neurons are instructive but not required for hunger-driven
+      feeding; dopaminergic PPL101 neurons are required but not instructive.
+      MBON11 sits at the convergence point.
+    </p>
+    <a href="https://doi.org/10.64898/2026.03.13.711740">&rarr; bioRxiv</a>
+  </div>
+
+</div>
+```

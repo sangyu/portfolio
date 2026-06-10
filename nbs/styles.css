@@ -192,6 +192,12 @@ em { color: var(--dark-ink); }
   color: var(--ink-blue);
 }
 
+.badge-icon {
+  height: 1em;
+  width: auto;
+  display: block;
+}
+
 /* Drosophila decorations */
 .fly-deco {
   position: absolute;
@@ -276,6 +282,12 @@ em { color: var(--dark-ink); }
 
 .card-icon {
   font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+.card-icon-svg {
+  height: 4rem;
+  width: auto;
   display: block;
   margin-bottom: 0.9rem;
 }
@@ -566,6 +578,17 @@ em { color: var(--dark-ink); }
   margin-bottom: 1.2rem;
   letter-spacing: 0.02em;
 }
+.cv-external-link {
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--coral);
+  text-decoration: none;
+  margin-left: 0.75rem;
+  vertical-align: middle;
+}
+.cv-external-link:hover { text-decoration: underline; }
 
 .cv-pub {
   margin-bottom: 1.1rem;
@@ -668,6 +691,38 @@ em { color: var(--dark-ink); }
   font-size: 0.95rem;
   margin: 0;
   line-height: 1.6;
+}
+
+.coming-soon-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+.coming-soon-inner {
+  max-width: 480px;
+  padding: 2rem;
+}
+.coming-soon-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+.coming-soon-inner h1 {
+  font-size: 2rem;
+  color: var(--ink-blue);
+  margin-bottom: 0.7rem;
+}
+.coming-soon-sub {
+  font-size: 1.05rem;
+  color: var(--warm-grey);
+  margin-bottom: 1.5rem;
+}
+.coming-soon-note {
+  font-style: italic;
+  color: var(--ochre);
+  font-size: 0.95rem;
 }
 
 .coming-soon-tag {

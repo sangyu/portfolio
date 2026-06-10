@@ -1,0 +1,15 @@
+---
+title: "Four Agents, No Ground Truth"
+page-layout: full
+---
+
+```{=html}
+<div class="coming-soon-page">
+  <div class="coming-soon-inner">
+    <span class="coming-soon-icon">🤖</span>
+    <h1>Four Agents, No Ground Truth</h1>
+    <p class="coming-soon-sub">Adversarial multi-agent LLM manuscript evaluation pipeline.</p>
+    <p class="coming-soon-note">Notebook coming soon.</p>
+  </div>
+</div>
+```

@@ -1,11 +1,36 @@
 [build-system]
-requires = ["setuptools>=64.0"]
+requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name="portfolio"
-requires-python=">=3.9"
-dynamic = [ "keywords", "description", "version", "dependencies", "optional-dependencies", "readme", "license", "authors", "classifiers", "entry-points", "scripts", "urls"]
+name = "portfolio"
+dynamic = ["version"]
+description = "A Portfolio of Sangyu Xu's Visual Work"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+authors = [{name = "Sangyu Xu", email = "xusangyu@gmail.com"}]
+keywords = ['nbdev', 'jupyter', 'notebook', 'python']
+classifiers = ["Natural Language :: English", "Intended Audience :: Developers", "Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
+dependencies = [
+    "dabest>=2024.03.29",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "pandas>=1.5",
+    "scipy>=1.10",
+]
 
-[tool.uv]
-cache-keys = [{ file = "pyproject.toml" }, { file = "settings.ini" }, { file = "setup.py" }]
+[project.urls]
+Repository = "https://github.com/sangyu/portfolio"
+Documentation = "https://sangyu.github.io/portfolio"
+
+[project.entry-points.nbdev]
+portfolio = "portfolio._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "portfolio.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["portfolio"]
+
+[tool.nbdev]

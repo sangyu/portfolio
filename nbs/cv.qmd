@@ -10,33 +10,39 @@ page-layout: full
 
 <div class="cv-wrapper">
 
-  <div class="cv-profile">
-    AI evaluation and measurement scientist with 15+ years building rigorous frameworks
-    to define and quantify &ldquo;good&rdquo; in complex, high-dimensional systems.
-    Co-lead of DABEST 2.0 (<em>Nature Methods</em>, in revision). Builder of agentic LLM
-    evaluation pipelines and high-dimensional behavioural benchmarking tools.
-    PhD from MIT (Tonegawa Lab, Nobel laureate supervisor).
-  </div>
-
-
   <!-- PUBLICATIONS -->
-  <h2 class="cv-section-title">Selected Publications</h2>
+  <h2 class="cv-section-title">Selected Publications <a href="https://scholar.google.com/citations?hl=en&user=18wi0WoAAAAJ" class="cv-external-link" target="_blank">Google Scholar &nearr;</a></h2>
 
   <div class="cv-pub">
-    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. Getting over ANOVA: Estimation
-    graphics for multi-group comparisons. <em>Nature Methods</em> (co-corresponding,
-    in revision). bioRxiv 2026.
+    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. Getting over ANOVA: Estimation graphics for multi-group comparisons. (co-corresponding, in revision). bioRxiv 2026.
   </div>
 
   <div class="cv-pub">
     <strong>Xu S</strong> et al. Contextualized ethomics reveals a <em>Drosophila</em>
-    serotonergic circuit controlling satiety. <em>Science Advances</em> (in revision).
+    serotonergic circuit controlling satiety. (in revision).
   </div>
 
   <div class="cv-pub">
-    <strong>Xu S†</strong>, Karigo T, Tonegawa S†. Dorsal raphe serotonergic neurons
+    <strong>Xu S†</strong>, Das G, Hueske E, Tonegawa S†. Dorsal raphe serotonergic neurons
     control intertemporal choice under trade-off. <em>Current Biology</em> 2017;
     27(22):3440–3451. (Co-corresponding; 48 citations.)
+  </div>
+
+  <div class="cv-pub">
+    Zhang X, <strong>Xu S</strong>, Ho J, Stewart JC, Claridge-Chang A. A mushroom-body
+    output neuron that mediates octopamine-driven and hunger-motivated feeding in
+    <em>Drosophila</em>. bioRxiv 2026.
+  </div>
+
+  <div class="cv-pub">
+    Ott S, <strong>Xu S</strong>, Lee N, Hong I, Anns J, et al. Kalium channelrhodopsins
+    effectively inhibit neurons. <em>Nature Communications</em> 2024; 15:3480.
+  </div>
+
+  <div class="cv-pub">
+    <strong>Xu S</strong>, Zhang X, Cheung KY, Mai Y, Wu Y, Claridge-Chang A.
+    Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging.
+    bioRxiv 2026.
   </div>
 
   <div class="cv-pub">
@@ -54,15 +60,19 @@ page-layout: full
 
   <!-- EXPERIENCE -->
   <h2 class="cv-section-title">Experience</h2>
-
+  <div class="cv-entry">
+    <span class="cv-entry-main">Senior Research Fellow &mdash; Duke-NUS Medical School Singapore</span>
+    <span class="cv-entry-date">2017–present</span>
+  </div>
+  <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
+    Computational ethomics for internal state detection. Epitranscriptomics of native RNA states.
+  </p>
   <div class="cv-entry">
     <span class="cv-entry-main">Senior Research Fellow / Research Fellow &mdash; IMCB, A*STAR Singapore</span>
     <span class="cv-entry-date">2017–present</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Led the computational side of the Claridge-Chang Lab&rsquo;s ethomics programme.
-    Built the DESTRA benchmarking framework, the LLM manuscript evaluation pipeline,
-    and the nanopore epitranscriptomics analysis stack.
+    Automatic behavior tracking. Estimation statistics. Computational ethomics. Epitranscriptomics of native RNA states.
   </p>
 
   <div class="cv-entry">
@@ -70,8 +80,7 @@ page-layout: full
     <span class="cv-entry-date">2016–2017</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Characterised serotonergic control of intertemporal choice in <em>Drosophila</em>
-    (<em>Current Biology</em> 2017). First postdoc in lab to work on an invertebrate system.
+    Characterised serotonergic control of intertemporal choice in mice (<em>Current Biology</em> 2017).
   </p>
 
 
@@ -83,8 +92,8 @@ page-layout: full
     <span class="cv-entry-date">2016</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Supervisor: Susumu Tonegawa (Nobel Prize in Physiology or Medicine, 1987).
-    Dissertation: memory engram cells and the circuits of fear.
+    Supervisor: Susumu Tonegawa.
+    Dissertation: <a href="https://dspace.mit.edu/entities/publication/c9824c48-d937-47ff-a7d2-937ef1828507">Control of intertemporal choice by dorsal raphe serotonergic neurons</a>.
   </p>
 
   <div class="cv-entry">
@@ -92,7 +101,7 @@ page-layout: full
     <span class="cv-entry-date">2007</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Supervisor: Charles Zuker. Undergraduate research in taste transduction.
+    Supervisor: Charles Zuker. Undergraduate Dissertation: A Novel Trans-Synaptic Neuronal Tracing Strategy.
   </p>
 
 
@@ -146,7 +155,6 @@ page-layout: full
 
   <div class="award-item">Painter — 22nd UOB Painting of the Year Exhibition, Singapore, 2003</div>
   <div class="award-item">Ceramicist — The Art of the Cup, Cambridge, MA, USA, 2014</div>
-  <div class="award-item">Classical soprano — performed in Singapore and internationally</div>
 
 </div>
 ```

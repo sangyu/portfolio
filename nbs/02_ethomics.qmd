@@ -1,0 +1,15 @@
+---
+title: "What Is a Hungry Fly?"
+page-layout: full
+---
+
+```{=html}
+<div class="coming-soon-page">
+  <div class="coming-soon-inner">
+    <span class="coming-soon-icon">🪰</span>
+    <h1>What Is a Hungry Fly?</h1>
+    <p class="coming-soon-sub">Contextualized ethomics and the DESTRA benchmarking framework.</p>
+    <p class="coming-soon-note">Interactive demo coming soon &mdash; paper in revision.</p>
+  </div>
+</div>
+```
