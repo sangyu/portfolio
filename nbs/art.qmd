@@ -113,16 +113,16 @@ page-layout: full
       <div class="gallery-caption">Spiral plate.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/marbled-bowl-interior.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/marbled-bowl-interior.jpg" alt="Nerikomi bowl viewed from directly above — black and white marbled clay spirals inward to a vortex" loading="lazy">
+      <a href="images/ceramics/bottle.JPG" target="_blank" class="gallery-link">
+      <img src="images/ceramics/bottle.JPG" alt="Bottle" loading="lazy">
       </a>
-      <div class="gallery-caption">Marbled bowl.</div>
+      <div class="gallery-caption">Bottle.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/sea-urchin-vessel.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/sea-urchin-vessel.jpg" alt="Small spherical vessel with barnacle-like textured surface, cobalt blue glaze pooling in the crevices" loading="lazy">
+      <a href="images/ceramics/squirrel.JPG" target="_blank" class="gallery-link">
+      <img src="images/ceramics/squirrel.JPG" alt="Squirrel" loading="lazy">
       </a>
-      <div class="gallery-caption">Vessel.</div>
+      <div class="gallery-caption">Squirrel.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/teal-nerikomi-yunomi.jpg" target="_blank" class="gallery-link">
@@ -167,16 +167,16 @@ page-layout: full
       <div class="gallery-caption">Distorted cup.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/bottle.JPG" target="_blank" class="gallery-link">
-      <img src="images/ceramics/bottle.JPG" alt="Bottle" loading="lazy">
+      <a href="images/ceramics/sea-urchin-vessel.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/sea-urchin-vessel.jpg" alt="Small spherical vessel with barnacle-like textured surface, cobalt blue glaze pooling in the crevices" loading="lazy">
       </a>
-      <div class="gallery-caption">Bottle.</div>
+      <div class="gallery-caption">Vessel.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/squirrel.JPG" target="_blank" class="gallery-link">
-      <img src="images/ceramics/squirrel.JPG" alt="Squirrel" loading="lazy">
+      <a href="images/ceramics/marbled-bowl-interior.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/marbled-bowl-interior.jpg" alt="Nerikomi bowl viewed from directly above — black and white marbled clay spirals inward to a vortex" loading="lazy">
       </a>
-      <div class="gallery-caption">Squirrel.</div>
+      <div class="gallery-caption">Marbled bowl.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/string-cup.jpg" target="_blank" class="gallery-link">
