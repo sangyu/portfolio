@@ -72,6 +72,12 @@ page-layout: full
       </a>
       <div class="gallery-caption">Ta Prohm, Angkor. Coloured pencil, 2018.</div>
     </div>
+    <div class="gallery-item">
+      <a href="images/paintings/still life.jpg" target="_blank" class="gallery-link">
+      <img src="images/paintings/still life.jpg" alt="Still life" loading="lazy">
+      </a>
+      <div class="gallery-caption">Still life.</div>
+    </div>
   </div>
 </div>
 
@@ -129,6 +135,60 @@ page-layout: full
       <img src="images/ceramics/blue-stripe-mug.jpg" alt="Round belly mug with combed blue and white slip — feathered horizontal stripes in ink-blue and cream" loading="lazy">
       </a>
       <div class="gallery-caption">Cup.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/fish.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/fish.jpg" alt="Fish" loading="lazy">
+      </a>
+      <div class="gallery-caption">Fish.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/wavecup.JPG" target="_blank" class="gallery-link">
+      <img src="images/ceramics/wavecup.JPG" alt="Wave cup" loading="lazy">
+      </a>
+      <div class="gallery-caption">Wave cup.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/lamp.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/lamp.jpg" alt="Lamp" loading="lazy">
+      </a>
+      <div class="gallery-caption">Lamp.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/cup.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/cup.jpg" alt="Cup" loading="lazy">
+      </a>
+      <div class="gallery-caption">Cup.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/distorted-cup.JPG" target="_blank" class="gallery-link">
+      <img src="images/ceramics/distorted-cup.JPG" alt="Distorted cup" loading="lazy">
+      </a>
+      <div class="gallery-caption">Distorted cup.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/bottle.JPG" target="_blank" class="gallery-link">
+      <img src="images/ceramics/bottle.JPG" alt="Bottle" loading="lazy">
+      </a>
+      <div class="gallery-caption">Bottle.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/squirrel.JPG" target="_blank" class="gallery-link">
+      <img src="images/ceramics/squirrel.JPG" alt="Squirrel" loading="lazy">
+      </a>
+      <div class="gallery-caption">Squirrel.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/string-cup.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/string-cup.jpg" alt="String cup" loading="lazy">
+      </a>
+      <div class="gallery-caption">String cup.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/pattern-cup.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/pattern-cup.jpg" alt="Pattern cup" loading="lazy">
+      </a>
+      <div class="gallery-caption">Pattern cup.</div>
     </div>
   </div>
 </div>
