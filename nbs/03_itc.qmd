@@ -8,8 +8,11 @@ page-layout: full
   <div class="coming-soon-inner">
     <span class="coming-soon-icon">⏳</span>
     <h1>Intertemporal Choice</h1>
-    <p class="coming-soon-sub">Serotonin and delay discounting in <em>Drosophila</em>.</p>
+    <p class="coming-soon-sub">Serotonin and delay discounting in mice.</p>
     <p class="coming-soon-note">Page coming soon &mdash; <em>Current Biology</em> 2017.</p>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/" target="_blank" class="pub-fig-link">
+      <img src="images/pubs/xu2017fig1.jpg" class="pub-fig" alt="Xu et al. 2017 Figure 1 — Current Biology">
+    </a>
   </div>
 </div>
 ```

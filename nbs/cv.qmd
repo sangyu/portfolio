@@ -145,16 +145,78 @@ page-layout: full
   <h2 class="cv-section-title">Recognition</h2>
 
   <div class="award-item">Outstanding Short Talk Award — Neuroscience Singapore 2025</div>
-  <div class="award-item">Walle Nauta Award for Excellence in Graduate Teaching — MIT, 2011</div>
   <div class="award-item">Gold Medal — 17th International Festival of Advent and Christmas Music, Prague, 2007</div>
   <div class="award-item">Honourable Mention — Singapore Physics Olympiad, 2002</div>
+
+
+  <!-- TEACHING -->
+  <h2 class="cv-section-title">Teaching</h2>
+
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">GMS6812 Modern Data Analysis for Biomedical Research (Teaching Assistant)</span>
+    <span class="cv-entry-date">Duke-NUS, Feb 2023</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">Evidence Session: Modern Data Analysis for Biomedical Research (Teaching Assistant)</span>
+    <span class="cv-entry-date">Duke-NUS, Oct 2022</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">YSC4229 Molecular Neuroscience &ndash; Genes, Brains, and Behaviour (Guest Lecturer)</span>
+    <span class="cv-entry-date">Yale-NUS, March 2023</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">GMS6812 Modern Data Analysis for Biomedical Research (Teaching Assistant)</span>
+    <span class="cv-entry-date">Duke-NUS, Feb 2022</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">Evidence Session: Modern Data Analysis for Biomedical Research (Teaching Assistant)</span>
+    <span class="cv-entry-date">Duke-NUS, Oct 2021</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">YSC4229 Molecular Neuroscience &ndash; Genes, Brains, and Behaviour (Guest Lecturer)</span>
+    <span class="cv-entry-date">Yale-NUS, March 2021</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">9.013 Molecular and Cellular Neuroscience II (Graduate)</span>
+    <span class="cv-entry-date">MIT, Spring 2011</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">9.301 Neural Plasticity in Learning and Memory (Graduate)</span>
+    <span class="cv-entry-date">MIT, Spring 2010</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main">9.150 Biochemistry and Pharmacology of Synaptic Transmission (Undergraduate)</span>
+    <span class="cv-entry-date">MIT, Fall 2009</span>
+  </div>
+  <div class="award-item" style="margin-top:0.8rem;">Walle Nauta Award for Excellence in Graduate Teaching &mdash; MIT, 2011</div>
+
+
+  <!-- SERVICE -->
+  <h2 class="cv-section-title">Service</h2>
+
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main"><a href="https://sfn.sg" target="_blank">Society for Neuroscience, Singapore Chapter</a> (Treasurer)</span>
+    <span class="cv-entry-date">Singapore, 2021&ndash;2024</span>
+  </div>
+  <div class="cv-teaching-item">
+    <span class="cv-entry-main"><a href="https://sfn.sg" target="_blank">Society for Neuroscience, Singapore Chapter</a> (Director of Membership)</span>
+    <span class="cv-entry-date">Singapore, 2018&ndash;2020</span>
+  </div>
+
+
+  <!-- MEDIA -->
+  <h2 class="cv-section-title">Media Coverage</h2>
+
+  <div class="cv-media-item">Duke-NUS researchers develop light-controlled &lsquo;switch&rsquo; for brain cells to better study the brain. <em>The Straits Times</em> (July 15, 2024).</div>
+  <div class="cv-media-item">Two Distinct Ways the Brain Stays Focused and Curbs Impulses. <em>Psychology Today</em> (November 6, 2020).</div>
+  <div class="cv-media-item">A delicate balance between positive and negative emotion. <em>MIT Press</em> (October 17, 2016).</div>
 
 
   <!-- ARTS -->
   <h2 class="cv-section-title">Arts</h2>
 
-  <div class="award-item">Painter — 22nd UOB Painting of the Year Exhibition, Singapore, 2003</div>
-  <div class="award-item">Ceramicist — The Art of the Cup, Cambridge, MA, USA, 2014</div>
+  <div class="award-item">Painter &mdash; 22nd UOB Painting of the Year Exhibition, Singapore, 2003</div>
+  <div class="award-item">Ceramicist &mdash; The Art of the Cup, Cambridge, MA, USA, 2014</div>
 
 </div>
 ```
