@@ -233,6 +233,47 @@ em { color: var(--dark-ink); }
   color: var(--dark-ink);
 }
 
+/* === News section === */
+.news-section {
+  max-width: 740px;
+  margin: 2.5rem auto 0.5rem;
+  padding: 0 1.5rem;
+}
+
+.news-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  margin-bottom: 0.9rem;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  font-size: 1rem;
+  line-height: 1.65;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(200, 169, 110, 0.2);
+  color: var(--dark-ink);
+}
+
+.news-list li:last-child { border-bottom: none; }
+
+.news-date {
+  display: inline-block;
+  min-width: 5.5rem;
+  font-size: 0.82rem;
+  color: var(--warm-grey);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.5rem;
+}
+
 /* === Section divider === */
 
 .section-divider {
