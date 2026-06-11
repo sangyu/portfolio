@@ -1,5 +1,7 @@
 _docs/
 _proc/
+portfolio/
+nbs/blog/potential ideas
 
 *.bak
 .gitattributes
