@@ -4,9 +4,6 @@
 
 **Site:** [sangyu.github.io/portfolio](https://sangyu.github.io/portfolio)
 
-I build frameworks to measure things that are hard to measure — from fruit fly hunger states to AI system quality.
-
----
 
 ## What's here
 
@@ -18,9 +15,3 @@ I build frameworks to measure things that are hard to measure — from fruit fly
 | [03_itc.qmd](nbs/03_itc.qmd) | Intertemporal choice — serotonin and delay discounting |
 
 ## About
-
-- **DABEST 2.0** — bootstrap effect size estimation replacing p-values (*Nature Methods*, in revision; predecessor: 2,000+ citations)
-- **DESTRA** — multidimensional behavioural state benchmarking in *Drosophila* (*Science Advances*, in revision)
-- **LLM Eval Pipeline** — adversarial multi-agent manuscript evaluation (DSPy + LangGraph)
-- PhD from MIT (Tonegawa Lab, Nobel laureate supervisor)
-- Based in Singapore, relocating to Boston Sep 2026
