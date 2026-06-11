@@ -62,14 +62,14 @@ page-layout: full
   <h2 class="cv-section-title">Experience</h2>
   <div class="cv-entry">
     <span class="cv-entry-main">Senior Research Fellow &mdash; Duke-NUS Medical School Singapore</span>
-    <span class="cv-entry-date">2017–present</span>
+    <span class="cv-entry-date">2026–present</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
     Computational ethomics for internal state detection. Epitranscriptomics of native RNA states.
   </p>
   <div class="cv-entry">
     <span class="cv-entry-main">Senior Research Fellow / Research Fellow &mdash; IMCB, A*STAR Singapore</span>
-    <span class="cv-entry-date">2017–present</span>
+    <span class="cv-entry-date">2017–2026</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
     Automatic behavior tracking. Estimation statistics. Computational ethomics. Epitranscriptomics of native RNA states.
