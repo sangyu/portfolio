@@ -1,0 +1,36 @@
+---
+title: "DABEST"
+page-layout: article
+---
+
+# Getting over ANOVA
+
+*See the effect, not just the P value.*
+
+Modern biology produces complex experiments: many groups, repeated measurements, genetic backgrounds, treatments, time points, binary outcomes, and internal replicates. But much of experimental science still reduces those experiments to the same question: *is it significant?*
+
+This paper is about getting past that bottleneck.
+
+For decades, scientists have relied on null-hypothesis significance testing — the familiar world of P values, stars, "significant" and "not significant." The problem is not that these tests are useless. The problem is that they often answer a question that is too blunt. A P value can tell you whether data are surprising under a null model, but it does not directly tell you the thing most scientists actually care about: how large the effect is, how precise the estimate is, and whether that effect is biologically meaningful.
+
+This problem becomes worse in multi-group experiments. ANOVA asks an omnibus question: are all the group means the same? If the answer is "probably not," the researcher is pushed into a second stage of post-hoc comparisons. A six-group experiment can become fifteen pairwise tests. The original biological question gets buried under a table of P values.
+
+DABEST 2.0 was built to make the analysis match the question.
+
+Instead of beginning with "which groups are significant?", estimation statistics begins with "what effect do I want to estimate?" DABEST plots the raw data, the effect size, and the uncertainty around that effect together. This makes the analysis more transparent: readers can see the data, the magnitude of the difference, and the confidence interval around the estimate, rather than only seeing stars above bars.
+
+In this paper, we expanded DABEST from simpler estimation plots into a broader framework for common experimental designs. For repeated-measures experiments, DABEST 2.0 shows how effects evolve over time, comparing each relevant time point against baseline while keeping individual trajectories visible. For two-factor experiments, we introduced delta-delta analysis: an intuitive "difference of differences" approach that asks how much one factor changes the effect of another. This lets researchers quantify the specific effect they care about, rather than stopping at a vague interaction term.
+
+We also extended estimation graphics to binary and proportional data. Many biological outcomes are yes/no: seizure or no seizure, survival or death, response or non-response. These are often shown as simple bar charts or tested with Fisher's exact or chi-squared tests, with little visual sense of uncertainty or effect size. DABEST 2.0 adds proportion plots and Sankey-style repeated-measures graphics so that categorical outcomes can be treated with the same estimation-first logic.
+
+Another major addition is "mini-meta" analysis for internal replicates. In practice, researchers often repeat experiments several times. Sometimes the replicates agree; sometimes one replicate is weaker, noisier, or even points the other way. The worst response is to hide the inconvenient replicate. Another common response is to pool everything into one large analysis, losing the history of the experiment. Mini-meta provides a middle path: show each replicate, show each effect size, and then estimate the weighted overall effect. It encourages transparency without pretending that every experiment was identical.
+
+For me, this project is part of a broader philosophy of measurement: analysis should make the scientific claim clearer, not obscure it. A good statistical graphic should help the reader understand the comparison, the magnitude, the uncertainty, and the biological interpretation at the same time.
+
+DABEST 2.0 is available in [Python](https://github.com/ACCLAB/DABEST-python), [R](https://github.com/ACCLAB/dabestr), and as a [web app](https://www.estimationstats.com), so researchers can use estimation statistics whether they code or not. The larger goal is not just to provide another plotting package. It is to make better statistical reasoning easier to practice: fewer star charts, fewer sprawling post-hoc tables, and more direct visual answers to the questions experiments were designed to ask.
+
+DABEST-Python is a literate programming project developed using [nbdev](https://nbdev.fast.ai/); for detailed usage and examples, see the [Tutorials](https://acclab.github.io/DABEST-python/).
+
+---
+
+*Preprint on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2) — currently in revision.*

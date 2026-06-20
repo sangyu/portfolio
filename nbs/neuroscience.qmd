@@ -20,22 +20,23 @@ page-layout: full
       hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
       produce genuine hunger, or just a superficially similar signature?
     </p>
-    <a href="02_ethomics.html">&rarr; Interactive demo</a>
+    <a href="02_ethomics.html">&rarr; Read more</a>
+    <span style="color: var(--bs-secondary); font-size: 0.85em;">Interactive demo coming soon.</span>
   </div>
 
   <div class="research-card">
-    <span class="output-tag">Current Biology 2017 &mdash; 48 citations</span>
+    <span class="output-tag">Current Biology 2017</span>
     <h3>Intertemporal Choice</h3>
     <p>
       Dorsal raphe serotonergic neurons bidirectionally control delay discounting
       in <em>Drosophila</em>. Activation increases patience; silencing increases
       impulsivity. Effect is trade-off specific &mdash; not a motor or motivational confound.
     </p>
-    <a href="03_itc.html">&rarr; Project page</a>
+    <a href="03_itc.html">&rarr; Read more</a>
   </div>
 
   <div class="research-card">
-    <span class="output-tag">PNAS 2020 &mdash; 119 citations</span>
+    <span class="output-tag">PNAS 2020</span>
     <h3>Noradrenergic Attention</h3>
     <p>
       Two distinct noradrenergic pathways implement different attentional control
@@ -56,7 +57,7 @@ page-layout: full
   </div>
 
   <div class="research-card">
-    <span class="output-tag">Nature Neuroscience 2016 &mdash; 550 citations</span>
+    <span class="output-tag">Nature Neuroscience 2016</span>
     <h3>Basolateral Amygdala Valence Circuits</h3>
     <p>
       Antagonistic negative and positive neurons of the basolateral amygdala

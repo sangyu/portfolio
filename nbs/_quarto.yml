@@ -32,6 +32,10 @@ website:
         text: Genetic Tools
       - href: 04_llm_evals.qmd
         text: LLM Evals
+      - text: Demos
+        menu:
+          - text: DABEST 2.0
+            href: 01_dabest.ipynb
       - href: blog/index.qmd
         text: Writing
       - href: art.qmd
