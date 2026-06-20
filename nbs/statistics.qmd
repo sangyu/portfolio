@@ -20,19 +20,20 @@ page-layout: full
       confidence intervals, and the full sampling distribution of your effect.
       The delta-delta plot handles 2&times;2 factorial designs and beyond.
     </p>
-    <a href="01_dabest.html">&rarr; Interactive demo</a>
+    <a href="dabest.html">&rarr; Read more</a> &ensp; <a href="01_dabest.html">Interactive demo &nearr;</a>
   </div>
 
   <div class="research-card">
     <span class="output-tag">in revision</span>
     <h3>DESTRA</h3>
     <p>
-      Dimensionality-reduced ESTimation of Reference-Anchored behavioural state.
+      <b>D</b>elta <b>e</b>thomic <b>s</b>tate-<b>t</b>ransition <b>r</b>ecapitulation <b>a</b>ssessment.
       Bootstrap effect size profiles across all measured metrics, anchored to a
       ground-truth reference condition. Asks not whether individual metrics differ,
       but whether the full profile matches the target state.
     </p>
-    <a href="02_ethomics.html">&rarr; Interactive demo</a>
+    <a href="02_ethomics.html">&rarr; Read more</a>
+    <span style="color: var(--bs-secondary); font-size: 0.85em;">Interactive demo coming soon.</span>
   </div>
 
 </div>
