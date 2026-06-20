@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sangyu.github.io/portfolio/index.html</loc>
-    <lastmod>2026-06-12T16:15:52.080Z</lastmod>
+    <loc>https://xusangyu.com/index.html</loc>
+    <lastmod>2026-06-20T16:17:51.298Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/statistics.html</loc>
-    <lastmod>2026-06-12T16:15:52.080Z</lastmod>
+    <loc>https://xusangyu.com/statistics.html</loc>
+    <lastmod>2026-06-20T16:17:51.298Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/neuroscience.html</loc>
-    <lastmod>2026-06-12T16:15:52.080Z</lastmod>
+    <loc>https://xusangyu.com/neuroscience.html</loc>
+    <lastmod>2026-06-20T16:17:51.298Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/cv.html</loc>
-    <lastmod>2026-06-12T16:15:51.932Z</lastmod>
+    <loc>https://xusangyu.com/dabest.html</loc>
+    <lastmod>2026-06-20T16:17:51.152Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/art.html</loc>
-    <lastmod>2026-06-12T16:15:51.932Z</lastmod>
+    <loc>https://xusangyu.com/blog/index.html</loc>
+    <lastmod>2026-06-20T16:17:51.152Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/03_itc.html</loc>
-    <lastmod>2026-06-12T16:15:51.928Z</lastmod>
+    <loc>https://xusangyu.com/04_llm_evals.html</loc>
+    <lastmod>2026-06-20T16:17:51.147Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/02_ethomics.html</loc>
-    <lastmod>2026-06-12T16:15:51.928Z</lastmod>
+    <loc>https://xusangyu.com/02_ethomics.html</loc>
+    <lastmod>2026-06-20T16:17:51.147Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/04_llm_evals.html</loc>
-    <lastmod>2026-06-12T16:15:51.928Z</lastmod>
+    <loc>https://xusangyu.com/03_itc.html</loc>
+    <lastmod>2026-06-20T16:17:51.147Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/blog/index.html</loc>
-    <lastmod>2026-06-12T16:15:51.932Z</lastmod>
+    <loc>https://xusangyu.com/art.html</loc>
+    <lastmod>2026-06-20T16:17:51.152Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/genetic-tools.html</loc>
-    <lastmod>2026-06-12T16:15:51.932Z</lastmod>
+    <loc>https://xusangyu.com/cv.html</loc>
+    <lastmod>2026-06-20T16:17:51.152Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/research.html</loc>
-    <lastmod>2026-06-12T16:15:52.080Z</lastmod>
+    <loc>https://xusangyu.com/genetic-tools.html</loc>
+    <lastmod>2026-06-20T16:17:51.152Z</lastmod>
   </url>
   <url>
-    <loc>https://sangyu.github.io/portfolio/01_dabest.html</loc>
-    <lastmod>2026-06-12T16:15:51.925Z</lastmod>
+    <loc>https://xusangyu.com/research.html</loc>
+    <lastmod>2026-06-20T16:17:51.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/01_dabest.html</loc>
+    <lastmod>2026-06-20T16:17:51.146Z</lastmod>
   </url>
 </urlset>

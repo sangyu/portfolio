@@ -77,16 +77,18 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Intertemporal Choice – Sangyu Xu 徐桑榆">
-<meta property="og:image" content="https://sangyu.github.io/portfolio/images/pubs/xu2017fig1.jpg">
+<meta property="og:description" content="Computational Behaviour Scientist">
+<meta property="og:image" content="https://xusangyu.com/images/pubs/xu2017fig1.jpg">
 <meta property="og:site_name" content="Sangyu Xu 徐桑榆">
 <meta property="og:image:alt" content="Xu et al. 2017 Figure 1 — Current Biology">
 <meta name="twitter:title" content="Intertemporal Choice – Sangyu Xu 徐桑榆">
-<meta name="twitter:image" content="https://sangyu.github.io/portfolio/images/pubs/xu2017fig1.jpg">
+<meta name="twitter:description" content="Computational Behaviour Scientist">
+<meta name="twitter:image" content="https://xusangyu.com/images/pubs/xu2017fig1.jpg">
 <meta name="twitter:image:alt" content="Xu et al. 2017 Figure 1 — Current Biology">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -123,6 +125,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./04_llm_evals.html"> 
 <span class="menu-text">LLM Evals</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Demos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
+        <li>
+    <a class="dropdown-item" href="./01_dabest.html">
+ <span class="dropdown-text">DABEST 2.0</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./blog/index.html"> 
 <span class="menu-text">Writing</span></a>
@@ -154,12 +167,12 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -168,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     
   
@@ -180,19 +193,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="coming-soon-page">
-  <div class="coming-soon-inner">
-    <span class="coming-soon-icon">⏳</span>
-    <h1>Intertemporal Choice</h1>
-    <p class="coming-soon-sub">Serotonin and delay discounting in mice.</p>
-    <p class="coming-soon-note">Page coming soon — <em>Current Biology</em> 2017.</p>
-    <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/" target="_blank" class="pub-fig-link">
-      <img src="images/pubs/xu2017fig1.jpg" class="pub-fig" alt="Xu et al. 2017 Figure 1 — Current Biology">
-    </a>
-  </div>
-</div>
+<section id="serotonin-and-patience-at-the-moment-of-choice" class="level1">
+<h1>Serotonin and patience at the moment of choice</h1>
+<p><em>Serotonin at the moment of choice.</em></p>
+<p>I built a mouse decision-making task to ask when serotonin changes a choice: before waiting begins, at the moment an animal decides whether a larger future reward is worth the delay.</p>
+<p>Would you rather have one reward now, or a better reward later? That everyday dilemma is called <strong>intertemporal choice</strong>. It is central to patience, impulsivity, addiction, self-control, and the way brains compare the pull of the present against the value of the future.</p>
+<p>Serotonin had long been linked to patience. Older lesion and pharmacology studies suggested that disrupting serotonin made animals choose more impulsively, and newer recordings showed that dorsal raphe serotonin neurons responded to reward-predicting cues. But a precise causal question was still open: does serotonin change the decision itself, at the moment of choice, or does it act later by changing movement, waiting, thirst, or reward consumption?</p>
+<p>To answer that, I needed a task with a clean decision point. Cued intertemporal-choice tasks with this structure were well established in humans and primates, but not in genetically tractable rodents where one can manipulate identified neurons in real time. I developed a <strong>novel odor-guided intertemporal choice task for mice</strong>. On each trial, a mouse sampled an odor mixture, chose left or right, and then waited for a water reward. The odors told the mouse how long each side would take; one option could be smaller and sooner, while the other could be larger but delayed.</p>
+<p>The key design was that the animal made its choice <em>before</em> the waiting period began. Reward delays were interleaved trial by trial, so the mouse could not simply follow a fixed habit. Trial duration was also controlled, so choosing the sooner reward did not let the animal earn more trials per session. This made it possible to test a specific hypothesis: whether serotonin activity at the cue-guided decision point biases the animal toward patience.</p>
+<p>Using optogenetics, I transiently inhibited or activated genetically identified dorsal raphe serotonin neurons during that decision window. The effects were bidirectional. Inhibiting these neurons made mice more likely to choose the sooner, smaller reward. Activating them made mice more willing to wait for the larger reward. These effects were not uniform across the task: they were strongest when the mouse faced a real trade-off, where neither option was obviously better.</p>
+<p>I analyzed the behavior with a generalized linear model that treated choice as a function of the two offered delays and their interaction. This was important because the serotonin effect was not just “more left” or “more right.” The model showed that serotonin changed how the animal combined delay information across the two options — in other words, it altered the computation of the trade-off itself.</p>
+<p>The circuit story pointed downstream to the nucleus accumbens, a reward-related target of dorsal raphe serotonin neurons. Manipulating serotonin projections to this region produced similar effects, suggesting one pathway by which serotonin can bias decisions toward larger delayed rewards.</p>
+<p>This work was published in <em>Current Biology</em> as <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">“Dorsal Raphe Serotonergic Neurons Control Intertemporal Choice under Trade-off.”</a> I later presented it as an invited talk at the CoSyNe 5-HT Workshop in Cascais, Portugal in 2019. For me, the project remains a template for how I like to do science: invent the behavioral assay that makes the hidden computation measurable, perturb the relevant circuit at the right moment, and use a model that captures the structure of the decision.</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/28988863/" target="_blank" class="pub-fig-link"> <img src="images/pubs/xu2017fig1.jpg" class="pub-fig" alt="Xu et al. 2017 Figure 1 — Current Biology"> </a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -268,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sangyu\.github\.io\/portfolio");
+        var filterRegex = new RegExp("https:\/\/xusangyu\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

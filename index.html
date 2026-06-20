@@ -77,11 +77,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="– Sangyu Xu 徐桑榆">
-<meta property="og:image" content="https://sangyu.github.io/portfolio/images/headshot.jpg">
+<meta property="og:image" content="https://xusangyu.com/images/headshot.jpg">
 <meta property="og:site_name" content="Sangyu Xu 徐桑榆">
 <meta property="og:image:alt" content="Sangyu Xu">
 <meta name="twitter:title" content="– Sangyu Xu 徐桑榆">
-<meta name="twitter:image" content="https://sangyu.github.io/portfolio/images/headshot.jpg">
+<meta name="twitter:image" content="https://xusangyu.com/images/headshot.jpg">
 <meta name="twitter:image:alt" content="Sangyu Xu">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -123,6 +123,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./04_llm_evals.html"> 
 <span class="menu-text">LLM Evals</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Demos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
+        <li>
+    <a class="dropdown-item" href="./01_dabest.html">
+ <span class="dropdown-text">DABEST 2.0</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./blog/index.html"> 
 <span class="menu-text">Writing</span></a>
@@ -182,7 +193,7 @@ Computational Behaviour Scientist
 </div>
 <div class="about-section">
 <p>
-I’m a computational behavior scientist with 15+ years building tools that define what “good” looks like in complex, ambiguous systems.
+I’m a computational behavior scientist with 15+ years building tools that model complex, ambiguous systems.
 </p>
 </div>
 <div class="news-section">
@@ -313,7 +324,7 @@ A biologist, a bioinformatician, a reviewer, and an editor — all LLMs, arguing
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sangyu\.github\.io\/portfolio");
+        var filterRegex = new RegExp("https:\/\/xusangyu\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

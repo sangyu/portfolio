@@ -119,6 +119,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./04_llm_evals.html"> 
 <span class="menu-text">LLM Evals</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Demos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
+        <li>
+    <a class="dropdown-item" href="./01_dabest.html">
+ <span class="dropdown-text">DABEST 2.0</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./blog/index.html"> 
 <span class="menu-text">Writing</span></a>
@@ -192,22 +203,23 @@ ul.task-list li input[type="checkbox"] {
       hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
       produce genuine hunger, or just a superficially similar signature?
     </p>
-    <a href="02_ethomics.html">→ Interactive demo</a>
+    <a href="02_ethomics.html">→ Read more</a>
+    <span style="color: var(--bs-secondary); font-size: 0.85em;">Interactive demo coming soon.</span>
   </div>
 
   <div class="research-card">
-    <span class="output-tag">Current Biology 2017 — 48 citations</span>
+    <span class="output-tag">Current Biology 2017</span>
     <h3 class="anchored">Intertemporal Choice</h3>
     <p>
       Dorsal raphe serotonergic neurons bidirectionally control delay discounting
       in <em>Drosophila</em>. Activation increases patience; silencing increases
       impulsivity. Effect is trade-off specific — not a motor or motivational confound.
     </p>
-    <a href="03_itc.html">→ Project page</a>
+    <a href="03_itc.html">→ Read more</a>
   </div>
 
   <div class="research-card">
-    <span class="output-tag">PNAS 2020 — 119 citations</span>
+    <span class="output-tag">PNAS 2020</span>
     <h3 class="anchored">Noradrenergic Attention</h3>
     <p>
       Two distinct noradrenergic pathways implement different attentional control
@@ -228,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 
   <div class="research-card">
-    <span class="output-tag">Nature Neuroscience 2016 — 550 citations</span>
+    <span class="output-tag">Nature Neuroscience 2016</span>
     <h3 class="anchored">Basolateral Amygdala Valence Circuits</h3>
     <p>
       Antagonistic negative and positive neurons of the basolateral amygdala
@@ -329,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sangyu\.github\.io\/portfolio");
+        var filterRegex = new RegExp("https:\/\/xusangyu\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
