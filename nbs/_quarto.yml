@@ -36,6 +36,14 @@ website:
         menu:
           - text: DABEST 2.0
             href: 01_dabest.ipynb
+          - text: Whorlmap
+            href: https://sangyu.github.io/whorlmap-paper/
+          - text: Rugprint
+            href: https://sangyu.github.io/rugprint/
+          - text: MODA
+            href: https://acclab.github.io/moda/
+          - text: ESPLoCo
+            href: https://github.com/sangyu/esploco/blob/main/nbs/Tutorials/01%20Tutorial.ipynb
       - href: blog/index.qmd
         text: Writing
       - href: art.qmd
