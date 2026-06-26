@@ -36,8 +36,6 @@ website:
         menu:
           - text: DABEST 2.0
             href: 01_dabest.ipynb
-<<<<<<< Updated upstream
-=======
           - text: Whorlmap
             href: https://sangyu.github.io/whorlmap-paper/
           - text: Rugprint
@@ -46,7 +44,6 @@ website:
             href: https://acclab.github.io/moda/
           - text: ESPLoCo
             href: https://sangyu.github.io/esploco/Tutorials/01%20Tutorial.html
->>>>>>> Stashed changes
       - href: blog/index.qmd
         text: Writing
       - href: art.qmd
