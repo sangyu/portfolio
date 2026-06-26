@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "portfolio"
-dynamic = ["version"]
+version = "0.0.1"
 description = "A Portfolio of Sangyu Xu's Visual Work"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -26,9 +26,6 @@ Documentation = "https://sangyu.github.io/portfolio"
 
 [project.entry-points.nbdev]
 portfolio = "portfolio._modidx:d"
-
-[tool.setuptools.dynamic]
-version = {attr = "portfolio.__version__"}
 
 [tool.setuptools.packages.find]
 include = ["portfolio"]
