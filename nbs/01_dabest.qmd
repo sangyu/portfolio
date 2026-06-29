@@ -1,5 +1,5 @@
 ---
-title: "DABEST"
+title: "Getting Over ANOVA"
 page-layout: article
 ---
 

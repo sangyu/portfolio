@@ -1,0 +1,14 @@
+Research
+Making hidden states visible
+My work asks how we infer hidden states from noisy, high-dimensional evidence.
+Hunger, satiety, impulsivity, attention, social influence, and model capability are not directly visible. We infer them from behavior, physiology, neural activity, molecular state, and context.
+I build experiments, models, and visual representations that make those inferences easier to compare, interpret, and trust.
+Three directions
+Internal states and neuromodulation:
+Serotonin, norepinephrine, feeding, satiety, attention, and decision-making.(link to) Neuroscience.html
+Statistical and visual tools:
+Effect sizes, uncertainty, phenovectors, estimation graphics, and high-dimensional visualization. (link to) Statistics.html
+AI-assisted scientific inference:
+LLM agents, rubric-based critique, manuscript evaluation, and reasoning without simple ground truth.(link to) Writing.html
+Current direction
+Across animals, patients, users, robots, and AI agents, the problem is often the same: infer hidden state from noisy evidence, represent it faithfully, and decide what can be trusted.

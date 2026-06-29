@@ -220,6 +220,71 @@ page-layout: full
 
 <div class="section-divider">&bull;</div>
 
+<!-- LIGHTBOX -->
+<dialog id="lightbox" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8249;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#8250;</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  const dialog   = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lightbox-img');
+  const lbCap    = document.getElementById('lightbox-caption');
+  const btnClose = document.getElementById('lightbox-close');
+  const btnPrev  = document.getElementById('lightbox-prev');
+  const btnNext  = document.getElementById('lightbox-next');
+
+  // Build index from all gallery items
+  const items = Array.from(document.querySelectorAll('.gallery-item')).map(item => ({
+    src:     item.querySelector('.gallery-link').href,
+    alt:     item.querySelector('img').alt,
+    caption: (item.querySelector('.gallery-caption') || {}).textContent || ''
+  }));
+
+  let current = 0;
+
+  function show(index) {
+    current = ((index % items.length) + items.length) % items.length;
+    lbImg.src = items[current].src;
+    lbImg.alt = items[current].alt;
+    lbCap.textContent = items[current].caption.trim();
+    dialog.showModal();
+    btnClose.focus();
+  }
+
+  function closeLightbox() {
+    dialog.close();
+    lbImg.src = '';
+  }
+
+  // Intercept gallery clicks
+  document.querySelectorAll('.gallery-link').forEach((link, i) => {
+    link.removeAttribute('target');
+    link.addEventListener('click', e => { e.preventDefault(); show(i); });
+  });
+
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', () => show(current - 1));
+  btnNext.addEventListener('click', () => show(current + 1));
+
+  // Backdrop click closes
+  dialog.addEventListener('click', e => { if (e.target === dialog) closeLightbox(); });
+
+  // Keyboard: Escape, arrows
+  dialog.addEventListener('keydown', e => {
+    if (e.key === 'Escape')      { closeLightbox(); }
+    if (e.key === 'ArrowLeft')   { e.preventDefault(); show(current - 1); }
+    if (e.key === 'ArrowRight')  { e.preventDefault(); show(current + 1); }
+  });
+})();
+</script>
+
 <!-- TUFTE NOTE -->
 <!-- <div class="art-section" style="max-width: 720px; margin-left: auto; margin-right: auto;">
   <div class="tufte-note">

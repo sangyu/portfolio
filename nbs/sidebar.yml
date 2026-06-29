@@ -3,7 +3,7 @@ website:
     contents:
       - index.ipynb
       - 00_core.ipynb
-      - 01_dabest.ipynb
+      - dabest_demo.ipynb
       - 02_ethomics.ipynb
       - 03_itc.qmd
       - 04_llm_evals.ipynb

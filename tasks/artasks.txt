@@ -1,0 +1,59 @@
+Additional art page task: replace raw-image click behavior with an in-page lightbox overlay.
+Current issue: On art.html, gallery thumbnails currently link directly to raw image files using anchors such as:
+<a href="images/paintings/sunset-trees.jpg" target="_blank" class="gallery-link">
+This opens the image file directly and takes the user away from the gallery experience. I want to keep the existing thumbnail hover animation, but clicking an artwork should open a magnified overlay/lightbox on the same page instead of navigating to the raw image.
+Please implement this in the source files, not only the generated HTML. The relevant source is likely:
+/Users/sangyuxu/Documents/GitHub/portfolio/nbs/art.qmd
+and shared styling is in:
+/Users/sangyuxu/Documents/GitHub/portfolio/styles.css
+Requirements:
+	1	Preserve the current gallery appearance and mouseover animation.
+	◦	Do not remove the thumbnail hover zoom.
+	◦	Do not disrupt the current gallery grid layout.
+	2	Change gallery click behavior.
+	◦	Clicking a thumbnail should open an overlay/lightbox.
+	◦	The overlay should show a larger version of the clicked image.
+	◦	It should show the existing caption if available.
+	◦	It should not navigate to the raw image file.
+	◦	It should not open a new tab.
+	3	Overlay behavior.
+	◦	Close when the user clicks a close button.
+	◦	Close when the user clicks outside the image/backdrop.
+	◦	Close when the user presses Escape.
+	◦	Optional but nice: allow left/right arrow keys to move between gallery images.
+	◦	Optional but nice: add previous/next controls.
+	4	Accessibility.
+	◦	Use a semantic dialog-style container if practical.
+	◦	Add aria-modal="true" and an accessible close button label.
+	◦	Preserve image alt text.
+	◦	Make keyboard closing work.
+	◦	Avoid trapping the user in a broken focus state.
+	5	Styling.
+	◦	Add lightbox CSS to styles.css.
+	◦	The overlay should match the existing warm paper / Tufte-Ghibli visual style.
+	◦	Use a translucent dark backdrop.
+	◦	The enlarged image should fit within the viewport:
+	▪	max-width: 90vw
+	▪	max-height: 80vh
+	▪	object-fit: contain
+	◦	Caption should appear beneath the image in the same visual language as .gallery-caption.
+	6	Implementation preference.
+	◦	Prefer vanilla JavaScript embedded in art.qmd or included in a small script block.
+	◦	Avoid adding a heavy external dependency.
+	◦	Use data-full, data-caption, or derive from the existing href, img alt, and .gallery-caption.
+	◦	It is fine to keep the anchor href as a fallback, but intercept clicks with JavaScript using event.preventDefault().
+	◦	Remove target="_blank" from gallery image links if possible.
+	7	Quarto build.
+	◦	After editing art.qmd and styles.css, rebuild the site.
+	◦	Confirm the generated art.html contains the overlay markup / script.
+	◦	Confirm the gallery thumbnails still render correctly.
+	8	Testing.
+	◦	Test at least:
+	▪	click thumbnail opens overlay
+	▪	close button closes overlay
+	▪	Escape closes overlay
+	▪	clicking backdrop closes overlay
+	▪	no thumbnail opens the raw image file in the same tab or new tab
+	▪	mobile viewport still works
+	▪	hover animation still works on desktop
+	◦	Report what changed and whether any issues remain.

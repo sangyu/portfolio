@@ -24,18 +24,18 @@ website:
     left:
       - href: index.ipynb
         text: Home
-      - href: statistics.qmd
-        text: Statistics
+      - href: research.qmd
+        text: Research
       - href: neuroscience.qmd
         text: Neuroscience
+      - href: statistics.qmd
+        text: Statistics
       - href: genetic-tools.qmd
         text: Genetic Tools
-      - href: 04_llm_evals.qmd
-        text: LLM Evals
       - text: Demos
         menu:
           - text: DABEST 2.0
-            href: 01_dabest.ipynb
+            href: dabest_demo.ipynb
           - text: Whorlmap
             href: https://sangyu.github.io/whorlmap-paper/
           - text: Rugprint
@@ -70,6 +70,12 @@ format:
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+        <!-- Privacy-friendly analytics by Plausible -->
+        <script async src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
+        <script>
+          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+          plausible.init()
+        </script>
 execute:
   freeze: auto
 

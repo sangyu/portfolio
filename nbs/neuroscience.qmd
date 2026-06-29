@@ -20,8 +20,7 @@ page-layout: full
       hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
       produce genuine hunger, or just a superficially similar signature?
     </p>
-    <a href="02_ethomics.html">&rarr; Read more</a>
-    <span style="color: var(--bs-secondary); font-size: 0.85em;">Interactive demo coming soon.</span>
+    <a href="02_ethomics.html">&rarr; Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub &nearr;</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub &nearr;</a>
   </div>
 
   <div class="research-card">
@@ -29,10 +28,10 @@ page-layout: full
     <h3>Intertemporal Choice</h3>
     <p>
       Dorsal raphe serotonergic neurons bidirectionally control delay discounting
-      in <em>Drosophila</em>. Activation increases patience; silencing increases
+      in mice. Activation increases patience; silencing increases
       impulsivity. Effect is trade-off specific &mdash; not a motor or motivational confound.
     </p>
-    <a href="03_itc.html">&rarr; Read more</a>
+    <a href="03_itc.html">&rarr; Read more</a> &ensp; <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">Paper &nearr;</a>
   </div>
 
   <div class="research-card">
@@ -43,7 +42,7 @@ page-layout: full
       mechanisms in rodents. Selective lesions reveal a functional dissociation
       not apparent from anatomy alone.
     </p>
-    <a href="cv.html">&rarr; Publication</a>
+    <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117">&rarr; Publication</a>
   </div>
 
   <div class="research-card stub">
@@ -64,7 +63,7 @@ page-layout: full
       encode opposing valence signals. Selective activation and silencing
       reveal a functional opponent architecture for fear and reward.
     </p>
-    <a href="cv.html">&rarr; Publication</a>
+    <a href="https://www.nature.com/articles/nn.4414">&rarr; Publication</a>
   </div>
 
   <div class="research-card">

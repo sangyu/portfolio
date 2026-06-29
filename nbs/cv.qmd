@@ -21,48 +21,48 @@ page-layout: full
   </div>
   
   <div class="cv-pub">
-    Zhang X, <strong>Xu S</strong>, Ho J, Stewart JC, Claridge-Chang A. A mushroom-body
+    Zhang X, <strong>Xu S</strong>, Ho J, Stewart JC, Claridge-Chang A. <a href="https://www.biorxiv.org/content/10.64898/2026.03.13.711740v1" target="_blank">A mushroom-body
     output neuron that mediates octopamine-driven and hunger-motivated feeding in
-    <em>Drosophila</em>. bioRxiv 2026.
+    <em>Drosophila</em>.</a> bioRxiv 2026.
   </div>
 
 
   <div class="cv-pub">
     <strong>Xu S</strong>, Zhang X, Cheung KY, Mai Y, Wu Y, Claridge-Chang A.
-    Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging.
+    <a href="https://www.biorxiv.org/content/10.64898/2026.04.12.718060v1" target="_blank">Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging.</a>
     bioRxiv 2026.
   </div>
 
 
   <div class="cv-pub">
-    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. Getting over ANOVA: Estimation graphics for multi-group comparisons. (co-corresponding, in revision). bioRxiv 2026.
+    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">Getting over ANOVA: Estimation graphics for multi-group comparisons.</a> (co-corresponding, in revision). bioRxiv 2026.
   </div>
 
 
 
   <div class="cv-pub">
-    Ott S, <strong>Xu S</strong>, Lee N, Hong I, Anns J, et al. Kalium channelrhodopsins
-    effectively inhibit neurons. <em>Nature Communications</em> 2024; 15:3480.
+    Ott S, <strong>Xu S</strong>, Lee N, Hong I, Anns J, et al. <a href="https://www.nature.com/articles/s41467-024-47203-w" target="_blank">Kalium channelrhodopsins
+    effectively inhibit neurons.</a> <em>Nature Communications</em> 2024; 15:3480.
   </div>
 
 
 
   <div class="cv-pub">
-    Bari A, <strong>Xu S</strong> et al. Differential attentional control mechanisms by
-    two distinct noradrenergic pathways. <em>PNAS</em> 2020; 117(46):29080–29089.
+    Bari A, <strong>Xu S</strong> et al. <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117" target="_blank">Differential attentional control mechanisms by
+    two distinct noradrenergic pathways.</a> <em>PNAS</em> 2020; 117(46):29080–29089.
     (119 citations.)
   </div>
 
   <div class="cv-pub">
-    <strong>Xu S†</strong>, Das G, Hueske E, Tonegawa S†. Dorsal raphe serotonergic neurons
-    control intertemporal choice under trade-off. <em>Current Biology</em> 2017;
+    <strong>Xu S†</strong>, Das G, Hueske E, Tonegawa S†. <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/" target="_blank">Dorsal raphe serotonergic neurons
+    control intertemporal choice under trade-off.</a> <em>Current Biology</em> 2017;
     27(22):3440–3451. (Co-corresponding; 48 citations.)
   </div>
 
 
   <div class="cv-pub">
-    Kim J, ..., <strong>Xu S</strong>, Tonegawa S. Antagonistic negative and positive
-    neurons of the basolateral amygdala. <em>Nature Neuroscience</em> 2016;
+    Kim J, ..., <strong>Xu S</strong>, Tonegawa S. <a href="https://www.nature.com/articles/nn.4414" target="_blank">Antagonistic negative and positive
+    neurons of the basolateral amygdala.</a> <em>Nature Neuroscience</em> 2016;
     19(12):1636–1646. (550 citations.)
   </div>
 
