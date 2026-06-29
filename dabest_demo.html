@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="DABEST in action: bootstrap confidence intervals and effect size estimation">
 
-<title>DABEST – Sangyu Xu 徐桑榆</title>
+<title>Getting Over ANOVA – Sangyu Xu 徐桑榆</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -43,6 +79,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-9502dc4c26c71327a14f8949f9a947c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,18 +112,30 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Caveat:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async="" src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="DABEST – Sangyu Xu 徐桑榆">
-<meta property="og:description" content="Computational Behaviour Scientist">
+<meta property="og:title" content="Getting Over ANOVA – Sangyu Xu 徐桑榆">
+<meta property="og:description" content="DABEST in action: bootstrap confidence intervals and effect size estimation">
+<meta property="og:image" content="https://xusangyu.com/dabest_demo_files/figure-html/cell-4-output-1.png">
 <meta property="og:site_name" content="Sangyu Xu 徐桑榆">
-<meta name="twitter:title" content="DABEST – Sangyu Xu 徐桑榆">
-<meta name="twitter:description" content="Computational Behaviour Scientist">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:height" content="409">
+<meta property="og:image:width" content="490">
+<meta name="twitter:title" content="Getting Over ANOVA – Sangyu Xu 徐桑榆">
+<meta name="twitter:description" content="DABEST in action: bootstrap confidence intervals and effect size estimation">
+<meta name="twitter:image" content="https://xusangyu.com/dabest_demo_files/figure-html/cell-4-output-1.png">
+<meta name="twitter:image-height" content="409">
+<meta name="twitter:image-width" content="490">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -106,20 +157,20 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./statistics.html"> 
-<span class="menu-text">Statistics</span></a>
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./neuroscience.html"> 
 <span class="menu-text">Neuroscience</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./genetic-tools.html"> 
-<span class="menu-text">Genetic Tools</span></a>
+    <a class="nav-link" href="./statistics.html"> 
+<span class="menu-text">Statistics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./04_llm_evals.html"> 
-<span class="menu-text">LLM Evals</span></a>
+    <a class="nav-link" href="./genetic-tools.html"> 
+<span class="menu-text">Genetic Tools</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -127,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
         <li>
-    <a class="dropdown-item" href="./01_dabest.html">
+    <a class="dropdown-item" href="./dabest_demo.html">
  <span class="dropdown-text">DABEST 2.0</span></a>
   </li>  
         <li>
@@ -179,21 +230,26 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DABEST</h1>
+<h1 class="title">Getting Over ANOVA</h1>
+</div>
+
+<div>
+  <div class="description">
+    DABEST in action: bootstrap confidence intervals and effect size estimation
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -205,25 +261,132 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="getting-over-anova" class="level1">
-<h1>Getting over ANOVA</h1>
-<p><em>See the effect, not just the P value.</em></p>
-<p>Modern biology produces complex experiments: many groups, repeated measurements, genetic backgrounds, treatments, time points, binary outcomes, and internal replicates. But much of experimental science still reduces those experiments to the same question: <em>is it significant?</em></p>
-<p>This paper is about getting past that bottleneck.</p>
-<p>For decades, scientists have relied on null-hypothesis significance testing — the familiar world of P values, stars, “significant” and “not significant.” The problem is not that these tests are useless. The problem is that they often answer a question that is too blunt. A P value can tell you whether data are surprising under a null model, but it does not directly tell you the thing most scientists actually care about: how large the effect is, how precise the estimate is, and whether that effect is biologically meaningful.</p>
-<p>This problem becomes worse in multi-group experiments. ANOVA asks an omnibus question: are all the group means the same? If the answer is “probably not,” the researcher is pushed into a second stage of post-hoc comparisons. A six-group experiment can become fifteen pairwise tests. The original biological question gets buried under a table of P values.</p>
-<p>DABEST 2.0 was built to make the analysis match the question.</p>
-<p>Instead of beginning with “which groups are significant?”, estimation statistics begins with “what effect do I want to estimate?” DABEST plots the raw data, the effect size, and the uncertainty around that effect together. This makes the analysis more transparent: readers can see the data, the magnitude of the difference, and the confidence interval around the estimate, rather than only seeing stars above bars.</p>
-<p>In this paper, we expanded DABEST from simpler estimation plots into a broader framework for common experimental designs. For repeated-measures experiments, DABEST 2.0 shows how effects evolve over time, comparing each relevant time point against baseline while keeping individual trajectories visible. For two-factor experiments, we introduced delta-delta analysis: an intuitive “difference of differences” approach that asks how much one factor changes the effect of another. This lets researchers quantify the specific effect they care about, rather than stopping at a vague interaction term.</p>
-<p>We also extended estimation graphics to binary and proportional data. Many biological outcomes are yes/no: seizure or no seizure, survival or death, response or non-response. These are often shown as simple bar charts or tested with Fisher’s exact or chi-squared tests, with little visual sense of uncertainty or effect size. DABEST 2.0 adds proportion plots and Sankey-style repeated-measures graphics so that categorical outcomes can be treated with the same estimation-first logic.</p>
-<p>Another major addition is “mini-meta” analysis for internal replicates. In practice, researchers often repeat experiments several times. Sometimes the replicates agree; sometimes one replicate is weaker, noisier, or even points the other way. The worst response is to hide the inconvenient replicate. Another common response is to pool everything into one large analysis, losing the history of the experiment. Mini-meta provides a middle path: show each replicate, show each effect size, and then estimate the weighted overall effect. It encourages transparency without pretending that every experiment was identical.</p>
-<p>For me, this project is part of a broader philosophy of measurement: analysis should make the scientific claim clearer, not obscure it. A good statistical graphic should help the reader understand the comparison, the magnitude, the uncertainty, and the biological interpretation at the same time.</p>
-<p>DABEST 2.0 is available in <a href="https://github.com/ACCLAB/DABEST-python">Python</a>, <a href="https://github.com/ACCLAB/dabestr">R</a>, and as a <a href="https://www.estimationstats.com">web app</a>, so researchers can use estimation statistics whether they code or not. The larger goal is not just to provide another plotting package. It is to make better statistical reasoning easier to practice: fewer star charts, fewer sprawling post-hoc tables, and more direct visual answers to the questions experiments were designed to ask.</p>
-<p>DABEST-Python is a literate programming project developed using <a href="https://nbdev.fast.ai/">nbdev</a>; for detailed usage and examples, see the <a href="https://acclab.github.io/DABEST-python/">Tutorials</a>.</p>
+<section id="getting-over-anova-dabest-in-actiondabest-data-analysis-using-bootstrap-coupled-estimation-replaces-p-values-with-effect-size-estimation-and-bootstrap-confidence-intervals.-the-core-question-shifts-from-is-there-a-difference-to-how-much-difference-with-what-precision-and-does-it-matter-learn-more-about-the-package-read-the-preprint-open-in-colab" class="level1">
+<h1>Getting Over ANOVA: DABEST in ActionDABEST (Data Analysis using Bootstrap-Coupled ESTimation) replaces p-values with effect size estimation and bootstrap confidence intervals. The core question shifts from <em>“is there a difference?”</em> to <em>“how much difference, with what precision, and does it matter?”</em>→ <a href="https://acclab.github.io/DABEST-python/">Learn more about the package</a>→ <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2">Read the preprint</a>→ <a href="https://colab.research.google.com/github/sangyu/portfolio/blob/main/nbs/dabest_demo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a>—</h1>
+<div id="577b7098" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dabest</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'figure.facecolor'</span>] <span class="op">=</span> <span class="st">'#FAF7F2'</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'axes.facecolor'</span>] <span class="op">=</span> <span class="st">'#FAF7F2'</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>mpl.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">'serif'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="a-two-group-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="a-two-group-comparison">A Two-Group Comparison</h2>
+<p>Here is the classic scenario: control versus treated. With a t-test, you get a p-value and a binary verdict. With DABEST, you get the actual difference, its distribution, and a 95% confidence interval computed from 5,000 bootstrap resamples.</p>
+<div id="ee32de0c" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate realistic biological variability</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># e.g., feeding duration in seconds, two experimental conditions</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>control <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="fl">8.5</span>, scale<span class="op">=</span><span class="fl">2.1</span>, size<span class="op">=</span>N)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>treated <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="fl">11.2</span>, scale<span class="op">=</span><span class="fl">2.4</span>, size<span class="op">=</span>N)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'Control'</span>: control, <span class="st">'Treated'</span>: treated})</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> dabest.load(df, idx<span class="op">=</span>(<span class="st">'Control'</span>, <span class="st">'Treated'</span>))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> db.mean_diff.plot(</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    raw_marker_size<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    contrast_marker_size<span class="op">=</span><span class="dv">8</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>fig.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Feeding duration (s)'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Cumming estimation plot: Control vs. Treated'</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">12</span>, y<span class="op">=</span><span class="fl">1.01</span>, color<span class="op">=</span><span class="st">'#2C4A6E'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="dabest_demo_files/figure-html/cell-4-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="dabest_demo_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The top panel shows the raw data. The bottom panel shows the <strong>bootstrap distribution</strong> of the mean difference — not a theoretical curve, but an empirical one computed from your actual data. The filled curve is the sampling distribution; the dot is the observed mean difference; the vertical line is the 95% confidence interval.</p>
+<p>The effect size here (~2.7 seconds, CI approximately [1.8, 3.6]) tells you something a p-value cannot: <strong>how big</strong> the difference is, and <strong>how precisely</strong> you have estimated it.</p>
 <hr>
-<p><em>Preprint on <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2">bioRxiv</a> — currently in revision.</em></p>
+</section>
+<section id="the-delta-delta-my-original-contribution-to-dabest" class="level2">
+<h2 class="anchored" data-anchor-id="the-delta-delta-my-original-contribution-to-dabest">The Delta-Delta: My Original Contribution to DABEST</h2>
+<p>The <strong>delta-delta</strong> plot answers a question that ANOVA cannot: in a 2×2 factorial design, do the treatment effects differ between subgroups — and <em>by how much</em>, with what precision?</p>
+<p>Standard ANOVA gives you an interaction p-value. The delta-delta gives you the <strong>effect of the effect</strong> — the difference between two differences — as an estimation graphic.</p>
+<div id="47820359" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2x2 factorial: drug x sex (long-format data)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The drug works strongly in males, weakly in females — does it differ?</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>N2 <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'Male'</span>,   <span class="st">'Control'</span>): (<span class="fl">9.0</span>,  <span class="fl">2.0</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'Male'</span>,   <span class="st">'Drug'</span>):    (<span class="fl">12.5</span>, <span class="fl">2.2</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'Female'</span>, <span class="st">'Control'</span>): (<span class="fl">8.8</span>,  <span class="fl">1.9</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'Female'</span>, <span class="st">'Drug'</span>):    (<span class="fl">10.1</span>, <span class="fl">2.1</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (sex, trt), (mu, sd) <span class="kw">in</span> params.items():</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> val <span class="kw">in</span> np.random.normal(mu, sd, N2):</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        rows.append({<span class="st">'sex'</span>: sex, <span class="st">'treatment'</span>: trt, <span class="st">'feeding_s'</span>: val})</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.DataFrame(rows)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>db2 <span class="op">=</span> dabest.load(</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    df2,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>[<span class="st">'treatment'</span>, <span class="st">'sex'</span>],</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'feeding_s'</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    experiment<span class="op">=</span><span class="st">'sex'</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    delta2<span class="op">=</span><span class="va">True</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>fig2 <span class="op">=</span> db2.mean_diff.plot(</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    raw_marker_size<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    contrast_marker_size<span class="op">=</span><span class="dv">8</span>,</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>fig2.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Feeding duration (s)'</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>fig2.suptitle(<span class="st">'Delta-delta plot: does the drug effect differ by sex?'</span>,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>              fontsize<span class="op">=</span><span class="dv">12</span>, y<span class="op">=</span><span class="fl">1.01</span>, color<span class="op">=</span><span class="st">'#2C4A6E'</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/Applications/anaconda3/envs/DabestNMethRevision/lib/python3.10/site-packages/dabest/plot_tools.py:2592: UserWarning: 8.0% of the points cannot be placed. You might want to decrease the size of the markers.
+  warnings.warn(err)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="dabest_demo_files/figure-html/cell-5-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="dabest_demo_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The rightmost panel shows the <strong>delta-delta</strong> — the difference between the male drug effect and the female drug effect — with its full bootstrap distribution.</p>
+<p>An ANOVA interaction tells you whether to reject the null hypothesis of no interaction. The delta-delta tells you the <strong>magnitude</strong> of that interaction and your uncertainty about it. Those are not the same question.</p>
+<hr>
+</section>
+<section id="why-bootstrap" class="level2">
+<h2 class="anchored" data-anchor-id="why-bootstrap">Why Bootstrap?</h2>
+<p>Most confidence intervals assume your data follows a specific distribution (usually normal). Bootstrap doesn’t. Instead:</p>
+<ol type="1">
+<li>Sample your data with replacement, 5,000 times</li>
+<li>Calculate the difference in means each time</li>
+<li>The distribution of those 5,000 differences <em>is</em> your confidence interval — empirically, not theoretically</li>
+</ol>
+<p>This makes the intervals more honest for biological data, which is rarely perfectly normal. It also makes the uncertainty <em>visible</em> — a wide bootstrap distribution means you need more data. A narrow one means you have estimated the effect well.</p>
+<hr>
+</section>
+<section id="adoption" class="level2">
+<h2 class="anchored" data-anchor-id="adoption">Adoption</h2>
+<p>The original DABEST paper (<em>Nature Methods</em> 2019) has <strong>2,000+ citations</strong> and has been adopted across <em>Drosophila</em> labs, zebrafish labs, and increasingly in clinical research. DABEST 2.0 adds the delta-delta, the proportional difference, and the mini-meta analysis — tools for the multi-group, multi-experiment designs that are now standard in biological research.</p>
+<p>The broader point: p-values answer a binary question. Effect size estimation answers a quantitative one. Science needs quantitative answers.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -628,6 +791,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

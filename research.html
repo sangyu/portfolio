@@ -73,6 +73,12 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Caveat:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async="" src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -84,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -106,20 +112,20 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./statistics.html"> 
-<span class="menu-text">Statistics</span></a>
+    <a class="nav-link active" href="./research.html" aria-current="page"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./neuroscience.html"> 
 <span class="menu-text">Neuroscience</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./genetic-tools.html"> 
-<span class="menu-text">Genetic Tools</span></a>
+    <a class="nav-link" href="./statistics.html"> 
+<span class="menu-text">Statistics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./04_llm_evals.html"> 
-<span class="menu-text">LLM Evals</span></a>
+    <a class="nav-link" href="./genetic-tools.html"> 
+<span class="menu-text">Genetic Tools</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -127,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
         <li>
-    <a class="dropdown-item" href="./01_dabest.html">
+    <a class="dropdown-item" href="./dabest_demo.html">
  <span class="dropdown-text">DABEST 2.0</span></a>
   </li>  
         <li>
@@ -179,12 +185,12 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -193,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     
   
@@ -205,99 +211,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="page-header">
-  <h1>Research</h1>
-  <p class="subtitle">I find a measurement problem, build the tool, and move on.</p>
-</div>
-
-<p class="research-intro">
-  The common thread across all my work: complex systems that produce signals we don’t yet
-  know how to interpret. A feeding fly. A manuscript under review. A genome-wide RNA modification
-  map. In each case, the scientific question requires inventing the measurement framework first.
-</p>
-
-<div class="research-grid">
-
-  <div class="research-card">
-    <span class="output-tag">Nature Methods — in revision</span>
-    <h3 class="anchored">DABEST 2.0</h3>
-    <p>
-      Bootstrap-coupled effect size estimation for multi-group comparisons.
-      Replaces p-values with estimation graphics: mean differences, confidence intervals,
-      and the full sampling distribution of your effect. The delta-delta plot — my
-      original contribution — handles 2×2 factorial designs and beyond.
-    </p>
-    <a href="01_dabest.html">→ Interactive demo</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">Science Advances — in revision</span>
-    <h3 class="anchored">Ethomics / DESTRA</h3>
-    <p>
-      High-dimensional behavioural state benchmarking in <em>Drosophila</em>.
-      The Espresso platform captures 17 behavioural metrics simultaneously.
-      DESTRA uses bootstrap effect size profiles to ask: does this manipulation
-      produce genuine hunger, or just a superficially similar signature?
-    </p>
-    <a href="02_ethomics.html">→ Interactive demo</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">Current Biology 2017 — 48 citations</span>
-    <h3 class="anchored">Intertemporal Choice</h3>
-    <p>
-      Dorsal raphe serotonergic neurons bidirectionally control delay discounting in
-      <em>Drosophila</em>. Activation increases patience; silencing increases impulsivity.
-      Effect is trade-off specific — not a motor or motivational confound.
-    </p>
-    <a href="03_itc.html">→ Project page</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">In development</span>
-    <h3 class="anchored">LLM Evaluation Pipeline</h3>
-    <p>
-      Adversarial multi-agent pipeline for scientific manuscript evaluation.
-      Four LLM subagents — biologist, bioinformatician, reviewer, editor —
-      argue toward a structured critique. Building toward bootstrap-estimated
-      inter-rater calibration against human expert reviewers.
-    </p>
-    <a href="04_llm_evals.html">→ Notebook</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">PNAS 2020 — 119 citations</span>
-    <h3 class="anchored">Noradrenergic Attention</h3>
-    <p>
-      Two distinct noradrenergic pathways implement different attentional control mechanisms
-      in rodents. Selective lesions of each reveal a functional dissociation not apparent
-      from anatomy alone.
-    </p>
-    <a href="cv.html">→ Full publication</a>
-  </div>
-
-  <div class="research-card stub">
-    <span class="output-tag">Coming soon</span>
-    <h3 class="anchored">Epitranscriptomics</h3>
-    <p>
-      Direct RNA nanopore sequencing pipeline for m6A and pseudouridine mapping.
-      Running on local GPU. Connects back to the behavioural work: does hunger
-      change the RNA modification landscape in serotonergic neurons?
-    </p>
-  </div>
-
-</div>
-
-<div class="section-divider">• • •</div>
-
-<div style="max-width: 680px; margin: 0 auto 4rem; padding: 0 1.5rem; text-align: center;">
-  <p style="font-style: italic; color: var(--warm-grey); font-size: 1.05rem;">
-    All computational tools are built in Python and released as open-source packages.<br>
-    DABEST: <a href="https://github.com/ACCLAB/DABEST-python">ACCLAB/DABEST-python</a>
-  </p>
-</div>
+<section id="making-hidden-states-visible" class="level1">
+<h1>Making hidden states visible</h1>
+<p>My work asks how we infer hidden states from noisy, high-dimensional evidence.</p>
+<p>Hunger, satiety, impulsivity, attention, social influence, and model capability are not directly visible. We infer them from behavior, physiology, neural activity, molecular state, and context. I build experiments, models, and visual representations that make those inferences easier to compare, interpret, and trust.</p>
+<section id="three-directions" class="level2">
+<h2 class="anchored" data-anchor-id="three-directions">Three directions</h2>
+<p><strong>Internal states and neuromodulation</strong> — serotonin, norepinephrine, feeding, satiety, attention, and decision-making. → <a href="neuroscience.html">Neuroscience</a></p>
+<p><strong>Statistical and visual tools</strong> — effect sizes, uncertainty, phenovectors, estimation graphics, and high-dimensional visualization. → <a href="statistics.html">Statistics</a></p>
+<p><strong>AI-assisted scientific inference</strong> — LLM agents, rubric-based critique, manuscript evaluation, and reasoning without simple ground truth. → <a href="blog/index.html">Writing</a></p>
+</section>
+<section id="current-direction" class="level2">
+<h2 class="anchored" data-anchor-id="current-direction">Current direction</h2>
+<p>Across animals, patients, users, robots, and AI agents, the problem is often the same: infer hidden state from noisy evidence, represent it faithfully, and decide what can be trusted.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

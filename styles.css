@@ -928,3 +928,102 @@ figcaption {
   body { background: white; }
   .feature-card, .research-card, .blog-stub { box-shadow: none; border: 1px solid #ddd; }
 }
+
+/* === Lightbox === */
+
+#lightbox {
+  border: none;
+  background: transparent;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#lightbox::backdrop {
+  background: rgba(21, 24, 39, 0.88);
+  backdrop-filter: blur(3px);
+}
+
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.lightbox-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(251, 250, 247, 0.72);
+  margin-top: 0.85rem;
+  text-align: center;
+  max-width: 90vw;
+  font-style: italic;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: rgba(251, 250, 247, 0.1);
+  border: 1.5px solid rgba(251, 250, 247, 0.25);
+  border-radius: 50%;
+  color: var(--paper);
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.lightbox-close:hover { background: rgba(251, 250, 247, 0.22); }
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(251, 250, 247, 0.1);
+  border: 1.5px solid rgba(251, 250, 247, 0.25);
+  border-radius: 50%;
+  color: var(--paper);
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.lightbox-prev { left: 1.2rem; }
+.lightbox-next { right: 1.2rem; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover { background: rgba(251, 250, 247, 0.22); }
+
+@media (max-width: 768px) {
+  .lightbox-prev { left: 0.4rem; }
+  .lightbox-next { right: 0.4rem; }
+}

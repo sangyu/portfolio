@@ -73,6 +73,12 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Caveat:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async="" src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -108,20 +114,20 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./statistics.html"> 
-<span class="menu-text">Statistics</span></a>
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./neuroscience.html"> 
 <span class="menu-text">Neuroscience</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./genetic-tools.html"> 
-<span class="menu-text">Genetic Tools</span></a>
+    <a class="nav-link" href="./statistics.html"> 
+<span class="menu-text">Statistics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./04_llm_evals.html"> 
-<span class="menu-text">LLM Evals</span></a>
+    <a class="nav-link" href="./genetic-tools.html"> 
+<span class="menu-text">Genetic Tools</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -129,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
         <li>
-    <a class="dropdown-item" href="./01_dabest.html">
+    <a class="dropdown-item" href="./dabest_demo.html">
  <span class="dropdown-text">DABEST 2.0</span></a>
   </li>  
         <li>
@@ -422,6 +428,71 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <div class="section-divider">•</div>
+
+<!-- LIGHTBOX -->
+<dialog id="lightbox" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  const dialog   = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lightbox-img');
+  const lbCap    = document.getElementById('lightbox-caption');
+  const btnClose = document.getElementById('lightbox-close');
+  const btnPrev  = document.getElementById('lightbox-prev');
+  const btnNext  = document.getElementById('lightbox-next');
+
+  // Build index from all gallery items
+  const items = Array.from(document.querySelectorAll('.gallery-item')).map(item => ({
+    src:     item.querySelector('.gallery-link').href,
+    alt:     item.querySelector('img').alt,
+    caption: (item.querySelector('.gallery-caption') || {}).textContent || ''
+  }));
+
+  let current = 0;
+
+  function show(index) {
+    current = ((index % items.length) + items.length) % items.length;
+    lbImg.src = items[current].src;
+    lbImg.alt = items[current].alt;
+    lbCap.textContent = items[current].caption.trim();
+    dialog.showModal();
+    btnClose.focus();
+  }
+
+  function closeLightbox() {
+    dialog.close();
+    lbImg.src = '';
+  }
+
+  // Intercept gallery clicks
+  document.querySelectorAll('.gallery-link').forEach((link, i) => {
+    link.removeAttribute('target');
+    link.addEventListener('click', e => { e.preventDefault(); show(i); });
+  });
+
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', () => show(current - 1));
+  btnNext.addEventListener('click', () => show(current + 1));
+
+  // Backdrop click closes
+  dialog.addEventListener('click', e => { if (e.target === dialog) closeLightbox(); });
+
+  // Keyboard: Escape, arrows
+  dialog.addEventListener('keydown', e => {
+    if (e.key === 'Escape')      { closeLightbox(); }
+    if (e.key === 'ArrowLeft')   { e.preventDefault(); show(current - 1); }
+    if (e.key === 'ArrowRight')  { e.preventDefault(); show(current + 1); }
+  });
+})();
+</script>
 
 <!-- TUFTE NOTE -->
 <!-- <div class="art-section" style="max-width: 720px; margin-left: auto; margin-right: auto;">
