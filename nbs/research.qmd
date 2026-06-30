@@ -13,7 +13,7 @@ Hunger, satiety, impulsivity, attention, social influence, and model capability 
 
 **Internal states and neuromodulation** — serotonin, norepinephrine, feeding, satiety, attention, and decision-making. → [Neuroscience](neuroscience.html)
 
-**Statistical and visual tools** — effect sizes, uncertainty, phenovectors, estimation graphics, and high-dimensional visualization. → [Statistics](statistics.html)
+**Statistical and visual tools** — effect sizes, uncertainty, phenovectors, estimation graphics, and high-dimensional visualization. → [Open Source Tools](statistics.html)
 
 **AI-assisted scientific inference** — LLM agents, rubric-based critique, manuscript evaluation, and reasoning without simple ground truth. → [Writing](blog/index.html)
 

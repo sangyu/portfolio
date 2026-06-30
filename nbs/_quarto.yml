@@ -31,7 +31,7 @@ website:
       - href: neuroscience.qmd
         text: Neuroscience
       - href: statistics.qmd
-        text: Statistics
+        text: Open Source Tools
       - href: genetic-tools.qmd
         text: Genetic Tools
       - text: Demos

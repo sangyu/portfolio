@@ -1,11 +1,11 @@
 ---
-title: "Statistics"
+title: "Open Source Tools"
 page-layout: full
 ---
 
 ```{=html}
 <div class="page-header">
-  <h1>Statistics</h1>
+  <h1>Open Source Tools</h1>
   <p class="subtitle">Measurement frameworks for complex, ambiguous systems.</p>
 </div>
 
