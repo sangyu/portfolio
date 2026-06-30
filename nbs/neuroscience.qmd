@@ -15,12 +15,12 @@ page-layout: full
     <span class="output-tag">in revision</span>
     <h3>Ethomics &mdash; What Is a Hungry Fly?</h3>
     <p>
-      High-dimensional behavioural state benchmarking in <em>Drosophila</em>.
+      High-dimensional behavioural state benchmarking in <em class="species">Drosophila</em>.
       The Espresso platform captures 17 behavioural metrics simultaneously across
       hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
       produce genuine hunger, or just a superficially similar signature?
     </p>
-    <a href="02_ethomics.html">&rarr; Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub &nearr;</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub &nearr;</a>
+    <a href="blog/02_ethomics.html">&rarr; Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub &nearr;</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub &nearr;</a>
   </div>
 
   <div class="research-card">
@@ -31,7 +31,7 @@ page-layout: full
       in mice. Activation increases patience; silencing increases
       impulsivity. Effect is trade-off specific &mdash; not a motor or motivational confound.
     </p>
-    <a href="03_itc.html">&rarr; Read more</a> &ensp; <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">Paper &nearr;</a>
+    <a href="blog/03_itc.html">&rarr; Read more</a> &ensp; <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">Paper &nearr;</a>
   </div>
 
   <div class="research-card">
@@ -50,7 +50,7 @@ page-layout: full
     <h3>Epitranscriptomics</h3>
     <p>
       Direct RNA nanopore sequencing pipeline for m6A and pseudouridine mapping
-      in <em>Drosophila</em> serotonergic neurons. Does hunger change the RNA
+      in <em class="species">Drosophila</em> serotonergic neurons. Does hunger change the RNA
       modification landscape?
     </p>
   </div>
@@ -71,7 +71,7 @@ page-layout: full
     <h3>Octopamine, Dopamine, and the Hungry Fly Circuit</h3>
     <p>
       A mushroom-body output neuron (MBON11) integrates octopaminergic and dopaminergic
-      signals to control hunger-motivated feeding in <em>Drosophila</em>.
+      signals to control hunger-motivated feeding in <em class="species">Drosophila</em>.
       Octopaminergic VPM3/4 neurons are instructive but not required for hunger-driven
       feeding; dopaminergic PPL101 neurons are required but not instructive.
       MBON11 sits at the convergence point.

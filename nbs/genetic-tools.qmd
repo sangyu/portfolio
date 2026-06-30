@@ -16,7 +16,7 @@ page-layout: full
     <h3>Kalium Channelrhodopsins (KCR)</h3>
     <p>
       Comparative evaluation of light-gated potassium-conducting channelrhodopsins
-      as neuronal inhibitors in <em>Drosophila</em>, <em>C. elegans</em>, and zebrafish.
+      as neuronal inhibitors in <em class="species">Drosophila</em>, <em class="species">C. elegans</em>, and zebrafish.
       KCR1-ET matches ACR1 potency while avoiding the depolarising artefact that
       chloride conductance produces in high-chloride cells &mdash; including axons.
     </p>
@@ -28,7 +28,7 @@ page-layout: full
     <h3>LSSmScarlet3 for Two-Photon Imaging</h3>
     <p>
       A long-Stokes-shift mScarlet variant that can be co-imaged with GCaMP using
-      a single 920-nm laser in <em>Drosophila</em>. Simplifies two-photon setups by
+      a single 920-nm laser in <em class="species">Drosophila</em>. Simplifies two-photon setups by
       eliminating the need for a second excitation wavelength when using a red
       structural marker alongside a green calcium indicator.
     </p>

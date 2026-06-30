@@ -1,6 +1,7 @@
 ---
 title: "Art & Music"
 page-layout: full
+lightbox: false
 ---
 
 ```{=html}

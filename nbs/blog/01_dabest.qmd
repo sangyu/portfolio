@@ -1,5 +1,7 @@
 ---
 title: "Getting Over ANOVA"
+author: "Sangyu Xu"
+date: "2026-03-06"
 page-layout: article
 ---
 
@@ -8,6 +10,10 @@ page-layout: article
 *See the effect, not just the P value.*
 
 Modern biology produces complex experiments: many groups, repeated measurements, genetic backgrounds, treatments, time points, binary outcomes, and internal replicates. But much of experimental science still reduces those experiments to the same question: *is it significant?*
+
+::: {style="float:right; width:50%; margin-left:1.5em; margin-bottom:1em;"}
+![](../images/blog/01_dabest_files/Figure_Unity_no_labels.png)
+:::
 
 This paper is about getting past that bottleneck.
 

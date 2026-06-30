@@ -12,7 +12,15 @@ page-layout: full
 <div style="max-width: 820px; margin: 0 auto; padding: 0 1.5rem 4rem;">
 
   <div class="blog-stub">
-    <h3><a href="../01_dabest.html">Getting Over ANOVA</a></h3>
+    <h3><a href="05_delta_delta_same_estimate_different_uncertainty.html">Interactions, Delta-Deltas, and How We Measure Uncertainty</a></h3>
+    <p>
+      A delta-delta is the same contrast as a regression interaction term or a two-way ANOVA interaction.
+      But bootstrap confidence intervals diverge from model-based uncertainty — and that difference is the whole point.
+    </p>
+  </div>
+
+  <div class="blog-stub">
+    <h3><a href="01_dabest.html">Getting Over ANOVA</a></h3>
     <p>
       Why effect size estimation replaces significance testing. The logic behind DABEST 2.0:
       bootstrap confidence intervals, estimation graphics, and the delta-delta for factorial designs.
@@ -20,7 +28,7 @@ page-layout: full
   </div>
 
   <div class="blog-stub">
-    <h3><a href="../02_ethomics.html">What Is a Hungry Fly?</a></h3>
+    <h3><a href="02_ethomics.html">What Is a Hungry Fly?</a></h3>
     <p>
       On behavioral state as a high-dimensional object. How the Espresso platform and DESTRA
       benchmarking framework distinguish genuine hunger from superficially similar signatures.
@@ -28,7 +36,7 @@ page-layout: full
   </div>
 
   <div class="blog-stub">
-    <h3><a href="../03_itc.html">Decision at the Odor Port</a></h3>
+    <h3><a href="03_itc.html">Decision at the Odor Port</a></h3>
     <p>
       A novel odor-guided intertemporal choice task for mice, and what serotonin does
       at the moment of decision. How to make a hidden computation measurable.
@@ -36,7 +44,7 @@ page-layout: full
   </div>
 
   <div class="blog-stub">
-    <h3><a href="../04_llm_evals.html">Four Agents, No Ground Truth</a></h3>
+    <h3><a href="04_llm_evals.html">Four Agents, No Ground Truth</a></h3>
     <p>
       Adversarial multi-agent LLM manuscript evaluation. The hard part is not building it —
       it is deciding what &ldquo;better&rdquo; means when there is no ground truth.

@@ -1,5 +1,6 @@
 ---
 title: "Four Agents, No Ground Truth"
+author: "Sangyu Xu"
 page-layout: full
 ---
 

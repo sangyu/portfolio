@@ -16,26 +16,26 @@ page-layout: full
 
   
   <div class="cv-pub">
-    <strong>Xu S</strong> et al. Contextualized ethomics reveals a <em>Drosophila</em>
-    serotonergic circuit controlling satiety. (in revision).
+    <strong>Xu S</strong> et al. Contextualized ethomics reveals a <em class="species">Drosophila</em>
+    serotonergic circuit controlling satiety. (in revision at <em>Science Advances</em>).
   </div>
   
   <div class="cv-pub">
     Zhang X, <strong>Xu S</strong>, Ho J, Stewart JC, Claridge-Chang A. <a href="https://www.biorxiv.org/content/10.64898/2026.03.13.711740v1" target="_blank">A mushroom-body
     output neuron that mediates octopamine-driven and hunger-motivated feeding in
-    <em>Drosophila</em>.</a> bioRxiv 2026.
+    <em class="species">Drosophila</em>.</a> bioRxiv 2026.
   </div>
 
 
   <div class="cv-pub">
     <strong>Xu S</strong>, Zhang X, Cheung KY, Mai Y, Wu Y, Claridge-Chang A.
     <a href="https://www.biorxiv.org/content/10.64898/2026.04.12.718060v1" target="_blank">Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging.</a>
-    bioRxiv 2026.
+    bioRxiv 2026. (accepted, <em>Micropublication Biology</em>).
   </div>
 
 
   <div class="cv-pub">
-    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">Getting over ANOVA: Estimation graphics for multi-group comparisons.</a> (co-corresponding, in revision). bioRxiv 2026.
+    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">Getting over ANOVA: Estimation graphics for multi-group comparisons.</a> (co-corresponding, in revision at <em>Nature Methods</em>). bioRxiv 2026.
   </div>
 
 
@@ -154,7 +154,7 @@ page-layout: full
   <h2 class="cv-section-title">Recognition</h2>
 
   <div class="award-item">Outstanding Short Talk Award — Neuroscience Singapore 2025</div>
-  <div class="award-item">Gold Medal — 17th International Festival of Advent and Christmas Music, Prague, 2007</div>
+  <div class="award-item">Walle Nauta Award for Excellence in Graduate Teaching &mdash; MIT, 2011</div>
   <div class="award-item">Honourable Mention — Singapore Physics Olympiad, 2002</div>
 
 
@@ -226,7 +226,6 @@ page-layout: full
     <span class="cv-entry-main">9.150 Biochemistry and Pharmacology of Synaptic Transmission (Undergraduate)</span>
     <span class="cv-entry-date">MIT, Fall 2009</span>
   </div>
-  <div class="award-item" style="margin-top:0.8rem;">Walle Nauta Award for Excellence in Graduate Teaching &mdash; MIT, 2011</div>
 
 
   <!-- SERVICE -->
@@ -242,7 +241,7 @@ page-layout: full
   </div>
 
   <div class="cv-teaching-item" style="margin-top:0.8rem;">
-    <span class="cv-entry-main">Reviewing &mdash; <em>Scientific Reports</em>, <em>Biology Direct</em></span>
+    <span class="cv-entry-main">Reviewing &mdash; <em>Scientific Reports</em></span>
   </div>
 
 
@@ -259,6 +258,7 @@ page-layout: full
 
   <div class="award-item">Painter &mdash; 22nd UOB Painting of the Year Exhibition, Singapore, 2003</div>
   <div class="award-item">Ceramicist &mdash; The Art of the Cup, Cambridge, MA, USA, 2014</div>
+  <div class="award-item">Gold Medal &mdash; 17th International Festival of Advent and Christmas Music, Prague, 2007</div>
 
 </div>
 ```

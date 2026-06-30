@@ -1,5 +1,7 @@
 ---
 title: "Intertemporal Choice"
+author: "Sangyu Xu"
+date: "2026-03-01"
 page-layout: article
 ---
 
@@ -9,9 +11,17 @@ page-layout: article
 
 I built a mouse decision-making task to ask when serotonin changes a choice: before waiting begins, at the moment an animal decides whether a larger future reward is worth the delay.
 
+::: {style="float:right; width:50%; margin-left:1.5em; margin-bottom:1em;"}
+![](../images/blog/03_itc_files/xu2017fig1.jpg)
+:::
+
 Would you rather have one reward now, or a better reward later? That everyday dilemma is called **intertemporal choice**. It is central to patience, impulsivity, addiction, self-control, and the way brains compare the pull of the present against the value of the future.
 
 Serotonin had long been linked to patience. Older lesion and pharmacology studies suggested that disrupting serotonin made animals choose more impulsively, and newer recordings showed that dorsal raphe serotonin neurons responded to reward-predicting cues. But a precise causal question was still open: does serotonin change the decision itself, at the moment of choice, or does it act later by changing movement, waiting, thirst, or reward consumption?
+
+::: {style="float:left; width:40%; margin-right:1.5em; margin-bottom:1em;"}
+<video src="../images/blog/03_itc_files/itc.mp4" autoplay muted loop playsinline style="width:100%; border-radius:4px;"></video>
+:::
 
 To answer that, I needed a task with a clean decision point. Cued intertemporal-choice tasks with this structure were well established in humans and primates, but not in genetically tractable rodents where one can manipulate identified neurons in real time. I developed a **novel odor-guided intertemporal choice task for mice**. On each trial, a mouse sampled an odor mixture, chose left or right, and then waited for a water reward. The odors told the mouse how long each side would take; one option could be smaller and sooner, while the other could be larger but delayed.
 
@@ -25,6 +35,4 @@ The circuit story pointed downstream to the nucleus accumbens, a reward-related 
 
 This work was published in *Current Biology* as ["Dorsal Raphe Serotonergic Neurons Control Intertemporal Choice under Trade-off."](https://pubmed.ncbi.nlm.nih.gov/28988863/) I later presented it as an invited talk at the CoSyNe 5-HT Workshop in Cascais, Portugal in 2019. For me, the project remains a template for how I like to do science: invent the behavioral assay that makes the hidden computation measurable, perturb the relevant circuit at the right moment, and use a model that captures the structure of the decision.
 
-<a href="https://pubmed.ncbi.nlm.nih.gov/28988863/" target="_blank" class="pub-fig-link">
-  <img src="images/pubs/xu2017fig1.jpg" class="pub-fig" alt="Xu et al. 2017 Figure 1 — Current Biology">
-</a>
+[Xu et al. (2017) *Current Biology* — Dorsal Raphe Serotonergic Neurons Control Intertemporal Choice under Trade-off &nearr;](https://pubmed.ncbi.nlm.nih.gov/28988863/)

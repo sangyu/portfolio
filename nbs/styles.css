@@ -51,6 +51,7 @@ a:hover { color: var(--verdigris); }
 strong { color: var(--ink-blue); }
 
 em { color: var(--dark-ink); }
+em.species { color: var(--verdigris); font-style: italic; }
 
 /* === Navbar — override Bootstrap dark-theme vars explicitly === */
 
@@ -713,6 +714,12 @@ em { color: var(--dark-ink); }
   font-size: 0.95rem;
 }
 
+.cv-entry-sub {
+  flex-basis: 100%;
+  color: var(--warm-grey);
+  font-size: 0.9rem;
+}
+
 .cv-media-item {
   margin-bottom: 0.75rem;
   font-size: 0.97rem;
@@ -762,6 +769,7 @@ em { color: var(--dark-ink); }
 
 .blog-stub h3 {
   font-size: 1.25rem;
+  font-weight: 600;
   margin: 0 0 0.4rem;
   color: var(--ink-blue);
 }
