@@ -2,54 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xusangyu.com/index.html</loc>
-    <lastmod>2026-06-30T03:56:47.016Z</lastmod>
+    <lastmod>2026-06-30T08:11:54.684Z</lastmod>
   </url>
   <url>
-    <loc>https://xusangyu.com/statistics.html</loc>
-    <lastmod>2026-06-30T03:56:47.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/neuroscience.html</loc>
-    <lastmod>2026-06-30T03:56:47.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/cv.html</loc>
-    <lastmod>2026-06-30T03:56:46.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/art.html</loc>
-    <lastmod>2026-06-30T03:56:46.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/03_itc.html</loc>
-    <lastmod>2026-06-30T03:56:46.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/01_dabest.html</loc>
-    <lastmod>2026-06-30T03:56:46.862Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/02_ethomics.html</loc>
-    <lastmod>2026-06-30T03:56:46.863Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/04_llm_evals.html</loc>
-    <lastmod>2026-06-30T03:56:46.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/blog/index.html</loc>
-    <lastmod>2026-06-30T03:56:46.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://xusangyu.com/genetic-tools.html</loc>
-    <lastmod>2026-06-30T03:56:46.869Z</lastmod>
+    <loc>https://xusangyu.com/blog/05_delta_delta_same_estimate_different_uncertainty.html</loc>
+    <lastmod>2026-06-30T08:11:54.527Z</lastmod>
   </url>
   <url>
     <loc>https://xusangyu.com/research.html</loc>
-    <lastmod>2026-06-30T03:56:47.016Z</lastmod>
+    <lastmod>2026-06-30T08:11:54.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/genetic-tools.html</loc>
+    <lastmod>2026-06-30T08:11:54.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/blog/index.html</loc>
+    <lastmod>2026-06-30T08:11:54.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/blog/03_itc.html</loc>
+    <lastmod>2026-06-30T08:11:54.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/blog/01_dabest.html</loc>
+    <lastmod>2026-06-30T08:11:54.525Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/art.html</loc>
+    <lastmod>2026-06-30T08:11:54.525Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/blog/02_ethomics.html</loc>
+    <lastmod>2026-06-30T08:11:54.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/blog/04_llm_evals.html</loc>
+    <lastmod>2026-06-30T08:11:54.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/cv.html</loc>
+    <lastmod>2026-06-30T08:11:54.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/neuroscience.html</loc>
+    <lastmod>2026-06-30T08:11:54.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://xusangyu.com/statistics.html</loc>
+    <lastmod>2026-06-30T08:11:54.685Z</lastmod>
   </url>
   <url>
     <loc>https://xusangyu.com/dabest_demo.html</loc>
-    <lastmod>2026-06-30T03:56:46.868Z</lastmod>
+    <lastmod>2026-06-30T08:11:54.528Z</lastmod>
   </url>
 </urlset>

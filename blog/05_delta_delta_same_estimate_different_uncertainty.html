@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sangyu Xu">
+<meta name="dcterms.date" content="2026-06-30">
+<meta name="description" content="A short essay on delta-delta means, regression interaction terms, ANOVA interactions, and why bootstrap confidence intervals are empirically different from model-based uncertainty.">
+
+<title>Interactions, Delta-Deltas, and How We Measure Uncertainty – Sangyu Xu 徐桑榆</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../🪰" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9b1188869ca3851c5a62a4fe00dfdbf4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Caveat:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async="" src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Interactions, Delta-Deltas, and How We Measure Uncertainty – Sangyu Xu 徐桑榆">
+<meta property="og:description" content="A short essay on delta-delta means, regression interaction terms, ANOVA interactions, and why bootstrap confidence intervals are empirically different from model-based uncertainty.">
+<meta property="og:image" content="https://xusangyu.com/blog/05_delta_delta_same_estimate_different_uncertainty_files/figure-html/cell-3-output-1.png">
+<meta property="og:site_name" content="Sangyu Xu 徐桑榆">
+<meta property="og:image:height" content="551">
+<meta property="og:image:width" content="710">
+<meta name="twitter:title" content="Interactions, Delta-Deltas, and How We Measure Uncertainty – Sangyu Xu 徐桑榆">
+<meta name="twitter:description" content="A short essay on delta-delta means, regression interaction terms, ANOVA interactions, and why bootstrap confidence intervals are empirically different from model-based uncertainty.">
+<meta name="twitter:image" content="https://xusangyu.com/blog/05_delta_delta_same_estimate_different_uncertainty_files/figure-html/cell-3-output-1.png">
+<meta name="twitter:image-height" content="551">
+<meta name="twitter:image-width" content="710">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Sangyu Xu 徐桑榆</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../neuroscience.html"> 
+<span class="menu-text">Neuroscience</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../statistics.html"> 
+<span class="menu-text">Statistics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../genetic-tools.html"> 
+<span class="menu-text">Genetic Tools</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Demos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
+        <li>
+    <a class="dropdown-item" href="../dabest_demo.html">
+ <span class="dropdown-text">DABEST 2.0</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://sangyu.github.io/whorlmap-paper/">
+ <span class="dropdown-text">Whorlmap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://sangyu.github.io/rugprint/">
+ <span class="dropdown-text">Rugprint</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://acclab.github.io/moda/">
+ <span class="dropdown-text">MODA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://sangyu.github.io/esploco/Tutorials/01%20Tutorial.html">
+ <span class="dropdown-text">ESPLoCo</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../art.html"> 
+<span class="menu-text">Art &amp; Music</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sangyu"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://xusangyu.com"> 
+<span class="menu-text">xusangyu.com</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#interactions-delta-deltas-and-how-we-measure-uncertainty" id="toc-interactions-delta-deltas-and-how-we-measure-uncertainty" class="nav-link active" data-scroll-target="#interactions-delta-deltas-and-how-we-measure-uncertainty">Interactions, Delta-Deltas, and How We Measure Uncertainty</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Interactions, Delta-Deltas, and How We Measure Uncertainty</h1>
+<p class="subtitle lead">On delta-deltas, interaction terms, and the bootstrap</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">estimation statistics</div>
+    <div class="quarto-category">bootstrap</div>
+    <div class="quarto-category">DABEST</div>
+    <div class="quarto-category">interactions</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A short essay on delta-delta means, regression interaction terms, ANOVA interactions, and why bootstrap confidence intervals are empirically different from model-based uncertainty.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sangyu Xu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 30, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="interactions-delta-deltas-and-how-we-measure-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="interactions-delta-deltas-and-how-we-measure-uncertainty">Interactions, Delta-Deltas, and How We Measure Uncertainty</h2>
+<p><em>“Isn’t a delta-delta just an interaction term in disguise?”</em></p>
+<p>People ask this a lot, and the answer is: mostly, yes — but the uncertainty tells a different story, and that difference is the whole point.</p>
+<p>You calculate a mean. Then you wonder: how precise is this estimate?</p>
+<p>For a simple mean difference, this question is already important. For a delta-delta, it becomes even more important. A delta-delta asks whether one change is larger than another change: for example, whether a treatment effect is larger in an experimental genotype than in a control genotype.</p>
+<p>The estimate itself is just arithmetic. In a simple 2×2 design with dummy (treatment) coding, the delta-delta mean is exactly the <code>group × treatment</code> interaction coefficient in a saturated linear model. This equivalence depends on the coding scheme: with effect (sum-to-zero) coding, the interaction coefficient is scaled differently — in a 2×2 design it is one quarter of the delta-delta. The same basic interaction question is also asked by a two-way ANOVA: does the effect of one factor depend on the other? Regression and ANOVA can express the same general linear model structure, but the meaning of coefficients depends on the coding scheme used for categorical variables and interactions.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The uncertainty is where the methods part ways.</p>
+<p>A classical confidence interval usually starts with a mathematical story about the estimate. For a simple mean, that story often relies on the sampling distribution of the mean being approximately normal. For regression coefficients, the usual interval relies on the fitted model: independent observations, a correctly specified linear structure, residual variance, degrees of freedom, and a theoretical reference distribution. These assumptions may be reasonable, but they are still assumptions.</p>
+<p>A bootstrap confidence interval takes a different route. DABEST resamples the observed data with replacement, recomputes the effect size on each resample, and uses the resulting resampled effect-size distribution to form the confidence interval — with BCa correction applied.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The bootstrap was introduced by Efron as a computational approach to estimating uncertainty from resampling.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>That is why the bootstrap CI feels empirical. It asks: if I repeatedly resample data like the data I actually observed, how much does my estimate wobble? That said, the bootstrap is not assumption-free. BCa correction can be unreliable when samples are very small (n &lt; 10 per group) or when outcomes are highly discrete, because the resampling distribution itself becomes unstable.</p>
+<p>This matters in practice because real biological data often make the usual textbook picture uncomfortable: small sample sizes, skewed distributions, unequal variances, batches, and the occasional outlier that pulls the mean around. The bootstrap does not make these problems disappear, but it changes the question. Instead of deriving uncertainty only from a theoretical standard-error formula, it directly recomputes the statistic on resampled versions of the observed dataset. For well-behaved data with reasonable group sizes (say, n ≥ 20 per cell), bootstrap and model-based CIs are often numerically similar — width ratios near 1.0. The gap opens up meaningfully when data are skewed, variances are unequal across groups, or outliers are present. Those are precisely the conditions where the bootstrap’s empirical approach is most valuable.</p>
+<p>This fits the broader estimation-statistics argument: report effect sizes and confidence intervals, not only whether a P value crossed a threshold. Gardner and Altman made this argument in “Confidence intervals rather than P values,” and Cumming’s “new statistics” similarly emphasises estimation based on effect sizes, confidence intervals, and meta-analysis.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<section id="same-arithmetic-in-a-simple-22-design" class="level3">
+<h3 class="anchored" data-anchor-id="same-arithmetic-in-a-simple-22-design">Same arithmetic in a simple 2×2 design</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>What you calculate</th>
+<th>With dummy (treatment) coding</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Delta-delta mean</td>
+<td>Difference between two mean differences</td>
+<td>The raw interaction estimate</td>
+</tr>
+<tr class="even">
+<td>Regression interaction beta</td>
+<td><code>group × treatment</code> coefficient</td>
+<td><strong>Exactly equal</strong> to the delta-delta</td>
+</tr>
+<tr class="odd">
+<td>Regression interaction beta</td>
+<td><code>group × treatment</code> coefficient (effect/sum coding)</td>
+<td>Delta-delta ÷ 4 — scaled, not equal</td>
+</tr>
+<tr class="even">
+<td>ANOVA interaction</td>
+<td>Non-additive effect of two factors</td>
+<td>Same interaction question, no estimate of size</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="different-uncertainty-machinery" class="level3">
+<h3 class="anchored" data-anchor-id="different-uncertainty-machinery">Different uncertainty machinery</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Uncertainty output</th>
+<th>How uncertainty is built</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bootstrap delta-delta CI</td>
+<td>Empirical/resampling CI</td>
+<td>Resample observed data and recompute the full delta-delta</td>
+</tr>
+<tr class="even">
+<td>Regression beta CI</td>
+<td>Model-based CI</td>
+<td>Use model assumptions, a standard error formula, and usually a t distribution</td>
+</tr>
+<tr class="odd">
+<td>ANOVA interaction P value</td>
+<td>Model-based test</td>
+<td>Use an F statistic under a no-interaction null</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="a-numerical-illustration" class="level3">
+<h3 class="anchored" data-anchor-id="a-numerical-illustration">A numerical illustration</h3>
+<p>The cells below generate a synthetic 2×2 dataset with the following target means:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th style="text-align: right;">Vehicle</th>
+<th style="text-align: right;">Drug</th>
+<th style="text-align: right;">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>WT</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">+2</td>
+</tr>
+<tr class="even">
+<td>KO</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">+9</td>
+</tr>
+</tbody>
+</table>
+<p>The delta-delta is (18 − 9) − (12 − 10) = <strong>+7</strong>.</p>
+<p>The DABEST estimation plot, the regression interaction coefficient, and the two-way ANOVA all recover the same point estimate. The confidence intervals and the P value come from different machinery.</p>
+<p>A companion Colab notebook extends this with a larger dataset, a messier unbalanced variant, and a side-by-side plot of the bootstrap distribution against the model-based CI: <a href="https://colab.research.google.com/github/sangyu/portfolio/blob/main/nbs/blog/same_estimate_different_uncertainty_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a></p>
+<div id="fd8f7a79" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-06-30T06:23:51.081777Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-06-30T06:23:51.081593Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-06-30T06:23:52.394406Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-06-30T06:23:52.394107Z&quot;}}" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dabest</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.stats.anova <span class="im">as</span> sm_anova</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">7</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'measurement'</span>: np.concatenate([</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        rng.normal(<span class="dv">10</span>, <span class="dv">2</span>, n),   <span class="co"># WT Vehicle</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        rng.normal(<span class="dv">12</span>, <span class="dv">2</span>, n),   <span class="co"># WT Drug</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        rng.normal(<span class="dv">9</span>,  <span class="dv">2</span>, n),   <span class="co"># KO Vehicle</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        rng.normal(<span class="dv">18</span>, <span class="dv">2</span>, n),   <span class="co"># KO Drug</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    ]),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'genotype'</span>:  [<span class="st">'WT'</span>]<span class="op">*</span>(n<span class="op">*</span><span class="dv">2</span>) <span class="op">+</span> [<span class="st">'KO'</span>]<span class="op">*</span>(n<span class="op">*</span><span class="dv">2</span>),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'treatment'</span>: ([<span class="st">'Vehicle'</span>]<span class="op">*</span>n <span class="op">+</span> [<span class="st">'Drug'</span>]<span class="op">*</span>n) <span class="op">*</span> <span class="dv">2</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<section id="dabest-delta-delta-estimation-plot" class="level4">
+<h4 class="anchored" data-anchor-id="dabest-delta-delta-estimation-plot">DABEST delta-delta estimation plot</h4>
+<p>The upper panel shows the raw data and group means. The lower panel shows the two mean differences (WT Drug − WT Vehicle; KO Drug − KO Vehicle) and their delta — the delta-delta — with a 95% bootstrap BCa confidence interval.</p>
+<div id="bc736170" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-06-30T06:23:52.396084Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-06-30T06:23:52.395920Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-06-30T06:23:53.147731Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-06-30T06:23:53.147481Z&quot;}}" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>analysis <span class="op">=</span> dabest.load(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    df,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>[<span class="st">'treatment'</span>, <span class="st">'genotype'</span>],</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'measurement'</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    delta2<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    experiment<span class="op">=</span><span class="st">'genotype'</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    experiment_label<span class="op">=</span>[<span class="st">'WT'</span>, <span class="st">'KO'</span>],</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    x1_level<span class="op">=</span>[<span class="st">'Vehicle'</span>, <span class="st">'Drug'</span>],</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> analysis.mean_diff.plot(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    raw_marker_size<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    bar_width<span class="op">=</span><span class="fl">0.25</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    raw_desat<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    contrast_desat<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    custom_palette<span class="op">=</span>{<span class="st">'WT'</span>: <span class="st">'steelblue'</span>, <span class="st">'KO'</span>: <span class="st">'orangered'</span>},</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    raw_bars_kwargs<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.1</span>},</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    contrast_bars_kwargs<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.1</span>},</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    contrast_errorbar_kwargs<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'black'</span>, <span class="st">'lw'</span>: <span class="dv">2</span>, <span class="st">'linestyle'</span>: <span class="st">'-'</span>, <span class="st">'zorder'</span>: <span class="dv">1</span>},</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="05_delta_delta_same_estimate_different_uncertainty_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="05_delta_delta_same_estimate_different_uncertainty_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="regression-interaction-coefficient-and-model-based-ci" class="level4">
+<h4 class="anchored" data-anchor-id="regression-interaction-coefficient-and-model-based-ci">Regression: interaction coefficient and model-based CI</h4>
+<p>With dummy (treatment) coding — the default in statsmodels — the interaction coefficient is directly the delta-delta: it estimates how much the Drug effect changes from WT to KO. The CI comes from the model’s standard error and a t distribution.</p>
+<div id="5a9d8828" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-06-30T06:23:53.149140Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-06-30T06:23:53.149057Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-06-30T06:23:53.157731Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-06-30T06:23:53.157503Z&quot;}}" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> smf.ols(<span class="st">'measurement ~ C(genotype) * C(treatment)'</span>, data<span class="op">=</span>df).fit()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>coef_table <span class="op">=</span> model.summary2().tables[<span class="dv">1</span>][[<span class="st">'Coef.'</span>, <span class="st">'[0.025'</span>, <span class="st">'0.975]'</span>, <span class="st">'P&gt;|t|'</span>]]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(coef_table.to_string())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                               Coef.     [0.025     0.975]         P&gt;|t|
+Intercept                                  17.846924  17.145814  18.548035  5.725496e-71
+C(genotype)[T.WT]                          -6.277980  -7.269500  -5.286460  5.373939e-22
+C(treatment)[T.Vehicle]                    -8.906672  -9.898192  -7.915152  3.175259e-32
+C(genotype)[T.WT]:C(treatment)[T.Vehicle]   6.598166   5.195945   8.000387  3.889043e-15</code></pre>
+</div>
+</div>
+</section>
+<section id="two-way-anova-interaction-f-test" class="level4">
+<h4 class="anchored" data-anchor-id="two-way-anova-interaction-f-test">Two-way ANOVA: interaction F test</h4>
+<div id="3cd845d8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-06-30T06:23:53.159081Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-06-30T06:23:53.159002Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-06-30T06:23:53.164494Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-06-30T06:23:53.164253Z&quot;}}" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>anova_table <span class="op">=</span> sm_anova.anova_lm(model, typ<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(anova_table.to_string())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                              sum_sq    df           F        PR(&gt;F)
+C(genotype)               221.845711   1.0   71.129908  3.402525e-13
+C(treatment)              786.126199   1.0  252.053934  1.342959e-28
+C(genotype):C(treatment)  272.098739   1.0   87.242427  3.889043e-15
+Residual                  299.412566  96.0         NaN           NaN</code></pre>
+</div>
+</div>
+<p>The interaction row of the ANOVA table and the interaction coefficient in the regression table both point at the same effect. The bootstrap CI in the DABEST plot is empirically derived from the data; the regression CI is derived from the model’s residual variance and degrees of freedom. In clean, balanced, normally distributed data these will be similar. In practice they can differ — and knowing <em>why</em> they can differ is reason enough to look at both.</p>
+</section>
+</section>
+<section id="when-the-three-stop-matching-neatly" class="level3">
+<h3 class="anchored" data-anchor-id="when-the-three-stop-matching-neatly">When the three stop matching neatly</h3>
+<p>The equivalence is cleanest for a simple 2×2 ordinary least-squares model with matching contrasts. The answers can diverge when the design is unbalanced, when Type I/II/III sums of squares are chosen differently, when contrast coding changes the coefficient, when covariates are added, when observations are paired or clustered, when mixed effects are needed, when robust standard errors are used, when outcomes are modeled with logistic or Poisson regression, or when effects are estimated on a transformed scale. Statsmodels explicitly exposes Type I/II/III ANOVA choices and robust covariance options, which is a reminder that “the interaction P value” is not a single assumption-free object.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>The takeaway is simple: <strong>the mean is the estimate; the interval is the story of how much we trust it.</strong></p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>UCLA Statistical Methods and Data Analytics. “Regression with SPSS Chapter 6: More on Interactions of Categorical Variables.” <a href="https://stats.oarc.ucla.edu/spss/webbooks/reg/chapter6/regressionwith-spsschapter-6-more-on-interactions-of-categorical-variablesdraft-version/" class="uri">https://stats.oarc.ucla.edu/spss/webbooks/reg/chapter6/regressionwith-spsschapter-6-more-on-interactions-of-categorical-variablesdraft-version/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>DABEST. “Bootstrap Confidence Intervals.” <a href="https://acclab.github.io/DABEST-python/blog/posts/bootstraps/bootstraps.html" class="uri">https://acclab.github.io/DABEST-python/blog/posts/bootstraps/bootstraps.html</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Efron, B. (1979). “Bootstrap Methods: Another Look at the Jackknife.” <em>The Annals of Statistics</em>, 7(1), 1–26. <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife/10.1214/aos/1176344552.short" class="uri">https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife/10.1214/aos/1176344552.short</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Gardner, M. J., &amp; Altman, D. G. (1986). “Confidence intervals rather than P values: estimation rather than hypothesis testing.” <em>British Medical Journal</em>, 292, 746–750. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1339793/" class="uri">https://pmc.ncbi.nlm.nih.gov/articles/PMC1339793/</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Cumming, G. (2014). “The new statistics: why and how.” <em>Psychological Science</em>, 25(1), 7–29. <a href="https://pubmed.ncbi.nlm.nih.gov/24220629/" class="uri">https://pubmed.ncbi.nlm.nih.gov/24220629/</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Statsmodels. <code>statsmodels.stats.anova.anova_lm</code> documentation. <a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.anova.anova_lm.html" class="uri">https://www.statsmodels.org/stable/generated/statsmodels.stats.anova.anova_lm.html</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/xusangyu\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
