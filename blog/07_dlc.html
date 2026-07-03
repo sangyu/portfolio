@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Sangyu Xu">
+<meta name="dcterms.date" content="2026-07-02">
+<meta name="description" content="On adapting a pretrained vision model for animal behavior tracking — and what that shift revealed about the difference between a model as object and a model as tool.">
 
-<title>Neuroscience – Sangyu Xu 徐桑榆</title>
+<title>DeepLabCut and the first time pretrained models felt useful – Sangyu Xu 徐桑榆</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./🪰" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9b1188869ca3851c5a62a4fe00dfdbf4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../🪰" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9b1188869ca3851c5a62a4fe00dfdbf4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,21 +84,23 @@ ul.task-list li input[type="checkbox"] {
 </script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Neuroscience – Sangyu Xu 徐桑榆">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="DeepLabCut and the first time pretrained models felt useful – Sangyu Xu 徐桑榆">
+<meta property="og:description" content="On adapting a pretrained vision model for animal behavior tracking — and what that shift revealed about the difference between a model as object and a model as tool.">
 <meta property="og:site_name" content="Sangyu Xu 徐桑榆">
-<meta name="twitter:title" content="Neuroscience – Sangyu Xu 徐桑榆">
+<meta name="twitter:title" content="DeepLabCut and the first time pretrained models felt useful – Sangyu Xu 徐桑榆">
+<meta name="twitter:description" content="On adapting a pretrained vision model for animal behavior tracking — and what that shift revealed about the difference between a model as object and a model as tool.">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Sangyu Xu 徐桑榆</span>
     </a>
   </div>
@@ -106,23 +111,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./neuroscience.html" aria-current="page"> 
+    <a class="nav-link" href="../neuroscience.html"> 
 <span class="menu-text">Neuroscience</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./statistics.html"> 
+    <a class="nav-link" href="../statistics.html"> 
 <span class="menu-text">OSS Tools</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./genetic-tools.html"> 
+    <a class="nav-link" href="../genetic-tools.html"> 
 <span class="menu-text">Genetic Tools</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -131,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-demos">    
         <li>
-    <a class="dropdown-item" href="./dabest_demo.html">
+    <a class="dropdown-item" href="../dabest_demo.html">
  <span class="dropdown-text">DABEST 2.0</span></a>
   </li>  
         <li>
@@ -153,15 +158,15 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./art.html"> 
+    <a class="nav-link" href="../art.html"> 
 <span class="menu-text">Art &amp; Music</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -183,23 +188,45 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Neuroscience</h1>
+<h1 class="title">DeepLabCut and the first time pretrained models felt useful</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">neuroscience</div>
+    <div class="quarto-category">machine learning</div>
+    <div class="quarto-category">methods</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    On adapting a pretrained vision model for animal behavior tracking — and what that shift revealed about the difference between a model as object and a model as tool.
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sangyu Xu </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 2, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -209,84 +236,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="page-header">
-  <h1>Neuroscience</h1>
-  <p class="subtitle">Internal states, circuits, and the behaviour they produce.</p>
+<section id="deeplabcut-and-the-first-time-pretrained-models-felt-useful" class="level1">
+<h1>DeepLabCut and the first time pretrained models felt useful</h1>
+<p>My first exposure to neural networks was old-school: calculating perceptrons by hand, reading Sutton and Barto, learning the theory behind reinforcement learning and backpropagation. For a long time, neural networks felt like something I understood conceptually but not something that changed my daily scientific work.</p>
+<p>DeepLabCut changed that. In animal behavior, many things are obvious to a human but annoying to measure. A fly feeds, turns, touches another fly, crosses paths, changes posture. A worm bends, reverses, slows down. Traditional image-analysis heuristics work in clean cases, but they fall apart when animals overlap, lighting shifts, bodies deform, or social interactions matter. With DeepLabCut, the workflow flipped. Instead of hand-writing brittle rules for every scenario, I labeled examples from my own assays and adapted a pretrained vision model to the visual structure I actually cared about: body parts, posture, movement, social contact, feeding context.</p>
+<p>That’s when I realized a pretrained model was not an abstract object or a buzzword. It was a practical tool that turned messy biological videos into usable measurements. It still required scientific judgment — choosing training frames, checking failures, watching for jitter or identity swaps, validating that the output supported downstream analysis. But the bottleneck moved from writing brittle heuristics to curating examples, validating outputs, and interpreting results. That is a much better bottleneck.</p>
+<hr>
+<p>It is quite impressive when applied to real animal data:</p>
+<p>In <span class="species"><em>Drosophila</em></span> social-feeding assays, the model had to track body parts as flies jostled and overlapped in a small arena:</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+<video src="../images/blog/07_dlc/hungry3.mp4" autoplay="" muted="" playsinline="" loop="" style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
+<p style="font-size: 0.82rem; color: var(--warm-grey); margin-top: 0.6rem; font-style: italic;">
+DeepLabCut tracking in a <em class="species">Drosophila</em> social-feeding assay.
+</p>
 </div>
-
-<div class="research-grid">
-
-  <div class="research-card">
-    <span class="output-tag">in revision</span>
-    <h3 class="anchored">Ethomics — What Is a Hungry Fly?</h3>
-    <p>
-      High-dimensional behavioural state benchmarking in <em class="species">Drosophila</em>.
-      The Espresso platform captures 17 behavioural metrics simultaneously across
-      hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
-      produce genuine hunger, or just a superficially similar signature?
-    </p>
-    <a href="blog/02_ethomics.html">→ Read more</a>   <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub ↗</a>   <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub ↗</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">Current Biology 2017</span>
-    <h3 class="anchored">Intertemporal Choice</h3>
-    <p>
-      Dorsal raphe serotonergic neurons bidirectionally control delay discounting
-      in mice. Activation increases patience; silencing increases
-      impulsivity. Effect is trade-off specific — not a motor or motivational confound.
-    </p>
-    <a href="blog/03_itc.html">→ Read more</a>   <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">Paper ↗</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">PNAS 2020</span>
-    <h3 class="anchored">Noradrenergic Attention</h3>
-    <p>
-      Two distinct noradrenergic pathways implement different attentional control
-      mechanisms in rodents. Selective lesions reveal a functional dissociation
-      not apparent from anatomy alone.
-    </p>
-    <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117">→ Publication</a>
-  </div>
-
-  <div class="research-card stub">
-    <span class="output-tag">In development</span>
-    <h3 class="anchored">Epitranscriptomics</h3>
-    <p>
-      Direct RNA nanopore sequencing pipeline for m6A and pseudouridine mapping
-      in <em class="species">Drosophila</em> serotonergic neurons. Does hunger change the RNA
-      modification landscape?
-    </p>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">Nature Neuroscience 2016</span>
-    <h3 class="anchored">Basolateral Amygdala Valence Circuits</h3>
-    <p>
-      Antagonistic negative and positive neurons of the basolateral amygdala
-      encode opposing valence signals. Selective activation and silencing
-      reveal a functional opponent architecture for fear and reward.
-    </p>
-    <a href="https://www.nature.com/articles/nn.4414">→ Publication</a>
-  </div>
-
-  <div class="research-card">
-    <span class="output-tag">bioRxiv 2026</span>
-    <h3 class="anchored">Octopamine, Dopamine, and the Hungry Fly Circuit</h3>
-    <p>
-      A mushroom-body output neuron (MBON11) integrates octopaminergic and dopaminergic
-      signals to control hunger-motivated feeding in <em class="species">Drosophila</em>.
-      Octopaminergic VPM3/4 neurons are instructive but not required for hunger-driven
-      feeding; dopaminergic PPL101 neurons are required but not instructive.
-      MBON11 sits at the convergence point.
-    </p>
-    <a href="https://doi.org/10.64898/2026.03.13.711740">→ bioRxiv</a>
-  </div>
-
+<p>In <span class="species"><em>C. elegans</em></span> locomotion recordings, it had to follow a bending, reversing worm across low-contrast bright-field frames:</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+<video src="https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47203-w/MediaObjects/41467_2024_47203_MOESM11_ESM.mp4" autoplay="" muted="" playsinline="" loop="" style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
+<p style="font-size: 0.82rem; color: var(--warm-grey); margin-top: 0.6rem; font-style: italic;">
+<em class="species">C. elegans</em> locomotion tracking. Supplementary Video, <a href="https://www.nature.com/articles/s41467-024-47203-w" target="_blank">Ott et al.&nbsp;2024</a>.
+</p>
 </div>
+<p>Both cases meant choosing frames where animals were entangled, catching identity swaps during contact, and validating that a jittery keypoint didn’t corrupt the downstream analysis. The pretrained model handled the visual recognition; the scientific work was in curating the training data, inspecting failures, and deciding what counted as a reliable measurement. That distinction — model as tool, scientist as judge — stuck with me.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
