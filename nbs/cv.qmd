@@ -10,6 +10,16 @@ page-layout: full
 
 <div class="cv-wrapper">
 
+  <div class="cv-profile">
+    <strong>Senior Research Fellow</strong> — Duke-NUS Medical School, Singapore<br>
+    Computational behaviour scientist. I build measurement tools for internal states: automated tracking, effect-size estimation, and high-dimensional behavioral benchmarking. Currently: epitranscriptomics of native RNA states, ethomics of hunger circuits, constructing LLM loops to produce scientific reasoning and writing.<br>
+    <span style="margin-top:0.6rem; display:inline-block;">
+      <a href="mailto:xusangyu@gmail.com">xusangyu@gmail.com</a> &ensp;·&ensp;
+      <a href="https://scholar.google.com/citations?hl=en&user=18wi0WoAAAAJ" target="_blank">Google Scholar</a> &ensp;·&ensp;
+      <a href="https://github.com/sangyu" target="_blank">GitHub</a>
+    </span>
+  </div>
+
   <!-- PUBLICATIONS -->
   <h2 class="cv-section-title">Selected Publications <a href="https://scholar.google.com/citations?hl=en&user=18wi0WoAAAAJ" class="cv-external-link" target="_blank">Google Scholar &nearr;</a></h2>
 

@@ -94,13 +94,7 @@ lightbox: false
     produces an outcome that is partly designed and partly discovered.
     That negotiation is the interesting part.
   </p> -->
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <a href="images/ceramics/curl-handle-mug.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/curl-handle-mug.jpg" alt="Cream stoneware mug with sculpted curling handle that ends in a tight spiral" loading="lazy">
-      </a>
-      <div class="gallery-caption">Mug.</div>
-    </div>
+  <div class="gallery-grid-3x3">
     <div class="gallery-item">
       <a href="images/ceramics/herringbone-pitcher.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/herringbone-pitcher.jpg" alt="Amber-glazed pitcher with elegant long neck — lower body covered in dense herringbone impressed texture" loading="lazy">
@@ -120,58 +114,16 @@ lightbox: false
       <div class="gallery-caption">Bottle.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/squirrel.JPG" target="_blank" class="gallery-link">
-      <img src="images/ceramics/squirrel.JPG" alt="Squirrel" loading="lazy">
-      </a>
-      <div class="gallery-caption">Squirrel.</div>
-    </div>
-    <div class="gallery-item">
       <a href="images/ceramics/teal-nerikomi-yunomi.jpg" target="_blank" class="gallery-link">
       <img src="images/ceramics/teal-nerikomi-yunomi.jpg" alt="Tall yunomi with teal glaze over nerikomi marbled body — dark slip waves rising from the base" loading="lazy">
       </a>
-      <div class="gallery-caption">Cup.</div>
+      <div class="gallery-caption">Teal nerikomi cup.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/blue-stripe-mug.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/blue-stripe-mug.jpg" alt="Round belly mug with combed blue and white slip — feathered horizontal stripes in ink-blue and cream" loading="lazy">
+      <a href="images/ceramics/curl-handle-mug.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/curl-handle-mug.jpg" alt="Cream stoneware mug with sculpted curling handle that ends in a tight spiral" loading="lazy">
       </a>
-      <div class="gallery-caption">Cup.</div>
-    </div>
-    <div class="gallery-item">
-      <a href="images/ceramics/fish.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/fish.jpg" alt="Fish" loading="lazy">
-      </a>
-      <div class="gallery-caption">Fish.</div>
-    </div>
-    <div class="gallery-item">
-      <a href="images/ceramics/wavecup.JPG" target="_blank" class="gallery-link">
-      <img src="images/ceramics/wavecup.JPG" alt="Wave cup" loading="lazy">
-      </a>
-      <div class="gallery-caption">Wave cup.</div>
-    </div>
-    <div class="gallery-item">
-      <a href="images/ceramics/lamp.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/lamp.jpg" alt="Lamp" loading="lazy">
-      </a>
-      <div class="gallery-caption">Lamp.</div>
-    </div>
-    <div class="gallery-item">
-      <a href="images/ceramics/cup.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/cup.jpg" alt="Cup" loading="lazy">
-      </a>
-      <div class="gallery-caption">Cup.</div>
-    </div>
-    <div class="gallery-item">
-      <a href="images/ceramics/distorted-cup.JPG" target="_blank" class="gallery-link">
-      <img src="images/ceramics/distorted-cup.JPG" alt="Distorted cup" loading="lazy">
-      </a>
-      <div class="gallery-caption">Distorted cup.</div>
-    </div>
-    <div class="gallery-item">
-      <a href="images/ceramics/sea-urchin-vessel.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/sea-urchin-vessel.jpg" alt="Small spherical vessel with barnacle-like textured surface, cobalt blue glaze pooling in the crevices" loading="lazy">
-      </a>
-      <div class="gallery-caption">Vessel.</div>
+      <div class="gallery-caption">Curl-handle mug.</div>
     </div>
     <div class="gallery-item">
       <a href="images/ceramics/marbled-bowl-interior.jpg" target="_blank" class="gallery-link">
@@ -180,16 +132,22 @@ lightbox: false
       <div class="gallery-caption">Marbled bowl.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/string-cup.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/string-cup.jpg" alt="String cup" loading="lazy">
+      <a href="images/ceramics/fish.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/fish.jpg" alt="Fish" loading="lazy">
       </a>
-      <div class="gallery-caption">String cup.</div>
+      <div class="gallery-caption">Fish.</div>
     </div>
     <div class="gallery-item">
-      <a href="images/ceramics/pattern-cup.jpg" target="_blank" class="gallery-link">
-      <img src="images/ceramics/pattern-cup.jpg" alt="Pattern cup" loading="lazy">
+      <a href="images/ceramics/blue-stripe-mug.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/blue-stripe-mug.jpg" alt="Round belly mug with combed blue and white slip — feathered horizontal stripes in ink-blue and cream" loading="lazy">
       </a>
-      <div class="gallery-caption">Pattern cup.</div>
+      <div class="gallery-caption">Blue-stripe mug.</div>
+    </div>
+    <div class="gallery-item">
+      <a href="images/ceramics/cup.jpg" target="_blank" class="gallery-link">
+      <img src="images/ceramics/cup.jpg" alt="Cup" loading="lazy">
+      </a>
+      <div class="gallery-caption">Cup.</div>
     </div>
   </div>
 </div>

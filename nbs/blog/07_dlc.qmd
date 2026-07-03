@@ -1,0 +1,39 @@
+---
+title: "DeepLabCut and the first time pretrained models felt useful"
+author: "Sangyu Xu"
+date: "2026-07-02"
+page-layout: article
+description: "On adapting a pretrained vision model for animal behavior tracking — and what that shift revealed about the difference between a model as object and a model as tool."
+categories:
+  - neuroscience
+  - machine learning
+  - methods
+---
+
+# DeepLabCut and the first time pretrained models felt useful
+
+My first exposure to neural networks was old-school: calculating perceptrons by hand, reading Sutton and Barto, learning the theory behind reinforcement learning and backpropagation. For a long time, neural networks felt like something I understood conceptually but not something that changed my daily scientific work.
+
+DeepLabCut changed that. In animal behavior, many things are obvious to a human but annoying to measure. A fly feeds, turns, touches another fly, crosses paths, changes posture. A worm bends, reverses, slows down. Traditional image-analysis heuristics work in clean cases, but they fall apart when animals overlap, lighting shifts, bodies deform, or social interactions matter. With DeepLabCut, the workflow flipped. Instead of hand-writing brittle rules for every scenario, I labeled examples from my own assays and adapted a pretrained vision model to the visual structure I actually cared about: body parts, posture, movement, social contact, feeding context.
+
+That's when I realized a pretrained model was not an abstract object or a buzzword. It was a practical tool that turned messy biological videos into usable measurements. It still required scientific judgment — choosing training frames, checking failures, watching for jitter or identity swaps, validating that the output supported downstream analysis. But the bottleneck moved from writing brittle heuristics to curating examples, validating outputs, and interpreting results. That is a much better bottleneck.
+
+---
+
+It is quite impressive when applied to real animal data:
+
+In [*Drosophila*]{.species} social-feeding assays, the model had to track body parts as flies jostled and overlapped in a small arena:
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <video src="../images/blog/07_dlc/hungry3.mp4" autoplay muted playsinline loop style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
+  <p style="font-size: 0.82rem; color: var(--warm-grey); margin-top: 0.6rem; font-style: italic;">DeepLabCut tracking in a <em class="species">Drosophila</em> social-feeding assay.</p>
+</div>
+
+In [*C. elegans*]{.species} locomotion recordings, it had to follow a bending, reversing worm across low-contrast bright-field frames:
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <video src="https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47203-w/MediaObjects/41467_2024_47203_MOESM11_ESM.mp4" autoplay muted playsinline loop style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></video>
+  <p style="font-size: 0.82rem; color: var(--warm-grey); margin-top: 0.6rem; font-style: italic;"><em class="species">C. elegans</em> locomotion tracking. Supplementary Video, <a href="https://www.nature.com/articles/s41467-024-47203-w" target="_blank">Ott et al. 2024</a>.</p>
+</div>
+
+Both cases meant choosing frames where animals were entangled, catching identity swaps during contact, and validating that a jittery keypoint didn't corrupt the downstream analysis. The pretrained model handled the visual recognition; the scientific work was in curating the training data, inspecting failures, and deciding what counted as a reliable measurement. That distinction — model as tool, scientist as judge — stuck with me.

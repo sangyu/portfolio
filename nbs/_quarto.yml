@@ -3,6 +3,7 @@ project:
   output-dir: _docs
   resources:
     - images/blog/**
+    - images/blog/07_dlc/**
   render:
     - "*.qmd"
     - "*.ipynb"
@@ -23,6 +24,7 @@ website:
   navbar:
     pinned: true
     background: white
+    collapse-below: xl
     left:
       - href: index.ipynb
         text: Home
@@ -31,7 +33,7 @@ website:
       - href: neuroscience.qmd
         text: Neuroscience
       - href: statistics.qmd
-        text: Open Source Tools
+        text: OSS Tools
       - href: genetic-tools.qmd
         text: Genetic Tools
       - text: Demos
@@ -74,7 +76,7 @@ format:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
         <!-- Privacy-friendly analytics by Plausible -->
         <script async src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
         <script>

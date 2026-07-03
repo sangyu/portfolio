@@ -44,6 +44,7 @@ page-layout: full
       contrasts at once while still seeing direction, magnitude, and uncertainty inside
       each cell.
     </p>
+    <a href="https://sangyu.github.io/whorlmap-paper/">Demo &nearr;</a> &ensp;
     <a href="https://github.com/sangyu/whorlmap-paper">GitHub &nearr;</a>
   </div>
 
@@ -51,9 +52,10 @@ page-layout: full
     <h3>Rugprint</h3>
     <p>
       A compact multivariate fingerprint: selected 2D scatterplot projections arranged
-      as a sparse map, with edge rugs showing how the same observations collapse onto
-      one-dimensional axes.
+      as a sparse map, with edge rugs — a Tufte idea — showing how the same observations
+      collapse onto one-dimensional axes.
     </p>
+    <a href="https://sangyu.github.io/rugprint/">Demo &nearr;</a> &ensp;
     <a href="https://github.com/sangyu/rugprint">GitHub &nearr;</a>
   </div>
 
