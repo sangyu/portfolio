@@ -12,7 +12,7 @@ page-layout: full
 
   <div class="cv-profile">
     <strong>Senior Research Fellow</strong> — Duke-NUS Medical School, Singapore<br>
-    Computational behaviour scientist. I build measurement tools for internal states: automated tracking, effect-size estimation, and high-dimensional behavioral benchmarking. Currently: epitranscriptomics of native RNA states, ethomics of hunger circuits, constructing LLM loops to produce scientific reasoning and writing.<br>
+    Computational behaviour scientist. I build measurement tools for internal states: automated tracking, effect-size estimation, and high-dimensional behavioral benchmarking. I also work with electrophysiology time-series — spike sorting, LFP analysis, and signal conditioning. Currently: epitranscriptomics of native RNA states, ethomics of hunger circuits, constructing LLM loops to produce scientific reasoning and writing.<br>
     <span style="margin-top:0.6rem; display:inline-block;">
       <a href="mailto:xusangyu@gmail.com">xusangyu@gmail.com</a> &ensp;·&ensp;
       <a href="https://scholar.google.com/citations?hl=en&user=18wi0WoAAAAJ" target="_blank">Google Scholar</a> &ensp;·&ensp;
@@ -84,15 +84,16 @@ page-layout: full
     <span class="cv-entry-date">2026–present</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Computational ethomics for internal state detection. Epitranscriptomics of native RNA states.
+    Computational ethomics pipelines for internal state inference and epitranscriptomics workflows for native RNA modification mapping. Developing agentic LLM evaluation systems for scientific reasoning — grounded analytical outputs feed adversarial multi-agent critique and structured manuscript assessment pipelines.
   </p>
   <div class="cv-entry">
     <span class="cv-entry-main">Senior Research Fellow / Research Fellow &mdash; IMCB, A*STAR Singapore</span>
     <span class="cv-entry-date">2017–2026</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Automatic behavior tracking. Estimation statistics. Computational ethomics. Epitranscriptomics of native RNA states.<br>
-    Principal Investigator, Young Individual Researcher Grant (SGD $300,000; National Medical Research Council): led a team studying the neural underpinnings of socially facilitated feeding behaviour in <em class="species">Drosophila</em>, using genetics and deep-learning-based machine vision.
+    Co-developed DABEST 2.0, an estimation statistics framework for visualising effect sizes and uncertainty; predecessor has 2,000+ citations. Built DESTRA, a ground-truth-referenced benchmarking approach for high-dimensional behavioural states, showing that perturbations can shift individual metrics without recapitulating the full target state — presented as an invited talk at APDNC3 / RIKEN 2024.<br>
+    Developed automated behavioural classification pipelines for large-scale ethological data; contributed to novel optogenetic silencing tools (<em>Nature Communications</em> 2024) and long-Stokes-shift fluorescent markers for two-photon imaging (bioRxiv 2026).<br>
+    Principal Investigator, Young Individual Researcher Grant (SGD $300,000; National Medical Research Council): led a cross-disciplinary team combining genetics, deep-learning pose estimation (DeepLabCut, SLEAP), and epitranscriptomics to study the neural underpinnings of socially facilitated feeding behaviour in <em class="species">Drosophila</em>.
   </p>
 
   <div class="cv-entry">
@@ -100,7 +101,7 @@ page-layout: full
     <span class="cv-entry-date">2016–2017</span>
   </div>
   <p style="font-size: 0.95rem; color: var(--warm-grey); margin: -0.5rem 0 1.2rem; padding-left: 0.1rem;">
-    Characterised serotonergic control of intertemporal choice in mice (<em>Current Biology</em> 2017).
+    Designed the first olfactory-cued rodent intertemporal choice task, translating a paradigm from human preference evaluation to allow precise neural recording at the decision point. Built a psychometric model predicting choice probability as a function of delay; dorsal raphe serotonergic activation increased patience while silencing drove impulsivity (<em>Current Biology</em> 2017, co-corresponding). Also contributed to studies of noradrenergic attentional circuits (<em>PNAS</em> 2020) and basolateral amygdala valence encoding (<em>Nature Neuroscience</em> 2016).
   </p>
 
 
@@ -165,7 +166,7 @@ page-layout: full
   <h2 class="cv-section-title">Recognition</h2>
 
   <div class="award-item">Outstanding Short Talk Award &mdash; Neuroscience Singapore 2025</div>
-  <div class="award-item">Young Individual Research Grant &mdash; National Medical Research Council, Singapore, 2021&ndash;2025</div>
+  <div class="award-item">Young Individual Research Grant (SGD $300,000) &mdash; National Medical Research Council, Singapore, 2021&ndash;2025</div>
   <div class="award-item">Walle Nauta Award for Excellence in Graduate Teaching &mdash; MIT, 2011</div>
   <div class="award-item">National Science Scholarship &mdash; A*STAR, Singapore, 2004&ndash;2013</div>
   <div class="award-item">Honourable Mention &mdash; Singapore Physics Olympiad, 2002</div>

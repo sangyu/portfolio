@@ -19,7 +19,7 @@ page-layout: full
   <div class="blog-stub">
     <p class="blog-stub-meta">Measurement &middot; AI &middot; <time>Jul 2026</time></p>
     <h3><a href="06_goodhart.html">Benchmark Scores Have a Goodhart Problem. So Did My Fly Feeding Data.</a></h3>
-    <p>Once a metric becomes the target, it starts attracting loopholes. How a problem i ran into in fly neuroscience maps onto AI evaluation, digital health, and anywhere a proxy gets mistaken for the construct.</p>
+    <p>Once a metric becomes the target, it starts attracting loopholes. How a problem we ran into in fly neuroscience maps onto AI evaluation, digital health, and anywhere a proxy gets mistaken for the construct.</p>
   </div>
 
   <div class="blog-stub">
