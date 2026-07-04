@@ -1,0 +1,29 @@
+---
+title: "Benchmark scores have a Goodhart problem. So did my fly feeding data."
+author: "Sangyu Xu"
+date: "2026-07-08"
+page-layout: article
+description: "A single number is seductive because it feels like clarity. The trouble is that once a metric becomes the target, it starts attracting loopholes."
+categories:
+  - measurement
+  - evaluation
+  - estimation statistics
+---
+
+# Benchmark scores have a Goodhart problem. So did my fly feeding data.
+
+A single number is seductive because it feels like clarity. Accuracy. AUROC. Reward score. Daily steps. Sleep score. Food consumed. One metric gives everyone something to optimize, compare, and put on a dashboard. The trouble is that once a metric becomes the target, it starts attracting loopholes ([Manheim & Garrabrant, 2018](https://arxiv.org/abs/1803.04585)). Sometimes the system improves. Sometimes it merely learns how to look improved.
+
+We ran into this problem in a very biological form while studying fly feeding. If a neural manipulation made flies eat more, it was tempting to call the circuit hunger-promoting. If it made them eat less, maybe satiety-promoting. But biology is rarely that polite. A fly can eat less because it is sated, but also because it is sluggish, stressed, or uncoordinated. It can approach food more because it is hungry, but also because it is hyperactive. The measurement problem was not "can I detect a behavioral change?" It was "can I tell whether this change means what I think it means?" That question should feel familiar to anyone doing AI evaluation, digital health, or behavioral assessment — anywhere a proxy gets mistaken for the construct it is supposed to track.
+
+The solution we built was not to find one better metric. It was to stop trusting single metrics by themselves. We used a natural state transition — hunger to satiety — as a ground-truth reference, measured many behavioral features simultaneously, and represented each condition as a multidimensional effect-size vector. Neural manipulations were then compared against that reference. I called the framework DESTRA. Less grandly: do artificial perturbations recapitulate the real thing, or do they merely shift one convenient readout?
+
+The answer varied sharply by circuit. Some manipulations moved flies into a coherent state that closely matched natural hunger or satiety across many dimensions — meal size, locomotion, food approach, and post-meal behavior all shifting together. Others changed one readout while leaving everything else discordant. A single metric would have called both "feeding effects." The full profile distinguished them cleanly. And the comparison stays interpretable: each dimension is a standardized effect size for one specific behavioral feature, so you can see exactly where two profiles agree and where they diverge. When you are trying to argue that a perturbation authentically recreates a state, you need to be able to show your working.
+
+The same question scales. For AI evaluation, it means asking not just whether a benchmark score moved, but whether the full capability profile recapitulates the pattern of genuinely better performance. For digital health, it means treating states like fatigue, stress, or recovery as multidimensional constructs that need reference transitions and interpretable validation, not just proxy labels. The practical question is always the same: did the right things change, in the right combination, in the right direction? Not just: did the number go up?
+
+One metric will always be easier. It will also always be easier to fool.
+
+---
+
+*This piece extends the ideas in [Contextualized Ethomics](02_ethomics.html).*

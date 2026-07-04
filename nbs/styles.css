@@ -91,6 +91,7 @@ strong { color: var(--ink); }
 
 em { color: var(--body); }
 em.species { color: var(--verdigris); font-style: italic; }
+em.concept { color: var(--coral); font-style: bold; }
 
 /* === Navbar === */
 
@@ -457,6 +458,12 @@ em.species { color: var(--verdigris); font-style: italic; }
   display: block;
   margin-bottom: 0.9rem;
   filter: grayscale(1) contrast(0.7);
+}
+.research-card-icon {
+  display: block;
+  color: var(--warm-grey);
+  margin-bottom: 1rem;
+  opacity: 0.85;
 }
 
 .card-title {

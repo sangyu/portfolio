@@ -1,7 +1,7 @@
 ---
 title: "DeepLabCut and the first time pretrained models felt useful"
 author: "Sangyu Xu"
-date: "2026-07-02"
+date: "2026-04-02"
 page-layout: article
 description: "On adapting a pretrained vision model for animal behavior tracking — and what that shift revealed about the difference between a model as object and a model as tool."
 categories:
@@ -10,7 +10,7 @@ categories:
   - methods
 ---
 
-# DeepLabCut and the first time pretrained models felt useful
+# DeepLabCut and How I Learned about Pretrained Models
 
 My first exposure to neural networks was old-school: calculating perceptrons by hand, reading Sutton and Barto, learning the theory behind reinforcement learning and backpropagation. For a long time, neural networks felt like something I understood conceptually but not something that changed my daily scientific work.
 

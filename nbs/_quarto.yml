@@ -4,6 +4,7 @@ project:
   resources:
     - images/blog/**
     - images/blog/07_dlc/**
+    - files/**
   render:
     - "*.qmd"
     - "*.ipynb"
@@ -34,8 +35,8 @@ website:
         text: Neuroscience
       - href: statistics.qmd
         text: OSS Tools
-      - href: genetic-tools.qmd
-        text: Genetic Tools
+      - href: communications.qmd
+        text: Communications
       - text: Demos
         menu:
           - text: DABEST 2.0

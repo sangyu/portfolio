@@ -1,0 +1,24 @@
+---
+title: "Whorlmap: A Heatmap Cell With a Memory"
+author: "Sangyu Xu"
+date: "2026-07-04"
+page-layout: article
+---
+
+# Whorlmap: An Uncertainty-aware Heatmap
+
+Heatmaps are for making things legible. You tile a matrix of effect sizes, assign a color scale, and suddenly the structure of a high-dimensional experiment is visible at a glance — which rows cluster, which columns divide cleanly, where the real effects live. The problem is that the color assignment is final. One point estimate per cell, one color per cell, no record of how confident you are in the number behind it.
+
+This became a concrete annoyance while we were building the phenovector visualizations for the ethomics project. We had a matrix: one row per neural manipulation, one column per behavioral feature, each cell a standardized effect size. The heatmap showed the structure we cared about. But it quietly merged two very different kinds of pale square — one that was pale because the effect was small and well-estimated, and one that was pale because the effect was noisy and we'd seen almost anything. A confident null and an ambiguous mess look the same when you reduce both to their means.
+
+You can't solve this by adding error bars, because error bars don't tile. A single cell with a mini-violin or a confidence interval is readable. Thirty rows by seventeen columns of mini-violins is a disaster — the overview disappears, which is the only reason to make a heatmap in the first place. We tried several variations: stacked bands, color saturation as a proxy for precision, a separate uncertainty heatmap alongside the effect heatmap. They all either broke the matrix structure or required the reader to mentally fuse two separate images.
+
+So the design question became: can the uncertainty live *inside* the cell, without destroying the ability to scan across it?
+
+**Whorlmap** samples the bootstrap distribution behind each effect and arranges those samples spatially inside the cell, with color still encoding signed effect size. A tight, coherent distribution produces a visually coherent cell — the samples land close together and the color reads cleanly. A noisy, wide distribution produces a mixed cell where color varies across the tile. The matrix still tiles; the overview is intact. But a reader who wants to know whether a particular cell is actually well-estimated can see it directly.
+
+The name came from the visual form: the samples spiral outward from the cell center in a small rectangular whorl, repeating across the grid. It's still scannable as a heatmap. It's just a heatmap that hasn't discarded what it knows about each estimate.
+
+There's a continuity here with DESTRA that I find genuinely satisfying. DESTRA asks you not to trust a single behavioral metric in isolation — to look at the full profile, and see whether the pattern is coherent. Whorlmap asks the same thing about a heatmap cell: not to trust a single color in isolation, but to look at the distribution and see whether the estimate is well-founded. The instinct is the same in both cases. Keep more of the evidence visible. Don't let a tidy summary erase the variation that makes the conclusion honest.
+
+Whorlmap is early — a proof of concept for this kind of uncertainty-aware heatmap cell, with example analyses and a reproducible workflow. I'd be curious to know where people find it useful and where it fails, particularly in denser matrices or with different kinds of distributions than the ones we built it around.
