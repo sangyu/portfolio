@@ -16,28 +16,38 @@ page-layout: full
     <p style="font-size: 0.95rem; color: var(--body); line-height: 1.75; margin: 0;">Good science starts with a hunch: a pattern, a state change, a sense that something important is happening. These essays explore how we turn imperfect observations into reliable insight across biology, medicine, statistics, visualization, and AI.</p>
   </div>
 
-  <div class="blog-stub">
-    <p class="blog-stub-meta">Measurement &middot; AI &middot; <time>Jul 2026</time></p>
-    <h3><a href="06_goodhart.html">Benchmark Scores Have a Goodhart Problem. So Did My Fly Feeding Data.</a></h3>
-    <p>Once a metric becomes the target, it starts attracting loopholes. How a problem we ran into in fly neuroscience maps onto AI evaluation, digital health, and anywhere a proxy gets mistaken for the construct.</p>
-  </div>
+
 
   <div class="blog-stub">
+    <p class="blog-stub-meta">Quantified Self &middot; Health &middot; <time>Jul 2026</time></p>
+    <h3><a href="08_apple_watch.html">Pregnancy according to My Apple Watch</a></h3>
+    <p>An Apple Watch recorded my second pregnancy almost from the beginning. On VO₂ max, gait asymmetry, double support time — and what it means when one metric says you've recovered and another says you haven't.</p>
+  </div>
+
+
+  <div class="blog-stub">
+    <p class="blog-stub-meta">Measurement &middot; AI &middot; <time>Jul 2026</time></p>
+    <h3><a href="06_goodhart.html">Ethomics 3 - Benchmark Scores Have a Goodhart Problem. So Did My Fly Feeding Data.</a></h3>
+    <p>Once a metric becomes the target, it starts attracting loopholes. How a problem we ran into in fly neuroscience maps onto AI evaluation, digital health, and anywhere a proxy gets mistaken for the construct.</p>
+  </div>
+  
+  
+  <div class="blog-stub">
     <p class="blog-stub-meta">Visualization &middot; Uncertainty &middot; <time>Jul 2026</time></p>
-    <h3><a href="09_whorlmap.html">Whorlmap: An Uncertainty-aware Heatmap</a></h3>
+    <h3><a href="09_whorlmap.html">Ethomics 2 - Whorlmap: An Uncertainty-aware Heatmap</a></h3>
     <p>Ordinary heatmaps quietly discard confidence interval information: one color per cell, no memory of how well the effect was estimated. On encoding the full bootstrap distribution inside each cell &mdash; and why it matters when you need to compare not just what changed, but how certain you are.</p>
   </div>
 
 
   <div class="blog-stub">
     <p class="blog-stub-meta">Neuroscience &middot; Methods &middot; <time>Jul 2026</time></p>
-    <h3><a href="02_ethomics.html">What Is a Hungry Fly?</a></h3>
+    <h3><a href="02_ethomics.html">Ethomics 1 - What Is a Hungry Fly?</a></h3>
     <p>On behavioral state as a high-dimensional object. How the Espresso platform and DESTRA benchmarking framework distinguish genuine hunger from superficially similar signatures.</p>
   </div>
 
   <div class="blog-stub">
     <p class="blog-stub-meta">Statistics &middot; Uncertainty &middot; <time>Jun 2026</time></p>
-    <h3><a href="05_delta_delta_same_estimate_different_uncertainty.html">Interactions, Delta-Deltas, and How We Measure Uncertainty</a></h3>
+    <h3><a href="05_delta_delta_same_estimate_different_uncertainty.html">Effect Sizes 2 - Interactions, Delta-Deltas, and How We Measure Uncertainty</a></h3>
     <p>A delta-delta is the same contrast as a regression interaction term or a two-way ANOVA interaction. But bootstrap confidence intervals diverge from model-based uncertainty — and that difference is the whole point.</p>
   </div>
   
@@ -55,7 +65,7 @@ page-layout: full
 
   <div class="blog-stub">
     <p class="blog-stub-meta">Statistics &middot; Visualization &middot; <time>Jan 2026</time></p>
-    <h3><a href="01_dabest.html">Getting Over ANOVA</a></h3>
+    <h3><a href="01_dabest.html">Effect Sizes 1 - Getting Over ANOVA</a></h3>
     <p>Why effect size estimation replaces significance testing. The logic behind DABEST 2.0: bootstrap confidence intervals, estimation graphics, and the delta-delta for factorial designs.</p>
   </div>
 
