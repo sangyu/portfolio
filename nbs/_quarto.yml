@@ -7,6 +7,7 @@ project:
     - files/**
   render:
     - "*.qmd"
+    - "!cv_pdf.qmd"
     - "*.ipynb"
     - "!00_core.ipynb"
     - "blog/*.qmd"
@@ -50,7 +51,7 @@ website:
           - text: ESPLoCo
             href: https://sangyu.github.io/esploco/Tutorials/01%20Tutorial.html
       - href: blog/index.qmd
-        text: Writing
+        text: Blog
       - href: art.qmd
         text: Art & Music
       - href: cv.qmd

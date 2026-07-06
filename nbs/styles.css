@@ -12,6 +12,7 @@
   --body: #1F2937;
   --border: #E5E7EB;
   --border-subtle: #F1F5F9;
+  --border-hover: #D1D5DB;
 
   --verdigris: #3E8F82;   /* species names only */
   --link: #2C5F82;
@@ -271,8 +272,8 @@ em.concept { color: var(--coral); font-style: bold; }
   object-fit: cover;
   object-position: center top;
   margin: 0 auto 1.4rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  border: 3px solid var(--cream);
+  box-shadow: none;
+  border: 3px solid var(--border-subtle);
   filter: grayscale(0.15);
 }
 
@@ -411,7 +412,7 @@ em.concept { color: var(--coral); font-style: bold; }
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: 1080px;
   margin: 0 auto 4rem;
   padding: 1rem 2rem 2rem;
@@ -419,13 +420,16 @@ em.concept { color: var(--coral); font-style: bold; }
 
 .feature-card {
   background: var(--cream);
-  border-radius: var(--radius-lg);
-  padding: 2.2rem 2rem 1.8rem;
-  box-shadow: var(--shadow-warm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  border-radius: var(--radius);
+  padding: 1.7rem 1.65rem 1.45rem;
+  box-shadow: none;
+  transition: border-color var(--transition), background var(--transition);
   border: 1px solid var(--border-subtle);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .feature-card::after {
@@ -440,23 +444,24 @@ em.concept { color: var(--coral); font-style: bold; }
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-warm-hover);
+  transform: none;
+  border-color: var(--border-hover);
+  background: var(--paper);
 }
 
 .feature-card:hover::after { transform: scaleX(1); }
 
 .card-icon {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   display: block;
-  margin-bottom: 0.9rem;
+  margin: 0 0 0.9rem;
   filter: grayscale(1);
 }
 .card-icon-svg {
-  height: 4rem;
+  height: 3.35rem;
   width: auto;
   display: block;
-  margin-bottom: 0.9rem;
+  margin: 0 0 0.9rem;
   filter: grayscale(1) contrast(0.7);
 }
 .research-card-icon {
@@ -471,14 +476,14 @@ em.concept { color: var(--coral); font-style: bold; }
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--ink);
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.6rem;
 }
 
 .card-text {
   font-size: 0.93rem;
   color: var(--body);
   line-height: 1.7;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.25rem;
 }
 
 .card-link {
@@ -492,6 +497,7 @@ em.concept { color: var(--coral); font-style: bold; }
   gap: 0.3rem;
   transition: gap 0.2s ease, color 0.2s ease;
   text-decoration: none;
+  margin-top: auto;
 }
 
 .card-link:hover {
@@ -513,24 +519,26 @@ em.concept { color: var(--coral); font-style: bold; }
 .research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: 1080px;
   margin: 0 auto 3rem;
   padding: 0 1.5rem;
 }
 
 .research-card {
-  background: var(--cream);
+  background: var(--paper);
   border-radius: var(--radius);
-  padding: 1.6rem 2rem;
-  box-shadow: var(--shadow-warm);
+  padding: 1.35rem 1.5rem 1.25rem;
+  box-shadow: none;
+  border: 1px solid var(--border-subtle);
   border-left: 3px solid var(--border);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-left-color 0.25s ease, border-color 0.25s ease;
 }
 
 .research-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-warm-hover);
+  transform: none;
+  border-left-color: var(--ink);
+  border-color: var(--border-hover);
 }
 
 .research-card.stub {
@@ -622,16 +630,17 @@ em.concept { color: var(--coral); font-style: bold; }
 }
 
 .gallery-item {
-  background: var(--cream);
+  background: var(--paper);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-warm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-warm-hover);
+  transform: none;
+  border-color: var(--border-hover);
 }
 
 .gallery-placeholder {
@@ -728,7 +737,7 @@ em.concept { color: var(--coral); font-style: bold; }
   font-style: italic;
   line-height: 1.75;
   color: var(--body);
-  box-shadow: var(--shadow-warm);
+  box-shadow: none;
 }
 
 /* === CV page === */
@@ -746,8 +755,8 @@ em.concept { color: var(--coral); font-style: bold; }
   margin: 1.5rem 0 2.5rem;
   font-size: 1rem;
   line-height: 1.78;
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-warm);
+  border: 1px solid var(--border);
+  box-shadow: none;
 }
 
 .cv-section-title {
@@ -870,10 +879,11 @@ em.concept { color: var(--coral); font-style: bold; }
   max-width: 480px;
   width: 100%;
   border-radius: var(--radius);
-  box-shadow: var(--shadow-warm);
-  transition: box-shadow 0.25s ease;
+  box-shadow: none;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
 }
-.pub-fig:hover { box-shadow: var(--shadow-warm-hover); }
+.pub-fig:hover { border-color: var(--border-hover); }
 
 /* === Blog === */
 
@@ -1046,7 +1056,8 @@ figure { margin: 2rem 0; text-align: center; }
 
 figure img {
   border-radius: var(--radius);
-  box-shadow: var(--shadow-warm);
+  box-shadow: none;
+  border: 1px solid var(--border-subtle);
   max-width: 100%;
 }
 
@@ -1080,7 +1091,7 @@ figcaption {
   padding: 2rem 2.5rem;
   margin: 2rem 0;
   border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-warm);
+  box-shadow: none;
 }
 
 /* === Responsive === */
@@ -1088,6 +1099,8 @@ figcaption {
 @media (max-width: 768px) {
   .hero { padding: 3.5rem 1.5rem 3rem; }
   .cards-grid { grid-template-columns: 1fr; padding: 1rem 1.5rem; }
+  .card-icon { font-size: 1.65rem; }
+  .card-icon-svg { height: 2.8rem; }
   .hero-badges { gap: 0.65rem; }
   .cv-entry { flex-direction: column; gap: 0.15rem; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
@@ -1104,7 +1117,7 @@ figcaption {
 @media print {
   .navbar { display: none; }
   body { background: white; }
-  .feature-card, .research-card, .blog-stub { box-shadow: none; border: 1px solid #ddd; }
+  .feature-card, .research-card, .gallery-item, .cv-profile, .tufte-note, .blog-stub { box-shadow: none; border: 1px solid #ddd; }
 }
 
 /* === Lightbox === */

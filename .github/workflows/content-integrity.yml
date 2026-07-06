@@ -1,0 +1,10 @@
+name: Content Integrity
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  integrity:
+    uses: sangyu/ci-templates/.github/workflows/content-integrity.yml@main
+    secrets: inherit

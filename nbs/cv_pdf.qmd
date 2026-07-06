@@ -1,0 +1,146 @@
+---
+format:
+  typst:
+    output-file: SangyuXu_CV.pdf
+    margin:
+      x: 2cm
+      y: 2cm
+    font-size: 10pt
+---
+
+```{=typst}
+#set document(title: "Sangyu Xu — CV")
+#set text(size: 10pt, lang: "en")
+#set par(justify: true, leading: 0.65em)
+#set heading(numbering: none)
+
+#show heading.where(level: 2): it => {
+  v(0.8em)
+  set text(size: 9.5pt, weight: "bold")
+  upper(it.body)
+  v(0.1em)
+  line(length: 100%, stroke: 0.5pt)
+  v(0.1em)
+}
+
+// Header
+#align(center)[
+  #text(size: 22pt, weight: "bold")[Sangyu Xu 徐桑榆] \
+  #v(0.2em)
+  #text(size: 11pt)[Computational Behaviour Scientist] \
+  #v(0.3em)
+  #text(size: 9.5pt)[
+    #link("mailto:xusangyu@gmail.com")[xusangyu\@gmail.com]
+    #h(1em) · #h(1em)
+    #link("https://xusangyu.com")[xusangyu.com]
+    #h(1em) · #h(1em)
+    #link("https://scholar.google.com/citations?user=18wi0WoAAAAJ")[Google Scholar]
+    #h(1em) · #h(1em)
+    #link("https://github.com/sangyu")[GitHub]
+  ]
+]
+
+#v(0.8em)
+
+// Profile
+#text(size: 9.5pt)[
+  Computational behaviour scientist with 15+ years building measurement tools for internal states: automated tracking, effect-size estimation, and high-dimensional behavioral benchmarking. Currently building agentic LLM evaluation workflows for scientific reasoning. Also works with electrophysiology time-series — spike sorting, LFP analysis, and signal conditioning.
+]
+
+== Experience
+
+#let entry(title, date, body) = {
+  grid(
+    columns: (1fr, auto),
+    gutter: 0.5em,
+    text(weight: "bold")[#title],
+    text(style: "italic", size: 9pt)[#date]
+  )
+  v(0.2em)
+  body
+  v(0.5em)
+}
+
+#entry([Senior Research Fellow — Duke-NUS Medical School, Singapore], [2026–present])[
+  Computational ethomics pipelines for internal state inference and epitranscriptomics workflows for native RNA modification mapping. Developing agentic LLM evaluation systems for scientific reasoning — grounded analytical outputs feed adversarial multi-agent critique and structured manuscript assessment pipelines.
+]
+
+#entry([Senior Research Fellow / Research Fellow — IMCB, A\*STAR Singapore], [2017–2026])[
+  Co-developed DABEST 2.0, an estimation statistics framework for visualising effect sizes and uncertainty; predecessor has 2,000+ citations. Built DESTRA, a ground-truth-referenced benchmarking approach for high-dimensional behavioural states, showing that perturbations can shift individual metrics without recapitulating the full target state — presented as an invited talk at APDNC3 / RIKEN 2024.
+
+  Developed automated behavioural classification pipelines for large-scale ethological data; contributed to novel optogenetic silencing tools (_Nature Communications_ 2024) and long-Stokes-shift fluorescent markers for two-photon imaging (bioRxiv 2026).
+
+  _Principal Investigator_, Young Individual Researcher Grant (SGD \$300,000; National Medical Research Council): led a cross-disciplinary team combining genetics, deep-learning pose estimation (DeepLabCut, SLEAP), and epitranscriptomics to study the neural underpinnings of socially facilitated feeding behaviour in _Drosophila_.
+]
+
+#entry([Postdoctoral Associate — Tonegawa Lab, MIT], [2016–2017])[
+  Designed the first olfactory-cued rodent intertemporal choice task, translating a paradigm from human preference evaluation to allow precise neural recording at the decision point, including _in vivo_ optrode electrophysiology of dorsal raphe neurons. Built a psychometric model predicting choice probability as a function of delay; dorsal raphe serotonergic activation increased patience while silencing drove impulsivity (_Current Biology_ 2017, co-corresponding). Also contributed to studies of noradrenergic attentional circuits (_PNAS_ 2020) and basolateral amygdala valence encoding (_Nature Neuroscience_ 2016).
+]
+
+== Education
+
+#entry([PhD Systems Neuroscience — MIT], [2016])[
+  Supervisor: Susumu Tonegawa. Dissertation: _Control of Intertemporal Choice by Dorsal Raphe Serotonergic Neurons_.
+]
+
+#entry([BS Biology (Minor: Music) — UC San Diego], [2007])[
+  Supervisor: Charles Zuker. Undergraduate dissertation: A Novel Trans-Synaptic Neuronal Tracing Strategy.
+]
+
+== Selected Publications
+
+#let pub(body) = {
+  text(size: 9.5pt)[#body]
+  v(0.3em)
+}
+
+#pub[*Xu S* et al. Contextualized ethomics reveals a _Drosophila_ serotonergic circuit controlling satiety. (in revision, _Science Advances_).]
+
+#pub[Zhang X, *Xu S*, Ho J, Stewart JC, Claridge-Chang A. A mushroom-body output neuron that mediates octopamine-driven and hunger-motivated feeding in _Drosophila_. bioRxiv 2026.]
+
+#pub[*Xu S*, Zhang X, Cheung KY, Mai Y, Wu Y, Claridge-Chang A. Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging. bioRxiv 2026. (accepted, _Micropublication Biology_).]
+
+#pub[Lu Z\*, Anns J\*, Mai Y\*, *Xu S\*†* et al. Getting over ANOVA: Estimation graphics for multi-group comparisons. (co-corresponding, in revision, _Nature Methods_). bioRxiv 2026.]
+
+#pub[Ott S, *Xu S*, Lee N, Hong I, Anns J, et al. Kalium channelrhodopsins effectively inhibit neurons. _Nature Communications_ 2024; 15:3480.]
+
+#pub[Bari A, *Xu S* et al. Differential attentional control mechanisms by two distinct noradrenergic pathways. _PNAS_ 2020; 117(46):29080–29089.]
+
+#pub[*Xu S†*, Das G, Hueske E, Tonegawa S†. Dorsal raphe serotonergic neurons control intertemporal choice under trade-off. _Current Biology_ 2017; 27(22):3440–3451. (Co-corresponding.)]
+
+#pub[Kim J, ..., *Xu S*, Tonegawa S. Antagonistic negative and positive neurons of the basolateral amygdala. _Nature Neuroscience_ 2016; 19(12):1636–1646.]
+
+== Recognition
+
+#let award(body) = { text(size: 9.5pt)[#body]; v(0.15em) }
+
+#award[Outstanding Short Talk Award — Neuroscience Singapore 2025]
+#award[Young Individual Research Grant (SGD \$300,000) — National Medical Research Council, Singapore, 2021–2025]
+#award[Walle Nauta Award for Excellence in Graduate Teaching — MIT, 2011]
+#award[National Science Scholarship — A\*STAR, Singapore, 2004–2013]
+#award[Honourable Mention — Singapore Physics Olympiad, 2002]
+
+== Technical Skills
+
+#text(size: 9.5pt)[
+  Python · R · Git · nbdev · Quarto · pandas · NumPy · SciPy · PyTorch · matplotlib · LLM-as-Judge · DSPy · LangGraph · Claude API · agentic evals · adversarial red-teaming · bootstrap CI · effect size estimation · uncertainty quantification · causal inference · A/B testing · experimental design · Oxford Nanopore · direct RNA-seq · epitranscriptomics · DeepLabCut · SLEAP · SQL
+]
+
+== Teaching
+
+#let teach(title, date) = {
+  grid(
+    columns: (1fr, auto),
+    text(size: 9.5pt)[#title],
+    text(size: 9pt, style: "italic")[#date]
+  )
+  v(0.1em)
+}
+
+#teach[GMS6812 Modern Data Analysis for Biomedical Research (TA)][Duke-NUS, Feb 2023]
+#teach[YSC4229 Molecular Neuroscience — Genes, Brains, and Behaviour (Guest Lecturer)][Yale-NUS, Mar 2023]
+#teach[GMS6812 Modern Data Analysis for Biomedical Research (TA)][Duke-NUS, Feb 2022]
+#teach[9.013 Molecular and Cellular Neuroscience II (TA)][MIT, Spring 2011]
+#teach[9.301 Neural Plasticity in Learning and Memory (TA)][MIT, Spring 2010]
+#teach[9.150 Biochemistry and Pharmacology of Synaptic Transmission (TA)][MIT, Fall 2009]
+```
