@@ -19,13 +19,13 @@ In 2023, my partner and my mother gave me an Apple Watch. My initial mental mode
   .apple-watch-float-embed {
     float: right;
     margin: 0.25rem 0 1.25rem 1.5rem;
-    width: min(50%, 560px);
+    width: min(70%, 960px);
   }
 
   .apple-watch-float-embed iframe {
     border: 0;
     display: block;
-    height: 430px;
+    height: 550px;
     width: 100%;
   }
 
@@ -78,7 +78,7 @@ Double support time is different. It measures how much of each stride is spent w
 
 ```{=html}
 <div style="margin: 2rem 0;">
-  <iframe width="100%" height="934" frameborder="0"
+  <iframe width="100%" height="380" frameborder="0"
     src="https://observablehq.com/embed/76e9efc2ca04150f?cells=interactive3d"></iframe>
 </div>
 ```
