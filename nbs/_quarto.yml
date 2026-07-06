@@ -5,6 +5,7 @@ project:
     - images/blog/**
     - images/blog/07_dlc/**
     - files/**
+    - SangyuXu_CV.pdf
   render:
     - "*.qmd"
     - "!cv_pdf.qmd"

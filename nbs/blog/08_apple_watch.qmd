@@ -78,7 +78,7 @@ Double support time is different. It measures how much of each stride is spent w
 
 ```{=html}
 <div style="margin: 2rem 0;">
-  <iframe width="100%" height="584" frameborder="0"
+  <iframe width="100%" height="934" frameborder="0"
     src="https://observablehq.com/embed/76e9efc2ca04150f?cells=interactive3d"></iframe>
 </div>
 ```
