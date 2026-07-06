@@ -55,7 +55,7 @@ In 2023, my partner and my mother gave me an Apple Watch. My initial mental mode
 </style>
 <div class="apple-watch-float-embed">
   <iframe src="https://observablehq.com/embed/76e9efc2ca04150f@152?cells=state_space_asymmetry"></iframe>
-  <div class="apple-watch-float-caption">Travel the pregnancy state space with me</div>
+  <div class="apple-watch-float-caption">Travel the pregnancy state space with me! Data was resampled to daily and notice how fast I ran across the actual pregnant phases and then, despite quickly exiting dangerous physiology and biomechanics, have gotten stuck in the post partum ditch since? </div>
 </div>
 ```
 
