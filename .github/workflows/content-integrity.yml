@@ -5,6 +5,42 @@ on:
   pull_request:
 
 jobs:
-  integrity:
-    uses: sangyu/ci-templates/.github/workflows/content-integrity.yml@main
-    secrets: inherit
+  license-scan:
+    name: Code License Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Trivy license scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scanners: license
+          exit-code: 1
+          license-full: true
+          severity: UNKNOWN,HIGH,CRITICAL
+
+  text-scan:
+    name: Text Originality Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests thefuzz[speedup]
+
+      - name: Fetch changed text files
+        run: |
+          git fetch origin ${{ github.event.before || 'HEAD~1' }} 2>/dev/null || true
+          git diff --name-only ${{ github.event.before || 'HEAD~1' }} HEAD \
+            | grep -E '\.(qmd|md|txt|ipynb)$' > changed_files.txt || true
+
+      - name: Run text originality check
+        run: python .github/scripts/check_text.py changed_files.txt
+        env:
+          COPYLEAKS_API_KEY: ${{ secrets.COPYLEAKS_API_KEY }}
+          COPYLEAKS_EMAIL: ${{ secrets.COPYLEAKS_EMAIL }}
