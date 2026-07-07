@@ -12,6 +12,9 @@ categories:
 
 # Pregnancy according to My Apple Watch
 
+*Health is multidimensional; Recovery is not a single number.*
+
+
 In 2023, my partner and my mother gave me an Apple Watch. My initial mental model of a smartwatch was "notification buzzer I have to charge every night," which was not entirely wrong. But I wore it, and after a few days the neuroscientist in me started poking around in the Apple Health data. A wrist accelerometer estimating VO₂ max from gait is not, in principle, that different from what I do with flies. The hardware is sleeker; the subject is larger and less amenable to anesthesia.
 
 ```{=html}
@@ -85,7 +88,7 @@ Double support time is different. It measures how much of each stride is spent w
 
 To make this more explicit, I put three metrics into a state space: VO₂ max, resting heart rate, and one locomotor metric. Both plots use the same first two axes. The only thing I change is the third. With walk asymmetry as the locomotor axis, the trajectory almost closes. The body leaves the pre-pregnancy region, arcs through pregnancy and postpartum, and comes most of the way back. If this were the only gait metric I looked at, I might conclude that recovery is mostly complete.
 
-With double support time as the locomotor axis, the loop stays open. Same VO₂ max, same resting heart rate, different locomotor metric, different conclusion. That is the part I like, and also the part that makes me twitchy. Recovery is not a single number. It depends on which measurement you trust to represent the thing you care about. Asymmetry says one perturbation resolved. Double support says another one is still present.
+With double support time as the locomotor axis, the loop stays open. That changes the interpretation. My resting heart rate looks closer to baseline, and my walking asymmetry has mostly resolved, but another part of my gait still has not. This may help explain why the VO₂ max estimate remains stubbornly low: the limiting factor may not be cardiovascular recovery. alone, but movement efficiency. Recovery is not a single number. It depends on which measurement you trust to stand in for the thing you care about.
 
 The dashed line in each plot connects "now" to my 2023 peak. I have not closed that gap. VO₂ max is still about eight points below where it was. Double support time still has not returned. The watch does not know about kettlebell sessions, pull-up progress, sleep debt, toddlers, weaning, or the quiet indignity of plantar fascia. It just keeps recording. I will write a follow-up if the ring closes.
 
