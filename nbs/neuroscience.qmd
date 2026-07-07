@@ -12,7 +12,7 @@ page-layout: full
 <div class="research-grid">
 
   <div class="research-card">
-    <span class="output-tag">in revision</span>
+    <span class="output-tag">bioRxiv 2026</span>
     <h3>Ethomics &mdash; What Is a Hungry Fly?</h3>
     <p>
       High-dimensional behavioural state benchmarking in <em class="species">Drosophila</em>.
@@ -20,7 +20,7 @@ page-layout: full
       hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
       produce genuine hunger, or just a superficially similar signature?
     </p>
-    <a href="blog/02_ethomics.html">&rarr; Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub &nearr;</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub &nearr;</a>
+    <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">&rarr; bioRxiv</a> &ensp; <a href="blog/02_ethomics.html">Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub &nearr;</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub &nearr;</a>
   </div>
 
   <div class="research-card">

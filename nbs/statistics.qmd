@@ -67,7 +67,7 @@ page-layout: full
       <circle cx="22" cy="20" r="1.4" fill="#5f187f"/>
       <circle cx="26" cy="18" r="1.4" fill="#5f187f"/>
     </svg>
-    <span class="output-tag">in revision</span>
+    <span class="output-tag">bioRxiv 2026</span>
     <h3>DESTRA</h3>
     <p>
       <b>D</b>elta <b>e</b>thomic <b>s</b>tate-<b>t</b>ransition <b>r</b>ecapitulation <b>a</b>ssessment.
@@ -75,7 +75,7 @@ page-layout: full
       ground-truth reference condition. Asks not whether individual metrics differ,
       but whether the full profile matches the target state.
     </p>
-    <a href="blog/02_ethomics.html">&rarr; Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">GitHub &nearr;</a>
+    <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">&rarr; bioRxiv</a> &ensp; <a href="blog/02_ethomics.html">Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">GitHub &nearr;</a>
   </div>
 
   <div class="research-card">

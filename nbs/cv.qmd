@@ -27,8 +27,8 @@ page-layout: full
 
   
   <div class="cv-pub">
-    <strong>Xu S</strong> et al. Contextualized ethomics reveals a <em class="species">Drosophila</em>
-    serotonergic circuit controlling satiety. (in revision at <em>Science Advances</em>).
+    <strong>Xu S</strong> et al. <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">Contextualized ethomics reveals a <em class="species">Drosophila</em>
+    serotonergic circuit controlling satiety.</a> bioRxiv 2026. (in revision at <em>Science Advances</em>).
   </div>
   
   <div class="cv-pub">

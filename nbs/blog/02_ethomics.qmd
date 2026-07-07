@@ -40,4 +40,4 @@ The clearest state-like effects came from neurons marked by the **tryptophan hyd
 
 That is the larger point of contextualized ethomics. A neural circuit should not be called a state-control circuit just because it changes one behavior. Internal states are distributed things. They reveal themselves through coordinated patterns, not isolated readouts. One metric may be useful, elegant, even necessary, but the full behavioral profile is harder to fool.
 
-Preprint link: coming soon. More broadly, this is a framework for inferring hidden biological states from high-dimensional behavior, which is where I think neuroscience, bioinformatics, and AI-assisted measurement can get very interesting.
+[Preprint on bioRxiv &nearr;](https://doi.org/10.64898/2026.07.01.735755). More broadly, this is a framework for inferring hidden biological states from high-dimensional behavior, which is where I think neuroscience, bioinformatics, and AI-assisted measurement can get very interesting.
