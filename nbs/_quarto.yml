@@ -74,7 +74,7 @@ format:
     css: styles.css
     toc: false
     page-layout: full
-    page-navigation: true
+    page-navigation: false
     lightbox: true
     include-in-header:
       text: |
