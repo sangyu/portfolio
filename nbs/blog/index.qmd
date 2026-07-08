@@ -13,7 +13,7 @@ page-layout: full
   <div style="margin-bottom: 3rem;">
     <p style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--ink);">More Than Vibes</p>
     <p style="font-size: 1rem; font-weight: 500; color: var(--warm-grey); margin-bottom: 1rem;">Intuition is where the work begins, but measurement leads the story home.</p>
-    <p style="font-size: 0.95rem; color: var(--body); line-height: 1.75; margin: 0;">Good science starts with a hunch: a pattern, a state change, a sense that something important is happening. These essays explore how we turn imperfect observations into reliable insight across biology, medicine, statistics, visualization, and AI.</p>
+    <p style="font-size: 0.95rem; color: var(--body); line-height: 1.75; margin: 0;">Good science starts with  a hunch from an anecdotal observation, a pattern, or just a sense that something different is happening. These essays explore how we turn imperfect observations into reliable insight across biology, medicine, statistics, visualization, and AI.</p>
   </div>
 
 

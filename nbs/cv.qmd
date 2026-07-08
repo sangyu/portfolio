@@ -27,7 +27,7 @@ page-layout: full
 
   
   <div class="cv-pub">
-    <strong>Xu S</strong> et al. <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">Contextualized ethomics reveals a <em class="species">Drosophila</em>
+    <strong>Xu S</strong>, Zhang X, Stewart JC, Ho J, Choudhury D, Wang Z, Claridge-Chang A. <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">Contextualized phenovectors reveal a <em class="species">Drosophila</em>
     serotonergic circuit controlling satiety.</a> bioRxiv 2026. (in revision at <em>Science Advances</em>).
   </div>
   
@@ -46,20 +46,20 @@ page-layout: full
 
 
   <div class="cv-pub">
-    Lu Z*, Anns J*, Mai Y*, <strong>Xu S*†</strong> et al. <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">Getting over ANOVA: Estimation graphics for multi-group comparisons.</a> (co-corresponding, in revision at <em>Nature Methods</em>). bioRxiv 2026.
+    Lu Z*, Anns J*, Mai Y*, Zhang R, Lian K, Lee NM, Hashir S, Wang L, Li Y, Castillo-Gonzalez AR, Ho J, Choi H, <strong>Xu S*†</strong>, Claridge-Chang A†. <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">Getting over ANOVA: Estimation graphics for multi-group comparisons.</a> (co-corresponding, in revision at <em>Nature Methods</em>). bioRxiv 2026.
   </div>
 
 
 
   <div class="cv-pub">
-    Ott S, <strong>Xu S</strong>, Lee N, Hong I, Anns J, et al. <a href="https://www.nature.com/articles/s41467-024-47203-w" target="_blank">Kalium channelrhodopsins
+    Ott S, <strong>Xu S</strong>, Lee N, Hong I, Anns J, Suresh DD, Zhang Z, Zhang X, Harion R, Ye W, Chandramouli V, Jesuthasan S, Saheki Y, Claridge-Chang A. <a href="https://www.nature.com/articles/s41467-024-47203-w" target="_blank">Kalium channelrhodopsins
     effectively inhibit neurons.</a> <em>Nature Communications</em> 2024; 15:3480.
   </div>
 
 
 
   <div class="cv-pub">
-    Bari A, <strong>Xu S</strong> et al. <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117" target="_blank">Differential attentional control mechanisms by
+    Bari A, <strong>Xu S</strong>, Pignatelli M, Takeuchi D, Feng J, Li Y, Tonegawa S. <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117" target="_blank">Differential attentional control mechanisms by
     two distinct noradrenergic pathways.</a> <em>PNAS</em> 2020; 117(46):29080–29089.
     (119 citations.)
   </div>
@@ -72,7 +72,7 @@ page-layout: full
 
 
   <div class="cv-pub">
-    Kim J, ..., <strong>Xu S</strong>, Tonegawa S. <a href="https://www.nature.com/articles/nn.4414" target="_blank">Antagonistic negative and positive
+    Kim J, Pignatelli M, <strong>Xu S</strong>, Itohara S, Tonegawa S. <a href="https://www.nature.com/articles/nn.4414" target="_blank">Antagonistic negative and positive
     neurons of the basolateral amygdala.</a> <em>Nature Neuroscience</em> 2016;
     19(12):1636–1646. (550 citations.)
   </div>

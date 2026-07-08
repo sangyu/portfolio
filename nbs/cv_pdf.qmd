@@ -94,21 +94,21 @@ format:
   v(0.3em)
 }
 
-#pub[*Xu S* et al. Contextualized ethomics reveals a _Drosophila_ serotonergic circuit controlling satiety. (in revision, _Science Advances_).]
+#pub[*Xu S*, Zhang X, Stewart JC, Ho J, Choudhury D, Wang Z, Claridge-Chang A. Contextualized phenovectors reveal a _Drosophila_ serotonergic circuit controlling satiety. (in revision, _Science Advances_). bioRxiv 2026.]
 
 #pub[Zhang X, *Xu S*, Ho J, Stewart JC, Claridge-Chang A. A mushroom-body output neuron that mediates octopamine-driven and hunger-motivated feeding in _Drosophila_. bioRxiv 2026.]
 
 #pub[*Xu S*, Zhang X, Cheung KY, Mai Y, Wu Y, Claridge-Chang A. Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging. bioRxiv 2026. (accepted, _Micropublication Biology_).]
 
-#pub[Lu Z\*, Anns J\*, Mai Y\*, *Xu S\*†* et al. Getting over ANOVA: Estimation graphics for multi-group comparisons. (co-corresponding, in revision, _Nature Methods_). bioRxiv 2026.]
+#pub[Lu Z\*, Anns J\*, Mai Y\*, Zhang R, Lian K, Lee NM, Hashir S, Wang L, Li Y, Castillo-Gonzalez AR, Ho J, Choi H, *Xu S\*†*, Claridge-Chang A†. Getting over ANOVA: Estimation graphics for multi-group comparisons. (co-corresponding, in revision, _Nature Methods_). bioRxiv 2026.]
 
-#pub[Ott S, *Xu S*, Lee N, Hong I, Anns J, et al. Kalium channelrhodopsins effectively inhibit neurons. _Nature Communications_ 2024; 15:3480.]
+#pub[Ott S, *Xu S*, Lee N, Hong I, Anns J, Suresh DD, Zhang Z, Zhang X, Harion R, Ye W, Chandramouli V, Jesuthasan S, Saheki Y, Claridge-Chang A. Kalium channelrhodopsins effectively inhibit neurons. _Nature Communications_ 2024; 15:3480.]
 
-#pub[Bari A, *Xu S* et al. Differential attentional control mechanisms by two distinct noradrenergic pathways. _PNAS_ 2020; 117(46):29080–29089.]
+#pub[Bari A, *Xu S*, Pignatelli M, Takeuchi D, Feng J, Li Y, Tonegawa S. Differential attentional control mechanisms by two distinct noradrenergic pathways. _PNAS_ 2020; 117(46):29080–29089.]
 
 #pub[*Xu S†*, Das G, Hueske E, Tonegawa S†. Dorsal raphe serotonergic neurons control intertemporal choice under trade-off. _Current Biology_ 2017; 27(22):3440–3451. (Co-corresponding.)]
 
-#pub[Kim J, ..., *Xu S*, Tonegawa S. Antagonistic negative and positive neurons of the basolateral amygdala. _Nature Neuroscience_ 2016; 19(12):1636–1646.]
+#pub[Kim J, Pignatelli M, *Xu S*, Itohara S, Tonegawa S. Antagonistic negative and positive neurons of the basolateral amygdala. _Nature Neuroscience_ 2016; 19(12):1636–1646.]
 
 == Recognition
 
