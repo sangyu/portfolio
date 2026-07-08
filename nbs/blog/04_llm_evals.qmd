@@ -28,9 +28,7 @@ By design, I mean both algorithmic design and graphical design. Does this abstra
 
 These are not purely technical questions. They are human-facing questions. The final audience is a person: a reader, a reviewer, a student, a collaborator, a future version of myself. A human eye is not an optional aesthetic layer added after the "real" computation. It is part of the computation's purpose.
 
-The second place is goal-keeping.
-
-This sounds odd because LLMs can be astonishingly good at goals. Sometimes I give a model a messy project folder and a loose objective, and it breaks the task down better than I would have. It writes checklists. It finds missing files. It reminds me that the thing needs documentation, examples, tests, and a README.
+The second place is goal-keeping. This sounds odd because LLMs can be astonishingly good at goals. Sometimes I give a model a messy project folder and a loose objective, and it breaks the task down better than I would have. It writes checklists. It finds missing files. It reminds me that the thing needs documentation, examples, tests, and a README.
 
 But over longer workflows, goals drift. Context gets compacted. A side issue becomes the main issue. A spurious input gets over-weighted. The model becomes attached to a premature framing. A coding agent satisfies the local instruction while damaging the global purpose. The work keeps moving, but not always toward the thing I actually care about.
 
