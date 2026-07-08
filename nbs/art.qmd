@@ -149,7 +149,6 @@ lightbox: false
   </div>
 </div>
 
-<div class="section-divider">&bull;</div>
 
 <!-- MUSIC -->
 <div class="art-section">
