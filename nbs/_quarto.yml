@@ -31,8 +31,6 @@ website:
     left:
       - href: index.ipynb
         text: Home
-      - href: research.qmd
-        text: Research
       - href: neuroscience.qmd
         text: Neuroscience
       - href: statistics.qmd

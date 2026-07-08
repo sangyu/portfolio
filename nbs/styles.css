@@ -139,7 +139,7 @@ em.concept { color: var(--coral); font-style: bold; }
 /* === Hero Section === */
 
 .hero {
-  padding: 5.5rem 2rem 4.5rem;
+  padding: 5.5rem 2rem 2rem;
   text-align: center;
   background: var(--paper);
   position: relative;
@@ -279,7 +279,7 @@ em.concept { color: var(--coral); font-style: bold; }
 
 .about-section {
   max-width: 740px;
-  margin: 3rem auto 1rem;
+  margin: 0.5rem auto 1rem;
   padding: 0 1.5rem;
   font-size: 1.05rem;
   line-height: 1.8;
