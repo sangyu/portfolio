@@ -19,8 +19,6 @@ lightbox: false
   </p>
 </div> -->
 
-<div class="section-divider">&bull;</div>
-
 <!-- PAINTING -->
 <div class="art-section">
   <h2>Painting</h2>
@@ -82,7 +80,6 @@ lightbox: false
   </div>
 </div>
 
-<div class="section-divider">&bull;</div>
 
 <!-- CERAMICS -->
 <div class="art-section">
