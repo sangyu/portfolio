@@ -139,7 +139,7 @@ em.concept { color: var(--coral); font-style: bold; }
 /* === Hero Section === */
 
 .hero {
-  padding: 5.5rem 2rem 2rem;
+  padding: 1rem .5rem .5rem;
   text-align: center;
   background: var(--paper);
   position: relative;
@@ -155,8 +155,8 @@ em.concept { color: var(--coral); font-style: bold; }
 
 .hero-name {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(2.8rem, 7vw, 5rem);
-  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 300;
   color: var(--ink);
   letter-spacing: -0.02em;
   margin: 0 0 0.1rem;
@@ -165,12 +165,12 @@ em.concept { color: var(--coral); font-style: bold; }
 
 .hero-chinese {
   font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  color: var(--warm-grey);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--ink);
   margin: 0 0 1.2rem;
   letter-spacing: 0.18em;
   display: block;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .hero-tagline {
@@ -179,7 +179,7 @@ em.concept { color: var(--coral); font-style: bold; }
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--warm-grey);
-  margin-bottom: 1.6rem;
+  margin-bottom: .6rem;
 }
 
 .hero-one-liner {
@@ -231,11 +231,11 @@ em.concept { color: var(--coral); font-style: bold; }
 }
 
 .badge-icon {
-  width: 1.05em;
-  height: 1.05em;
-  max-width: 1.05em;
-  max-height: 1.05em;
-  flex: 0 0 1.05em;
+  width: .7em;
+  height: .7em;
+  max-width: .7em;
+  max-height: .7em;
+  flex: 0 0 .7em;
   object-fit: contain;
   object-position: center;
   display: inline-block;
