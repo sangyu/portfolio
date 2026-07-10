@@ -37,3 +37,7 @@ In [*C. elegans*]{.species} locomotion recordings, it had to follow a bending, r
 </div>
 
 Both cases meant choosing frames where animals were entangled, catching identity swaps during contact, and validating that a jittery keypoint didn't corrupt the downstream analysis. The pretrained model handled the visual recognition; the scientific work was in curating the training data, inspecting failures, and deciding what counted as a reliable measurement. That distinction — model as tool, scientist as judge — stuck with me.
+
+<div style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e0d5c5;font-size:0.85rem;color:#999;">
+This work was done in collaboration with Hazimah Yusoff.
+</div>

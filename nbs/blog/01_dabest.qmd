@@ -40,3 +40,7 @@ DABEST-Python is a literate programming project developed using [nbdev](https://
 ---
 
 *Preprint on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2) — currently in revision.*
+
+<div style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e0d5c5;font-size:0.85rem;color:#999;">
+This work was done in collaboration with <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">the DABEST Team</a> and the <a href="https://www.claridgechang.net/" target="_blank">Adam Claridge-Chang Lab</a>.
+</div>

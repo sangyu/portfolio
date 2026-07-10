@@ -43,3 +43,7 @@ Whorlmap is an early proof of concept for this kind of uncertainty-aware heatmap
 <li id="ref-5">Hao, Y., Hao, S., Andersen-Nissen, E., et al. (2021). Integrated analysis of multimodal single-cell data. <em>Cell</em>, 184(13), 3573–3587. <a href="https://doi.org/10.1016/j.cell.2021.04.048">doi:10.1016/j.cell.2021.04.048</a></li>
 <li id="ref-6">Keim, D. A. (2000). Designing pixel-oriented visualization techniques: theory and applications. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 6(1), 59–78. <a href="https://www.sdml.cs.kent.edu/library/Keim00.pdf">pdf</a></li>
 </ol>
+
+<div style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e0d5c5;font-size:0.85rem;color:#999;">
+This work was done in collaboration with <a href="https://www.claridgechang.net/people.html" target="_blank">Adam Claridge-Chang</a>.
+</div>
