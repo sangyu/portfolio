@@ -34,7 +34,7 @@ page-layout: full
       <line x1="21" y1="16" x2="21" y2="24" stroke="#e07f4d" stroke-width="1.5"/>
       <circle cx="21" cy="19" r="1.8" fill="#e07f4d"/>
     </svg>
-    <span class="output-tag">bioRxiv 2026 &mdash; in revision</span>
+    <span class="output-tag">bioRxiv 2026 &mdash; accepted, Nature Methods</span>
     <h3>DABEST 2.0</h3>
     <p>
       Bootstrap-coupled effect size estimation for multi-group comparisons.
