@@ -1,5 +1,5 @@
 ---
-title: "Whorlmap: A Heatmap Cell With a Memory"
+title: "Whorlmap: An Uncertainty-aware Heatmap"
 author: "Sangyu Xu"
 date: "2026-07-04"
 page-layout: article

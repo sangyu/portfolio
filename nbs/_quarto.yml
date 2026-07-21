@@ -21,7 +21,7 @@ website:
   site-url: "https://xusangyu.com"
   repo-url: "https://github.com/sangyu/portfolio"
   repo-branch: main
-  favicon: "🪰"
+  favicon: "images/favicon.svg"
   open-graph: true
   twitter-card: true
   navbar:
