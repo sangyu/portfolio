@@ -69,7 +69,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css: styles-20260721.css
     toc: false
     page-layout: full
     page-navigation: false
