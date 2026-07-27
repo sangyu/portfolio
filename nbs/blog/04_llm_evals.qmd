@@ -2,7 +2,7 @@
 title: "Four Agents, No Ground Truth"
 description: "On what it actually means to be human in the loop: design, goal-keeping, and building Lanting."
 author: "Sangyu Xu"
-date: "2026-07-08"
+date: "2026-07-27"
 page-layout: article
 ---
 
@@ -10,9 +10,9 @@ page-layout: article
 
 I have been using LLMs to help me code for about a year now, and I am not going to pretend it didn't help much. It feels like I 10×'ed.
 
-Not because the models magically know what I want. They often very much do not. But because they are extremely good at connecting my half-formed intentions to already-existing solutions: plotting libraries, packaging tools, literate programming frameworks, website generators, notebook cleanup, GitHub workflows. When the LLM reaches for the right known tool instead of hard-coding a tiny castle in the sand, I can move very fast.
+Despite early appearances of taking my prompt and doing what I want automagically, LLMs often very much do not. If I have LLM code something from scratch, I often find myself hand-holding the chat to the end of time before what I had envisioned materalizes. However, because they are extremely good at connecting my half-formed intentions to already-existing solutions: plotting libraries, packaging tools, literate programming frameworks, website generators, notebook cleanup, GitHub workflows, when the LLM reaches for the right known tool instead of hard-coding a tiny castle in the sand, I can move very fast.
 
-This has been especially powerful for the kind of work I do: scientific software, analysis notebooks, visualization, teaching materials, and and especially small web artifacts around research. I am usually not trying to build a giant production system. I am trying to make something that helps a scientist think: a plot, a demo, a tutorial, a figure, a clearer explanation of an analysis. The whorlmap figure repo (https://github.com/sangyu/whorlmap-paper) was build with Claude Code.
+This has been especially powerful for the kind of work I do: scientific software, analysis notebooks, visualization, teaching materials, and and especially small web artifacts around research. (Claude and Codex built this entire website without me looking at them too much.) I am usually not trying to build a giant production system. I am trying to make something that helps a scientist think: a plot, a demo, a tutorial, a figure, a clearer explanation of an analysis. The whorlmap figure repo (https://github.com/sangyu/whorlmap-paper) was build with Claude Code (albeit with a lot of hand-holding, but that's for another post). While amazed by the increase in productivity, I do also wonder if all this steering is necessary.
 
 But the "human in the loop" part is not a slogan to me. It is the actual work.
 
@@ -28,7 +28,7 @@ By design, I mean both algorithmic design and graphical design. Does this abstra
 
 These are not purely technical questions. They are human-facing questions. The final audience is a person: a reader, a reviewer, a student, a collaborator, a future version of myself. A human eye is not an optional aesthetic layer added after the "real" computation. It is part of the computation's purpose.
 
-The second place is goal-keeping. This sounds odd because LLMs can be astonishingly good at goals. Sometimes I give a model a messy project folder and a loose objective, and it breaks the task down better than I would have. It writes checklists. It finds missing files. It reminds me that the thing needs documentation, examples, tests, and a README.
+The second place is goal-keeping. This sounds odd because at first LLMs appeared to me astonishingly good at goals. Sometimes I give a model a messy project folder and a loose objective, and it breaks the task down better than I would have. It writes checklists. It finds missing files. It reminds me that the thing needs documentation, examples, tests, and a README. It even fights with **me** to achieve **my** goals.
 
 But over longer workflows, goals drift. Context gets compacted. A side issue becomes the main issue. A spurious input gets over-weighted. The model becomes attached to a premature framing. A coding agent satisfies the local instruction while damaging the global purpose. The work keeps moving, but not always toward the thing I actually care about.
 
@@ -64,7 +64,13 @@ The name comes from the *Lantingji Xu (兰亭集序)*, Wang Xizhi (王羲之)'s 
 
 ![《兰亭集序》摹本《神龙本》](https://upload.wikimedia.org/wikipedia/commons/f/f1/LantingXu.jpg){style="width:100%; display:block; margin: 1em auto;"}
 
-Lanting is currently a small experimental effort: an agentic manuscript-writing loop for drafting, critique, collation, and revision. A section is drafted, then passed through multiple judges: scientific integrity, article-type fit, adversarial review, and rhetorical hierarchy. Their critiques feed the next revision. The loop stops when the section score stabilizes, or when a hard trigger sends it back to a human.
+Lanting is currently a small experimental effort: an error-correcting loop for scientific prose. It is now compiled as an explicit state graph, so every step is a named node and every branch is an inspectable edge. A section is drafted, then attacked — first by cheap deterministic checks (protected claim present? banned phrases? citations that resolve to real references? invented technical terms?), then by four LLM judges reading their own rubrics: scientific integrity, article-type fit, adversarial review, and rhetorical hierarchy. The judges are deliberately walled off from one another and from the drafter's context, so each one argues from its own evidence rather than agreeing with the room.
+
+![The Lanting loop, compiled as a state graph. A draft is checked and judged; objections route it back to revision, forward to acceptance, or out to a human. Dashed edges are conditional.](../images/blog/04_llm_evals/lanting_graph.svg){style="width:100%; max-width:520px; display:block; margin:1.5em auto;"}
+
+Their objections are not thrown away between passes. They are normalized into a persistent registry that survives across loops, so an objection a judge rephrases on the next pass is recognized as *recurring* rather than *new*, and one that disappears is marked *resolved*. The drafter then revises against exactly those objections — repair, not resampling; it is told to leave alone everything the critics did not name. The loop stops when the draft stabilizes across two consecutive clean passes, when a call budget runs out, or when a safety invariant fires — the protected claim vanishing, a fabricated term, a forbidden phrase — and it halts for a human instead of quietly writing around the problem.
+
+The reason the plumbing is this elaborate is that Lanting is simultaneously a writing tool and the apparatus for an experiment about writing tools. The hypothesis is that a smaller, faster model inside a structured error-correcting loop can match or beat a larger model used in a single forward pass, at lower cost. So every LLM call is metered — tokens, latency, dollars, which node spent them. On the runs so far, about 85% of the spend is critique, not drafting. The writing is cheap; being sure the writing is right is where the money goes. That ratio is itself a finding, and I could only see it because the loop refuses to guess at a number it does not actually have.
 
 The important part is not the automation itself. I do not want a machine that confidently produces mediocre papers while I sleep. The important part is the interface between human judgment and machine repetition.
 

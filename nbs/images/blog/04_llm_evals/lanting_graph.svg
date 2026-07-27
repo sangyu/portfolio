@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 850" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5">
+
+<style>
+  :root { color-scheme: light dark; }
+  .ground { fill: #ECEFF2; }
+  .node   { fill: #F2F0FF; stroke: #8C86C8; stroke-width: 1.4; }
+  .term   { fill: #BFB6FC; stroke: #8C86C8; stroke-width: 1.4; }
+  .lbl    { fill: #1F1A33; }
+  .edge   { stroke: #5E7078; stroke-width: 1.5; fill: none; }
+  .cond   { stroke-dasharray: 5 4; }
+  @media (prefers-color-scheme: dark) {
+    .ground { fill: #0D1216; }
+    .node   { fill: #2A2740; stroke: #6E68A8; }
+    .term   { fill: #4A4478; stroke: #8C86C8; }
+    .lbl    { fill: #E8E6F5; }
+    .edge   { stroke: #8496A0; }
+  }
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5"
+          markerHeight="7.5" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5E7078"/>
+  </marker>
+  <marker id="ahd" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5"
+          markerHeight="7.5" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5E7078"/>
+  </marker>
+</defs>
+<rect class="ground" x="0" y="0" width="720" height="850"/>
+
+<path class="edge cond" d="M 397.4,178.0 L 700.0,178.0 L 700.0,672.0 L 617.4,672.0" marker-end="url(#ahd)"/>
+<path class="edge cond" d="M 427.0,388.0 L 640.0,388.0 L 640.0,600.0 L 388.0,600.0" marker-end="url(#ahd)"/>
+<path class="edge cond" d="M 292.0,600.0 L 60.0,600.0 L 60.0,318.0 L 292.0,318.0" marker-end="url(#ahd)"/>
+<path class="edge" d="M 340.0,63.0 L 340.0,95.0" marker-end="url(#ah)"/>
+<path class="edge" d="M 340.0,129.0 L 340.0,161.0" marker-end="url(#ah)"/>
+<path class="edge cond" d="M 340.0,195.0 L 340.0,231.0" marker-end="url(#ahd)"/>
+<path class="edge" d="M 340.0,265.0 L 340.0,301.0" marker-end="url(#ah)"/>
+<path class="edge" d="M 340.0,335.0 L 340.0,371.0" marker-end="url(#ah)"/>
+<path class="edge cond" d="M 293.9,405.0 L 196.1,441.0" marker-end="url(#ahd)"/>
+<path class="edge" d="M 198.0,458.0 L 253.0,458.0" marker-end="url(#ah)"/>
+<path class="edge" d="M 340.0,475.0 L 340.0,511.0" marker-end="url(#ah)"/>
+<path class="edge" d="M 340.0,545.0 L 340.0,583.0" marker-end="url(#ah)"/>
+<path class="edge cond" d="M 388.0,615.7 L 508.1,655.0" marker-end="url(#ahd)"/>
+<path class="edge cond" d="M 340.0,617.0 L 340.0,725.0" marker-end="url(#ahd)"/>
+<path class="edge" d="M 506.6,689.0 L 393.4,725.0" marker-end="url(#ah)"/>
+<path class="edge" d="M 340.0,759.0 L 340.0,795.0" marker-end="url(#ah)"/>
+<rect class="term" x="292.0" y="29.0" width="96.0" height="34" rx="17.0" ry="17.0"/>
+<text class="lbl" x="340" y="50.2" text-anchor="middle">__start__</text>
+<rect class="node" x="282.6" y="95.0" width="114.8" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="116.2" text-anchor="middle">load_project</text>
+<rect class="node" x="282.6" y="161.0" width="114.8" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="182.2" text-anchor="middle">compile_spec</text>
+<rect class="node" x="282.6" y="231.0" width="114.8" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="252.2" text-anchor="middle">load_context</text>
+<rect class="node" x="292.0" y="301.0" width="96.0" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="322.2" text-anchor="middle">draft</text>
+<rect class="node" x="253.0" y="371.0" width="174.0" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="392.2" text-anchor="middle">deterministic_checks</text>
+<rect class="node" x="102.0" y="441.0" width="96.0" height="34" rx="5" ry="5"/>
+<text class="lbl" x="150" y="462.2" text-anchor="middle">judge</text>
+<rect class="node" x="253.0" y="441.0" width="174.0" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="462.2" text-anchor="middle">normalize_objections</text>
+<rect class="node" x="275.2" y="511.0" width="129.6" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="532.2" text-anchor="middle">compute_vector</text>
+<rect class="node" x="292.0" y="583.0" width="96.0" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="604.2" text-anchor="middle">route</text>
+<rect class="node" x="502.6" y="655.0" width="114.8" height="34" rx="5" ry="5"/>
+<text class="lbl" x="560" y="676.2" text-anchor="middle">human_review</text>
+<rect class="node" x="267.8" y="725.0" width="144.4" height="34" rx="5" ry="5"/>
+<text class="lbl" x="340" y="746.2" text-anchor="middle">render_artifacts</text>
+<rect class="term" x="292.0" y="795.0" width="96.0" height="34" rx="17.0" ry="17.0"/>
+<text class="lbl" x="340" y="816.2" text-anchor="middle">__end__</text>
+</svg>

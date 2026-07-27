@@ -38,6 +38,11 @@ This distinction turned out to matter. We applied the framework to serotonergic 
 
 The clearest state-like effects came from neurons marked by the **tryptophan hydroxylase enhancer Trhn**. Activating Trhn neurons in hungry flies produced a satiety-like phenovector. Inhibiting Trhn neurons in fed flies produced a hunger-like phenovector. These effects were not limited to food volume; they extended across meal structure, locomotion, food approach, and post-meal behavior. By contrast, other feeding-related circuits produced more fragmented profiles: real behavioral effects, but not convincing recapitulations of natural hunger or satiety.
 
+<div style="margin:2.5rem auto; max-width:720px;">
+<a href="../images/blog/ethomics_phenovectors.png" class="lightbox"><img src="../images/blog/ethomics_phenovectors.png" class="img-fluid" alt="Phenovectors of serotonergic manipulations clustered by their full behavioral profile. Trhn manipulations align with the natural hunger-satiety transition, while other feeding-related circuits fall into more fragmented profiles."></a>
+<p style="margin-top:0.6rem; font-size:0.82rem; color:var(--warm-grey); line-height:1.5;">Manipulations placed by their full phenovector, not one metric at a time. Trhn activation and inhibition land on opposite ends of the natural hunger–satiety axis; other feeding-related circuits scatter into fragmented profiles.</p>
+</div>
+
 That is the larger point of contextualized ethomics. A neural circuit should not be called a state-control circuit just because it changes one behavior. Internal states are distributed things. They reveal themselves through coordinated patterns, not isolated readouts. One metric may be useful, elegant, even necessary, but the full behavioral profile is harder to fool.
 
 [Preprint on bioRxiv &nearr;](https://doi.org/10.64898/2026.07.01.735755). More broadly, this is a framework for inferring hidden biological states from high-dimensional behavior, which is where I think neuroscience, bioinformatics, and AI-assisted measurement can get very interesting.

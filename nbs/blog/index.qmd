@@ -17,6 +17,13 @@ page-layout: full
 
 
   <div class="blog-stub">
+    <p class="blog-stub-meta">AI &middot; Evaluation &middot; <time>Jul 2026</time></p>
+    <h3><a href="04_llm_evals.html">Four Agents, No Ground Truth</a></h3>
+    <p>An error-correcting loop for scientific prose: a draft is attacked by deterministic checks and four walled-off LLM judges, its objections tracked across revisions, until it stabilizes or halts for a human. The hard part is not building it &mdash; it is deciding what &ldquo;better&rdquo; means when there is no ground truth. <a href="https://github.com/sangyu/lanting" target="_blank">GitHub &nearr;</a></p>
+  </div>
+
+
+  <div class="blog-stub">
     <p class="blog-stub-meta">Quantified Self &middot; Health &middot; <time>Jul 2026</time></p>
     <h3><a href="08_apple_watch.html">Pregnancy according to My Apple Watch</a></h3>
     <p>An Apple Watch recorded my second pregnancy almost from the beginning. On VO₂ max, gait asymmetry, double support time — and what it means when one metric says you've recovered and another says you haven't.</p>
@@ -65,12 +72,6 @@ page-layout: full
     <p class="blog-stub-meta">Statistics &middot; Visualization &middot; <time>Jan 2026</time></p>
     <h3><a href="01_dabest.html">Effect Sizes 1 - Getting Over ANOVA</a></h3>
     <p>Why effect size estimation replaces significance testing. The logic behind DABEST 2.0: bootstrap confidence intervals, estimation graphics, and the delta-delta for factorial designs.</p>
-  </div>
-
-  <div class="blog-stub">
-    <p class="blog-stub-meta">AI &middot; Evaluation &middot; work in progress</p>
-    <h3><a href="04_llm_evals.html">Four Agents, No Ground Truth</a></h3>
-    <p>Adversarial multi-agent LLM manuscript evaluation. The hard part is not building it — it is deciding what &ldquo;better&rdquo; means when there is no ground truth. <a href="https://github.com/sangyu/lanting" target="_blank">GitHub &nearr;</a></p>
   </div>
 
 </div>
