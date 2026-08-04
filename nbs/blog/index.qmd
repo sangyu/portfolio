@@ -17,6 +17,20 @@ page-layout: full
 
 
   <div class="blog-stub">
+    <p class="blog-stub-meta">Tools &middot; Literature &middot; <time>Aug 2026</time></p>
+    <h3><a href="11_gravitas.html">Every Citation Has Something to Say</a></h3>
+    <p>A citation map where clicking an edge shows the verbatim sentence the citing paper wrote about the cited one &mdash; no model in the loop. An agent built it in an afternoon; the interesting part is the plumbing underneath, where publishers strip reference lists and author manuscripts rescue the claims. <a href="https://sangyu.github.io/gravitas/" target="_blank">Try it &nearr;</a></p>
+  </div>
+
+
+  <div class="blog-stub">
+    <p class="blog-stub-meta">Statistics &middot; Uncertainty &middot; <time>Aug 2026</time></p>
+    <h3><a href="10_full_circle.html">Effect Sizes 3 - A Full Circle Moment</a></h3>
+    <p>In 2016 I emailed Adam Claridge-Chang about his <em>Nature Methods</em> piece on estimation statistics. Ten years later our paper on the subject is out in the same journal. On what the bootstrap makes visible, how far the question travels outside biology, and a small, happy manifesto. <a href="https://www.nature.com/articles/s41592-026-03187-7" target="_blank">Nature Methods &nearr;</a></p>
+  </div>
+
+
+  <div class="blog-stub">
     <p class="blog-stub-meta">AI &middot; Evaluation &middot; <time>Jul 2026</time></p>
     <h3><a href="04_llm_evals.html">Four Agents, No Ground Truth</a></h3>
     <p>An error-correcting loop for scientific prose: a draft is attacked by deterministic checks and four walled-off LLM judges, its objections tracked across revisions, until it stabilizes or halts for a human. The hard part is not building it &mdash; it is deciding what &ldquo;better&rdquo; means when there is no ground truth. <a href="https://github.com/sangyu/lanting" target="_blank">GitHub &nearr;</a></p>
