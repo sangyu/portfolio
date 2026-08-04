@@ -46,7 +46,7 @@ page-layout: full
 
 
   <div class="cv-pub">
-    Lu Z*, Anns J*, Mai Y*, Zhang R, Lian K, Lee NM, Hashir S, Wang L, Li Y, Castillo-Gonzalez AR, Ho J, Choi H, <strong>Xu S*†</strong>, Claridge-Chang A†. <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">Getting over ANOVA: Estimation graphics for multi-group comparisons.</a> (co-corresponding, accepted, <em>Nature Methods</em>). bioRxiv 2026.
+    Lu Z*, Anns J*, Mai Y*, Zhang R, Lian K, Lee NM, Hashir S, Wang L, Li Y, Castillo-Gonzalez AR, Ho J, Choi H, <strong>Xu S*†</strong>, Claridge-Chang A†. <a href="https://www.nature.com/articles/s41592-026-03187-7" target="_blank">Getting over ANOVA: estimation graphics for multi-group comparisons.</a> <em>Nature Methods</em> 2026. (Co-corresponding.)
   </div>
 
 

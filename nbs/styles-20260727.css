@@ -496,9 +496,9 @@ em.concept { color: var(--coral); font-style: bold; }
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
   grid-template-areas:
-    "hungry whorl"
-    "hungry llm"
-    "anova preg";
+    "lead whorl"
+    "lead llm"
+    "second preg";
   gap: 1.35rem;
   margin-top: 1.6rem;
 }
@@ -510,12 +510,12 @@ em.concept { color: var(--coral); font-style: bold; }
 }
 
 .home-lead-story {
-  grid-area: hungry;
+  grid-area: lead;
   align-self: start;
   display: block;
 }
 
-.home-anova-story { grid-area: anova; }
+.home-second-story { grid-area: second; }
 .home-whorl-story { grid-area: whorl; }
 .home-llm-story { grid-area: llm; }
 .home-preg-story { grid-area: preg; }
@@ -649,7 +649,7 @@ em.concept { color: var(--coral); font-style: bold; }
   height: 202px;
 }
 
-.home-anova-story {
+.home-second-story {
   grid-template-columns: 172px 1fr;
 }
 

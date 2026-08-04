@@ -9,6 +9,10 @@ page-layout: article
 
 *See the effect, not just the P value.*
 
+::: {.callout-note appearance="simple"}
+**Update, August 2026:** this paper is now published in *Nature Methods* — [Getting over ANOVA: estimation graphics for multi-group comparisons &nearr;](https://www.nature.com/articles/s41592-026-03187-7)
+:::
+
 Modern biology produces complex experiments: many groups, repeated measurements, genetic backgrounds, treatments, time points, binary outcomes, and internal replicates. But much of experimental science still reduces those experiments to the same question: *is it significant?*
 
 ::: {style="float:right; width:50%; margin-left:1.5em; margin-bottom:1em;"}
@@ -39,8 +43,8 @@ DABEST-Python is a literate programming project developed using [nbdev](https://
 
 ---
 
-*Preprint on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2) — accepted at Nature Methods.*
+*Published in [Nature Methods](https://www.nature.com/articles/s41592-026-03187-7) (2026). Preprint on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2).*
 
 <div style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e0d5c5;font-size:0.85rem;color:#999;">
-This work was done in collaboration with <a href="https://www.biorxiv.org/content/10.64898/2026.01.26.701654v2" target="_blank">the DABEST Team</a> and the <a href="https://www.claridgechang.net/" target="_blank">Adam Claridge-Chang Lab</a>.
+This work was done in collaboration with <a href="https://www.nature.com/articles/s41592-026-03187-7" target="_blank">the DABEST Team</a> and the <a href="https://www.claridgechang.net/" target="_blank">Adam Claridge-Chang Lab</a>.
 </div>

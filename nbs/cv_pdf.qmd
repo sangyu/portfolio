@@ -100,7 +100,7 @@ format:
 
 #pub[*Xu S*, Zhang X, Cheung KY, Mai Y, Wu Y, Claridge-Chang A. Long-Stokes-Shift mScarlet3 as a structural marker for two-photon imaging. bioRxiv 2026. (accepted, _Micropublication Biology_).]
 
-#pub[Lu Z\*, Anns J\*, Mai Y\*, Zhang R, Lian K, Lee NM, Hashir S, Wang L, Li Y, Castillo-Gonzalez AR, Ho J, Choi H, *Xu S\*†*, Claridge-Chang A†. Getting over ANOVA: Estimation graphics for multi-group comparisons. (co-corresponding, accepted, _Nature Methods_). bioRxiv 2026.]
+#pub[Lu Z\*, Anns J\*, Mai Y\*, Zhang R, Lian K, Lee NM, Hashir S, Wang L, Li Y, Castillo-Gonzalez AR, Ho J, Choi H, *Xu S\*†*, Claridge-Chang A†. Getting over ANOVA: estimation graphics for multi-group comparisons. _Nature Methods_ 2026. doi:10.1038/s41592-026-03187-7. (Co-corresponding.)]
 
 #pub[Ott S, *Xu S*, Lee N, Hong I, Anns J, Suresh DD, Zhang Z, Zhang X, Harion R, Ye W, Chandramouli V, Jesuthasan S, Saheki Y, Claridge-Chang A. Kalium channelrhodopsins effectively inhibit neurons. _Nature Communications_ 2024; 15:3480.]
 
