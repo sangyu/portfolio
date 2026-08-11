@@ -40,7 +40,7 @@ website:
       - text: Demos
         menu:
           - text: DABEST 2.0
-            href: dabest_demo.ipynb
+            href: https://colab.research.google.com/github/sangyu/portfolio/blob/main/nbs/dabest_demo.ipynb
           - text: Gravitas
             href: https://sangyu.github.io/gravitas/
           - text: Whorlmap
