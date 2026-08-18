@@ -92,7 +92,7 @@ page-layout: full
   </div>
 
   <div class="research-card">
-    <span class="output-tag">bioRxiv 2026</span>
+    <span class="output-tag">microPublication Biology 2026</span>
     <h3>LSSmScarlet3 for Two-Photon Imaging</h3>
     <p>
       A long-Stokes-shift mScarlet variant that can be co-imaged with GCaMP using
@@ -100,7 +100,7 @@ page-layout: full
       eliminating the need for a second excitation wavelength when using a red
       structural marker alongside a green calcium indicator.
     </p>
-    <a href="https://doi.org/10.64898/2026.04.12.718060">&rarr; bioRxiv</a>
+    <a href="https://doi.org/10.17912/micropub.biology.002142">&rarr; microPublication Biology</a>
   </div>
 
 </div>
