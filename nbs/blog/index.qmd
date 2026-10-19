@@ -17,6 +17,13 @@ page-layout: full
 
 
   <div class="blog-stub">
+    <p class="blog-stub-meta">Statistics &middot; Optogenetics &middot; <time>Oct 2026</time></p>
+    <h3><a href="12_significant_and_significant.html">Effect Sizes 4 - Significant and Significant</a></h3>
+    <p>Optogenetics just won the Nobel Prize, and every optogenetics lab runs the same 2&times;2. The textbook analysis leaves you writing &ldquo;light changed the controls, p = 0.0001, and light changed the test flies, p &lt; 0.0001&rdquo;. On subtracting the light and reporting what is left, with real flies. <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">bioRxiv &nearr;</a></p>
+  </div>
+
+
+  <div class="blog-stub">
     <p class="blog-stub-meta">Tools &middot; Literature &middot; <time>Aug 2026</time></p>
     <h3><a href="11_gravitas.html">Every Citation Has Something to Say</a></h3>
     <p>A citation map where clicking an edge shows the verbatim sentence the citing paper wrote about the cited one &mdash; no model in the loop. An agent built it in an afternoon; the interesting part is the plumbing underneath, where publishers strip reference lists and author manuscripts rescue the claims. <a href="https://sangyu.github.io/gravitas/" target="_blank">Try it &nearr;</a></p>
