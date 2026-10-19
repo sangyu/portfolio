@@ -81,6 +81,18 @@ format:
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Lightbox for raw-HTML <a class="lightbox"> links. Quarto only ships glightbox on pages
+             with markdown images, so load it here and initialise unless Quarto already did. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+        <script>
+          window.addEventListener('DOMContentLoaded', function () {
+            var quartoHasIt = document.querySelector('script[src*="quarto-contrib/glightbox"]');
+            if (!quartoHasIt && window.GLightbox && document.querySelector('a.lightbox')) {
+              GLightbox({ selector: 'a.lightbox', openEffect: 'zoom', closeEffect: 'zoom', loop: false });
+            }
+          });
+        </script>
         <!-- Privacy-friendly analytics by Plausible -->
         <script async src="https://plausible.io/js/pa-1qkUnQ7mwTijcLlWfCLUi.js"></script>
         <script>
