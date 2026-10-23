@@ -113,26 +113,8 @@ format:
 == Grants
 
 #let award(body) = { text(size: 9.5pt)[#body]; v(0.15em) }
-#let teach(title, date) = {
-  grid(
-    columns: (1fr, auto),
-    text(size: 9.5pt)[#title],
-    text(size: 9pt, style: "italic")[#date]
-  )
-  v(0.1em)
-}
-#let subline(body) = {
-  pad(left: 1.2em, text(size: 9pt, fill: luma(70))[#body])
-  v(0.05em)
-}
 
-#teach[*NMRC Open Fund – Young Individual Research Grant (OF-YIRG)*, sole investigator][SGD 300,000, 2021–2025]
-#subline[Neural Correlates of Social Influence on Feeding Behaviour (OFYIRG20nov-0051). Submitted Nov 2020; funded.]
-#v(0.3em)
-#teach[*Applications not funded*][]
-#subline[A\*STAR Career Development Award, 2020 call, as PI — Targeting Neuromodulator Receptors and Transporters for Controlling Protein Feeding Behavior in Mated Females in _Drosophila melanogaster_ and _Aedes aegypti_. SGD 300,000 requested; letter of intent Sep 2020; shortlisted and interviewed.]
-#subline[A\*STAR Career Development Award, 1st call, as PI — Investigating serotonin neurons as a link between metabolic dysfunction and dementia in _Drosophila melanogaster_. SGD 480,000 requested; letter of intent Jan 2020, rebuttal Mar 2020.]
-#subline[L'Oréal Singapore For Women in Science National Fellowship 2019, Life Sciences — applied Sep 2019.]
+#award[NMRC Open Fund – Young Individual Research Grant (OF-YIRG), sole investigator — Neural Correlates of Social Influence on Feeding Behaviour (OFYIRG20nov-0051). SGD 300,000, 2021–2025.]
 
 == Recognition
 
@@ -149,6 +131,19 @@ format:
 ]
 
 == Teaching
+
+#let teach(title, date) = {
+  grid(
+    columns: (1fr, auto),
+    text(size: 9.5pt)[#title],
+    text(size: 9pt, style: "italic")[#date]
+  )
+  v(0.1em)
+}
+#let subline(body) = {
+  pad(left: 1.2em, text(size: 9pt, fill: luma(70))[#body])
+  v(0.05em)
+}
 
 #teach[*Modern Data Analysis for Biomedical Research* (Teaching Assistant, recurring)][Duke-NUS, 2021–2023]
 #subline[GMS6812 Modern Data Analysis for Biomedical Research — Feb 2022, Feb 2023]

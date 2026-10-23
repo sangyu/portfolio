@@ -61,20 +61,19 @@ page-layout: full
   <div class="cv-pub">
     Bari A, <strong>Xu S</strong>, Pignatelli M, Takeuchi D, Feng J, Li Y, Tonegawa S. <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117" target="_blank">Differential attentional control mechanisms by
     two distinct noradrenergic pathways.</a> <em>PNAS</em> 2020; 117(46):29080–29089.
-    (119 citations.)
   </div>
 
   <div class="cv-pub">
     <strong>Xu S†</strong>, Das G, Hueske E, Tonegawa S†. <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/" target="_blank">Dorsal raphe serotonergic neurons
     control intertemporal choice under trade-off.</a> <em>Current Biology</em> 2017;
-    27(22):3440–3451. (Co-corresponding; 48 citations.)
+    27(22):3440–3451. (Co-corresponding.)
   </div>
 
 
   <div class="cv-pub">
     Kim J, Pignatelli M, <strong>Xu S</strong>, Itohara S, Tonegawa S. <a href="https://www.nature.com/articles/nn.4414" target="_blank">Antagonistic negative and positive
     neurons of the basolateral amygdala.</a> <em>Nature Neuroscience</em> 2016;
-    19(12):1636–1646. (550 citations.)
+    19(12):1636–1646.
   </div>
 
 
@@ -166,17 +165,7 @@ page-layout: full
   <!-- GRANTS -->
   <h2 class="cv-section-title">Grants</h2>
 
-  <div class="cv-teaching-item">
-    <span class="cv-entry-main">NMRC Open Fund &ndash; Young Individual Research Grant (OF-YIRG), sole investigator</span>
-    <span class="cv-entry-date">SGD 300,000, 2021&ndash;2025</span>
-    <span class="cv-entry-sub">Neural Correlates of Social Influence on Feeding Behaviour (OFYIRG20nov-0051). Submitted Nov 2020; funded.</span>
-  </div>
-  <div class="cv-teaching-item" style="margin-top:0.8rem;">
-    <span class="cv-entry-main">Applications not funded</span>
-    <span class="cv-entry-sub">A*STAR Career Development Award, 2020 call, as PI &mdash; Targeting Neuromodulator Receptors and Transporters for Controlling Protein Feeding Behavior in Mated Females in <em class="species">Drosophila melanogaster</em> and <em class="species">Aedes aegypti</em>. SGD 300,000 requested; letter of intent Sep 2020; shortlisted and interviewed.</span>
-    <span class="cv-entry-sub">A*STAR Career Development Award, 1st call, as PI &mdash; Investigating serotonin neurons as a link between metabolic dysfunction and dementia in <em class="species">Drosophila melanogaster</em>. SGD 480,000 requested; letter of intent Jan 2020, rebuttal Mar 2020.</span>
-    <span class="cv-entry-sub">L&rsquo;Or&eacute;al Singapore For Women in Science National Fellowship 2019, Life Sciences &mdash; applied Sep 2019.</span>
-  </div>
+  <div class="award-item">NMRC Open Fund &ndash; Young Individual Research Grant (OF-YIRG), sole investigator &mdash; Neural Correlates of Social Influence on Feeding Behaviour (OFYIRG20nov-0051). SGD 300,000, 2021&ndash;2025.</div>
 
 
   <!-- RECOGNITION -->
