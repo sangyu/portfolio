@@ -66,11 +66,11 @@ format:
 ]
 
 #entry([Senior Research Fellow / Research Fellow — IMCB, A\*STAR Singapore], [2017–2026])[
+  Wrote and won a SGD 300,000 National Medical Research Council Young Individual Research Grant as sole investigator; ran it for four years (2021–2025) with one research assistant, whom I trained in genetics, assay development, automatic behavior tracking and pose estimation, machine learning, and native RNA sequencing.
+
   Co-developed DABEST 2.0, an estimation statistics framework for visualising effect sizes and uncertainty; predecessor has 2,000+ citations. Built DESTRA, a ground-truth-referenced benchmarking approach for high-dimensional behavioural states, showing that perturbations can shift individual metrics without recapitulating the full target state — presented as an invited talk at APDNC3 / RIKEN 2024.
 
   Developed automated behavioural classification pipelines for large-scale ethological data; contributed to novel optogenetic silencing tools (_Nature Communications_ 2024) and long-Stokes-shift fluorescent markers for two-photon imaging (_microPublication Biology_ 2026).
-
-  _Principal Investigator_, Young Individual Researcher Grant (SGD \$300,000; National Medical Research Council): led a cross-disciplinary team combining genetics, deep-learning pose estimation (DeepLabCut, SLEAP), and epitranscriptomics to study the neural underpinnings of socially facilitated feeding behaviour in _Drosophila_.
 ]
 
 #entry([Postdoctoral Associate — Tonegawa Lab, MIT], [2016–2017])[
@@ -110,9 +110,31 @@ format:
 
 #pub[Kim J, Pignatelli M, *Xu S*, Itohara S, Tonegawa S. Antagonistic negative and positive neurons of the basolateral amygdala. _Nature Neuroscience_ 2016; 19(12):1636–1646.]
 
-== Recognition
+== Grants
 
 #let award(body) = { text(size: 9.5pt)[#body]; v(0.15em) }
+#let teach(title, date) = {
+  grid(
+    columns: (1fr, auto),
+    text(size: 9.5pt)[#title],
+    text(size: 9pt, style: "italic")[#date]
+  )
+  v(0.1em)
+}
+#let subline(body) = {
+  pad(left: 1.2em, text(size: 9pt, fill: luma(70))[#body])
+  v(0.05em)
+}
+
+#teach[*NMRC Open Fund – Young Individual Research Grant (OF-YIRG)*, sole investigator][SGD 300,000, 2021–2025]
+#subline[Neural Correlates of Social Influence on Feeding Behaviour (OFYIRG20nov-0051). Submitted Nov 2020; funded.]
+#v(0.3em)
+#teach[*Applications not funded*][]
+#subline[A\*STAR Career Development Award, 2020 call, as PI — Targeting Neuromodulator Receptors and Transporters for Controlling Protein Feeding Behavior in Mated Females in _Drosophila melanogaster_ and _Aedes aegypti_. SGD 300,000 requested; letter of intent Sep 2020; shortlisted and interviewed.]
+#subline[A\*STAR Career Development Award, 1st call, as PI — Investigating serotonin neurons as a link between metabolic dysfunction and dementia in _Drosophila melanogaster_. SGD 480,000 requested; letter of intent Jan 2020, rebuttal Mar 2020.]
+#subline[L'Oréal Singapore For Women in Science National Fellowship 2019, Life Sciences — applied Sep 2019.]
+
+== Recognition
 
 #award[Outstanding Short Talk Award — Neuroscience Singapore 2025]
 #award[Young Individual Research Grant (SGD \$300,000) — National Medical Research Council, Singapore, 2021–2025]
@@ -128,19 +150,40 @@ format:
 
 == Teaching
 
-#let teach(title, date) = {
-  grid(
-    columns: (1fr, auto),
-    text(size: 9.5pt)[#title],
-    text(size: 9pt, style: "italic")[#date]
-  )
-  v(0.1em)
-}
+#teach[*Modern Data Analysis for Biomedical Research* (Teaching Assistant, recurring)][Duke-NUS, 2021–2023]
+#subline[GMS6812 Modern Data Analysis for Biomedical Research — Feb 2022, Feb 2023]
+#subline[Evidence Session: Modern Data Analysis for Biomedical Research — Oct 2021, Oct 2022]
+#v(0.3em)
+#teach[*Graduate and undergraduate courses* (Teaching Assistant)][MIT, 2009–2011]
+#subline[_Walle Nauta Award for Excellence in Graduate Teaching_, MIT, 2011]
+#subline[9.013 Molecular and Cellular Neuroscience II — Spring 2011]
+#subline[9.301 Neural Plasticity in Learning and Memory — Spring 2010]
+#subline[9.150 Biochemistry and Pharmacology of Synaptic Transmission — Fall 2009]
+#v(0.3em)
+#teach[YSC4229 Molecular Neuroscience — Genes, Brains, and Behaviour (Guest Lecturer)][Yale-NUS, Mar 2021, Mar 2023]
 
-#teach[GMS6812 Modern Data Analysis for Biomedical Research (TA)][Duke-NUS, Feb 2023]
-#teach[YSC4229 Molecular Neuroscience — Genes, Brains, and Behaviour (Guest Lecturer)][Yale-NUS, Mar 2023]
-#teach[GMS6812 Modern Data Analysis for Biomedical Research (TA)][Duke-NUS, Feb 2022]
-#teach[9.013 Molecular and Cellular Neuroscience II (TA)][MIT, Spring 2011]
-#teach[9.301 Neural Plasticity in Learning and Memory (TA)][MIT, Spring 2010]
-#teach[9.150 Biochemistry and Pharmacology of Synaptic Transmission (TA)][MIT, Fall 2009]
+== Mentoring
+
+// One line per person: Name (role, dates) — what they did with me → where they went. Duplicate a row per person.
+#let mentee(body) = { text(size: 9.5pt)[#body]; v(0.15em) }
+
+#mentee[Hazimah Yusoff (Research Assistant, NMRC YIRG, 2022–2025) — genetics, assay development, automated behaviour tracking and pose estimation, machine learning, native RNA sequencing → National University Health System (NUHS)]
+#mentee[John Lovett (summer attachment student, Jul–Aug 2012) — expression of protein in mouse brain]
+#mentee[Sinem Kadıoğlu (postgraduate attachment student, Jun–Oct 2018) — development of novel neurogenetics tools → Scientist, Genome Institute of Singapore, A\*STAR]
+#mentee[Farhana Haque Anisha (undergraduate student, May–Aug 2018) — development of novel fly feeding assay → Analyst, Costello Medical]
+#mentee[Zoe Ang (polytechnic intern, Jul 2018–Jan 2019) — development of novel fly feeding assay]
+#mentee[Jade Oh (summer intern, Jun–Aug 2019) — development of novel neurogenetics tools → Clarendon Scholar, Oxford]
+#mentee[Beatrix Tang (undergraduate intern, Jun–Nov 2021) — development of novel neurogenetics molecular tools → medical student, Duke-NUS Medical School, Singapore]
+
+== Service
+
+#teach[*Society for Neuroscience, Singapore Chapter*][Singapore, 2018–2024]
+#subline[Treasurer — 2021–2024]
+#subline[Director of Membership — 2018–2020]
+#v(0.3em)
+#teach[*Journal reviewing* — _Scientific Reports_][]
+#v(0.3em)
+#teach[*Outreach and public engagement*][]
+#subline[Drawing Neurons, art–science collaboration (scientist collaborator) — exhibited at the Neuroscience Singapore Symposium and The Substation, Singapore, 2019]
+#subline[Brain Festival and Brain Awareness Week (exhibitor) — live demonstration of _Drosophila_ culture under light microscopes, Science Centre Singapore, 2018]
 ```
