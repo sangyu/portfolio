@@ -48,5 +48,5 @@ That is the larger point of contextualized ethomics. A neural circuit should not
 [Preprint on bioRxiv &nearr;](https://doi.org/10.64898/2026.07.01.735755). More broadly, this is a framework for inferring hidden biological states from high-dimensional behavior, which is where I think neuroscience, bioinformatics, and AI-assisted measurement can get very interesting.
 
 <div style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e0d5c5;font-size:0.85rem;color:#999;">
-This work was done in collaboration with Xianyuan Zhang, James C. Stewart, Joses Ho, Deepak Choudhury, Zhiping Wang, and <a href="https://www.claridgechang.net/people.html" target="_blank">Adam Claridge-Chang</a>.
+This work was done in collaboration with Xianyuan Zhang, James C. Stewart, Joses Ho, Deepak Choudhury, Zhiping Wang, and <a href="https://claridgechang.com/" target="_blank">Adam Claridge-Chang</a>.
 </div>

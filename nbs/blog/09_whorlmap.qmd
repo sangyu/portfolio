@@ -45,5 +45,5 @@ Whorlmap is an early proof of concept for this kind of uncertainty-aware heatmap
 </ol>
 
 <div style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e0d5c5;font-size:0.85rem;color:#999;">
-This work was done in collaboration with <a href="https://www.claridgechang.net/people.html" target="_blank">Adam Claridge-Chang</a>.
+This work was done in collaboration with <a href="https://claridgechang.com/" target="_blank">Adam Claridge-Chang</a>.
 </div>

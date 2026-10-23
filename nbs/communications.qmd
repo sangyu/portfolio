@@ -52,7 +52,7 @@ page-layout: full
   </div>
 
   <p style="font-size: 0.95rem; color: var(--body); line-height: 1.75; margin: 0 0 2rem;">
-    A note on <a href="https://doi.org/10.1093/comjnl/27.2.97" target="_blank"><em>literate programming</em></a>: I first came to nbdev through <a href="https://claridgechang.net" target="_blank">Adam Claridge-Chang</a>, who pointed me toward <a href="https://jeremy.fast.ai" target="_blank">Jeremy Howard</a>&rsquo;s
+    A note on <a href="https://doi.org/10.1093/comjnl/27.2.97" target="_blank"><em>literate programming</em></a>: I first came to nbdev through <a href="https://claridgechang.com/" target="_blank">Adam Claridge-Chang</a>, who pointed me toward <a href="https://jeremy.fast.ai" target="_blank">Jeremy Howard</a>&rsquo;s
     work on notebooks as a home for code, documentation, tests, and teaching. In practice,
     this is not only elegant; it makes teaching materials easier to run, inspect, maintain,
     and install. <a href="https://quarto.org" target="_blank">Quarto</a> extends the same spirit across websites, papers, talks, and teaching
