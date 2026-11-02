@@ -20,7 +20,7 @@ page-layout: full
       hundreds of flies. Used here to ask: does a serotonergic circuit manipulation
       produce genuine hunger, or just a superficially similar signature?
     </p>
-    <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">&rarr; bioRxiv</a> &ensp; <a href="blog/02_ethomics.html">Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub &nearr;</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub &nearr;</a>
+    <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">Preprint on bioRxiv</a> &ensp; <a href="blog/02_ethomics.html">Read more</a> &ensp; <a href="https://github.com/sangyu/Ethomics5HT">Ethomics GitHub</a> &ensp; <a href="https://github.com/sangyu/esploco">ESPLoCo GitHub</a>
   </div>
 
   <div class="research-card">
@@ -31,7 +31,7 @@ page-layout: full
       in mice. Activation increases patience; silencing increases
       impulsivity. Effect is trade-off specific &mdash; not a motor or motivational confound.
     </p>
-    <a href="blog/03_itc.html">&rarr; Read more</a> &ensp; <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">Paper &nearr;</a>
+    <a href="blog/03_itc.html">Read more</a> &ensp; <a href="https://pubmed.ncbi.nlm.nih.gov/28988863/">Paper in Current Biology</a>
   </div>
 
   <div class="research-card">
@@ -42,7 +42,7 @@ page-layout: full
       mechanisms in rodents. Selective lesions reveal a functional dissociation
       not apparent from anatomy alone.
     </p>
-    <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117">&rarr; Publication</a>
+    <a href="https://www.pnas.org/doi/10.1073/pnas.2015635117">Paper in PNAS</a>
   </div>
 
   <div class="research-card stub">
@@ -63,7 +63,7 @@ page-layout: full
       encode opposing valence signals. Selective activation and silencing
       reveal a functional opponent architecture for fear and reward.
     </p>
-    <a href="https://www.nature.com/articles/nn.4414">&rarr; Publication</a>
+    <a href="https://www.nature.com/articles/nn.4414">Paper in Nature Neuroscience</a>
   </div>
 
   <div class="research-card">
@@ -76,7 +76,7 @@ page-layout: full
       feeding; dopaminergic PPL101 neurons are required but not instructive.
       MBON11 sits at the convergence point.
     </p>
-    <a href="https://doi.org/10.64898/2026.03.13.711740">&rarr; bioRxiv</a>
+    <a href="https://doi.org/10.64898/2026.03.13.711740">Preprint on bioRxiv</a>
   </div>
 
   <div class="research-card">
@@ -88,7 +88,7 @@ page-layout: full
       KCR1-ET matches ACR1 potency while avoiding the depolarising artefact that
       chloride conductance produces in high-chloride cells &mdash; including axons.
     </p>
-    <a href="https://doi.org/10.1038/s41467-024-47203-w">&rarr; Nature Communications</a>
+    <a href="https://doi.org/10.1038/s41467-024-47203-w">Paper in Nature Communications</a>
   </div>
 
   <div class="research-card">
@@ -100,7 +100,7 @@ page-layout: full
       eliminating the need for a second excitation wavelength when using a red
       structural marker alongside a green calcium indicator.
     </p>
-    <a href="https://doi.org/10.17912/micropub.biology.002142">&rarr; microPublication Biology</a>
+    <a href="https://doi.org/10.17912/micropub.biology.002142">Paper in microPublication Biology</a>
   </div>
 
 </div>

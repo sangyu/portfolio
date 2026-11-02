@@ -1030,12 +1030,16 @@ em.concept { color: var(--coral); font-style: bold; }
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--link);
   letter-spacing: 0.02em;
   text-decoration: none;
 }
 
-.research-card a:hover { color: var(--warm-grey); }
+.research-card a:hover {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* === Art page === */
 

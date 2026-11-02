@@ -17,6 +17,13 @@ page-layout: full
 
 
   <div class="blog-stub">
+    <p class="blog-stub-meta">Physiology &middot; Statistics &middot; AI &middot; <time datetime="2026-11-02">Nov 2026</time></p>
+    <h3><a href="13_phenovector_ai.html">PhenoVector AI: Estimating Within-Person Physiology with Governed AI</a></h3>
+    <p>How much does a recurring state move a person's physiology, and does the movement repeat? Within-person phenovectors and cycle-to-cycle comparisons, built with a human-governed AI-assisted workflow. First application: menstrual-cycle physiology in mcPHASES. <a href="https://sangyu.github.io/phaseffect/" target="_blank">Results site &nearr;</a></p>
+  </div>
+
+
+  <div class="blog-stub">
     <p class="blog-stub-meta">Statistics &middot; Optogenetics &middot; <time>Oct 2026</time></p>
     <h3><a href="12_significant_and_significant.html">Effect Sizes 4 - Significant and Significant</a></h3>
     <p>Optogenetics just won the Nobel Prize, and every optogenetics lab runs the same 2&times;2. The textbook analysis leaves you writing &ldquo;light changed the controls, p = 0.0001, and light changed the test flies, p &lt; 0.0001&rdquo;. On subtracting the light and reporting what is left, with real flies. <a href="https://doi.org/10.64898/2026.07.01.735755" target="_blank">bioRxiv &nearr;</a></p>

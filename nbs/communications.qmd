@@ -47,8 +47,8 @@ page-layout: full
       as teaching documents, we used nbdev to keep dependencies organized and make the student
       installation experience smoother.
     </p>
-    <a href="https://acclab.github.io/moda/" target="_blank">Course site &nearr;</a> &ensp;
-    <a href="https://github.com/acclab/moda" target="_blank">GitHub &nearr;</a>
+    <a href="https://acclab.github.io/moda/" target="_blank">Course site</a> &ensp;
+    <a href="https://github.com/acclab/moda" target="_blank">GitHub</a>
   </div>
 
   <p style="font-size: 0.95rem; color: var(--body); line-height: 1.75; margin: 0 0 2rem;">
