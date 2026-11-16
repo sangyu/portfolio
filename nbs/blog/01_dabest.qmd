@@ -15,6 +15,8 @@ page-layout: article
 
 Modern biology produces complex experiments: many groups, repeated measurements, genetic backgrounds, treatments, time points, binary outcomes, and internal replicates. But much of experimental science still reduces those experiments to the same question: *is it significant?*
 
+The replication crisis makes the limits of that question harder to ignore. In a 2016 *Nature* survey, more than 70% of respondents reported having tried and failed to reproduce another scientist's experiments ([Baker, 2016](https://doi.org/10.1038/533452a)). The crisis has many causes, but the pressure to produce significant results is part of the problem: selectively publishing those results can inflate apparent effect sizes ([Simonsohn et al., 2014](https://doi.org/10.1177/1745691614553988)), while trying analyses until one crosses the significance threshold creates further bias ([Head et al., 2015](https://doi.org/10.1371/journal.pbio.1002106)). Estimation graphics alone cannot fix these incentives. They can, however, help us ask a fuller question: how large is the effect, how uncertain is it, and how consistent is it across experiments?
+
 ::: {style="float:right; width:50%; margin-left:1.5em; margin-bottom:1em;"}
 ![](../images/blog/01_dabest_files/Figure_Unity_no_labels.png)
 :::
