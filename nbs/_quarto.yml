@@ -12,6 +12,7 @@ project:
     - "*.ipynb"
     - "!00_core.ipynb"
     - "blog/*.qmd"
+    - "learning/*.qmd"
     - "blog/*.ipynb"
     - "!blog/*colab*.ipynb"
 
@@ -27,7 +28,7 @@ website:
   navbar:
     pinned: true
     background: white
-    collapse-below: xl
+    collapse-below: xxl
     left:
       - href: index.ipynb
         text: Home
@@ -57,6 +58,8 @@ website:
         text: Art & Music
       - href: cv.qmd
         text: CV
+      - href: bilingual-learning.qmd
+        text: Bilingual Learning
     right:
       - icon: github
         href: https://github.com/sangyu

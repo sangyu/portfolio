@@ -1,0 +1,39 @@
+---
+title: "Bilingual Learning"
+description: "Printable Chinese and English learning resources for families. 中英文双语学习资源：为孩子制作的中文、数学与家庭学习材料，附可下载打印的 PDF 和使用说明。"
+page-layout: full
+listing:
+  id: learning-resources
+  contents: learning/*.qmd
+  type: grid
+  grid-columns: 2
+  image-height: 240px
+  fields: [image, title, description, categories]
+  sort: title
+  max-description-length: 350
+---
+
+::: {.page-header .learning-header}
+# Bilingual Learning
+
+[双语学习]{lang="zh-Hans" .learning-chinese-title}
+
+Printables and learning materials I make for my own children as we learn in Chinese and English. A growing collection, shared here for other families learning together.
+
+::: {lang="zh-Hans"}
+这里收集了我为自己的孩子制作的中英文双语学习材料，也分享给希望在家陪孩子一起学习的家庭。从中文乘法口诀到日常学习中的小练习，希望让中文、英文和学科知识自然地联系起来。
+
+每份资源都有内容介绍和使用建议，并提供可以下载、打印的 PDF。目前先从九九乘法口诀表开始，之后会陆续加入新的材料。
+:::
+:::
+
+::: {.learning-collection}
+## Resources · 学习资源 {.learning-section-title}
+
+Browse a resource for a closer look, ideas for using it, and the printable PDF.
+
+[点击资源卡片，查看详细介绍、亲子练习建议和 PDF 下载。]{lang="zh-Hans"}
+
+::: {#learning-resources}
+:::
+:::
